@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:text="相關規範"
+            android:text="@string/specification"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="尚在籌畫中..."
+            android:text="@string/spec_no_info"
             android:textColor="#CCCCCC"
             android:textSize="26dp" />
     </LinearLayout>

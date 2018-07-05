@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:text="工作安排"
+            android:text="@string/calender"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="還沒有任何工作安排！\n是否要去新增工作安排？"
+            android:text="@string/calender_no_info"
             android:textColor="#CCCCCC"
             android:textSize="26dp" />
 
@@ -84,7 +84,7 @@
             android:layout_marginRight="80dp"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
-            android:text="新增工作安排"
+            android:text="@string/add_calender"
             android:textColor="@android:color/white" />
 
 

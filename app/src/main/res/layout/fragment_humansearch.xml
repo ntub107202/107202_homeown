@@ -30,7 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_horizontal"
-                    android:text="@string/human_search"
+                    android:text="人才搜尋"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
             </android.support.v7.widget.Toolbar>

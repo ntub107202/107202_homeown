@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
-            android:text="@string/contact_history"
+            android:text="聯絡紀錄"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
     </android.support.v7.widget.Toolbar>
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/contact_history_no_info"
+            android:text="還沒有任何聯絡紀錄喔！"
             android:textColor="#CCCCCC"
             android:textSize="26dp" />
 

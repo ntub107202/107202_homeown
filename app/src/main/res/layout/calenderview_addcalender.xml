@@ -22,12 +22,13 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
+
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="@string/add_calender"
+                android:text="新增工作安排"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -45,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:background="#CCCCCC"
                     android:padding="12dp"
-                    android:text="@string/work_info"
+                    android:text="工作資訊"
                     android:textColor="@color/fontDark" />
 
                 <TextView
@@ -53,7 +54,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="@string/work_title"
+                    android:text="工作標題"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -62,14 +63,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="@string/hint_work_title"
+                    android:hint="請輸入工作標題"
+                    android:text="擔任櫃台人員，處理退房事務"
                     android:singleLine="true" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/work_type"
+                    android:text="工作類型"
                     android:textColor="@color/fontDark" />
 
                 <RadioGroup
@@ -83,14 +85,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="50dp"
-                        android:text="@string/everyday_work"
+                        android:text="日常性工作"
                         android:textColor="@color/fontDark" />
 
                     <RadioButton
                         android:id="@+id/rad_work_type_once"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/once_work"
+                        android:text="一次性工作"
                         android:textColor="@color/fontDark" />
                 </RadioGroup>
 
@@ -98,7 +100,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/work_time"
+                    android:text="工作時間"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -112,7 +114,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_time"
+                        android:hint="點擊選擇時間"
+                        android:text="7:00"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -131,7 +134,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_time"
+                        android:hint="點擊選擇時間"
+                        android:text="11:00"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -145,7 +149,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="@string/hint_work_content"
+                    android:text="工作內容"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -155,7 +159,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:gravity="top"
-                    android:hint="@string/hint_work_content"
+                    android:hint="請輸入工作內容、細項"
+                    android:text="在櫃檯收取鑰匙，以及處理各類旅客問題"
                     android:inputType="textMultiLine"
                     android:minLines="4" />
 
@@ -164,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:background="#CCCCCC"
                     android:padding="12dp"
-                    android:text="@string/member"
+                    android:text="安排人員"
                     android:textColor="@color/fontDark" />
 
                 <ListView
@@ -182,7 +187,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@color/colorPrimary"
                     android:gravity="center"
-                    android:text="@string/add_calender"
+                    android:text="新增工作安排"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>

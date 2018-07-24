@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">一家順順</string>
+    <string name="app_name">hostel</string>
     <string name="title_people">編輯履歷</string>
     <string name="title_publish">刊登資訊</string>
     <string name="title_work">工作安排</string>
@@ -48,101 +48,4 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <string name="add_job">新增刊登職缺</string>
-    <string name="publish_hotel">刊登民宿</string>
-    <string name="job_info">職缺資訊</string>
-    <string name="job_title">職缺名稱</string>
-    <string name="hint_job_title">請輸入職缺名稱</string>
-    <string name="salary">待遇</string>
-    <string name="hint_salary">請輸入數字金額</string>
-    <string name="salary_day">/ 日</string>
-    <string name="no">無</string>
-    <string name="service">其他待遇</string>
-    <string name="stay">包含住宿</string>
-    <string name="snorkel">浮潛</string>
-    <string name="food">包含吃食</string>
-    <string name="moto">提供機車</string>
-    <string name="fish">釣魚</string>
-    <string name="time">時間</string>
-    <string name="hint_date">點擊選擇日期</string>
-    <string name="time_1">時段 1</string>
-    <string name="hint_time">點擊選擇時間</string>
-    <string name="add_time">新增時段</string>
-    <string name="numder_people">需求人數</string>
-    <string name="hint_number_people">請輸入人數</string>
-    <string name="work_content">工作內容</string>
-    <string name="work_item1">工作項目 1</string>
-    <string name="hint_work_content">請輸入工作內容</string>
-    <string name="add_work_item">新增項目</string>
-    <string name="skill">所需技能</string>
-    <string name="general_skill">一般技能</string>
-    <string name="og">庭園整理</string>
-    <string name="cr">櫃台接待</string>
-    <string name="rc">房務清潔</string>
-    <string name="od">資料整理</string>
-    <string name="rs">餐廳服務</string>
-    <string name="profession_skill">專業技能</string>
-    <string name="cook">料理</string>
-    <string name="art">美術設計</string>
-    <string name="photograph">攝影</string>
-    <string name="web">網站管理</string>
-    <string name="gardening">園藝</string>
-    <string name="show">藝術表演</string>
-    <string name="dance">舞蹈</string>
-    <string name="sing">唱歌</string>
-    <string name="music">樂器演奏</string>
-    <string name="language_skill">語言能力</string>
-    <string name="English">英文</string>
-    <string name="Japanese">日文</string>
-    <string name="Minnan">閩南語</string>
-    <string name="driving_skill">駕駛技能</string>
-    <string name="motorcycle">機車駕照</string>
-    <string name="car">汽車駕照</string>
-    <string name="publish_date">刊登期間</string>
-    <string name="contact_info">應徵方式</string>
-    <string name="contact">聯絡人</string>
-    <string name="contact_name">請輸入聯絡人姓名</string>
-    <string name="email">E-mail</string>
-    <string name="hint_email">請輸入聯絡人電子信箱</string>
-    <string name="phone">手機</string>
-    <string name="hint_phone">請輸入聯絡人電話</string>
-
-    <string name="boss_setting">雇主頁面</string>
-    <string name="hotel_info">民宿資訊</string>
-    <string name="hire_history">雇用紀錄</string>
-    <string name="contact_history">聯絡紀錄</string>
-    <string name="system_notice">系統通知</string>
-    <string name="return_problem">回報問題</string>
-    <string name="about">關於我們</string>
-    <string name="specification">相關規範</string>
-    <string name="identity_change">身分切換</string>
-    <string name="login">登入</string>
-    <string name="sign">註冊</string>
-
-    <string name="add_calender">新增工作安排</string>
-    <string name="work_info">工作資訊</string>
-    <string name="work_title">工作標題</string>
-    <string name="hint_work_title">請輸入工作標題</string>
-    <string name="work_type">工作類型</string>
-    <string name="everyday_work">日常性工作</string>
-    <string name="once_work">一次性工作</string>
-    <string name="work_time">工作時間</string>
-    <string name="member">安排人員</string>
-
-    <string name="human_search">人才搜尋</string>
-    <string name="job_view">刊登職缺</string>
-    <string name="job_view_no_info">還沒有刊登任何職缺資訊喔！ 是否要去刊登新的職缺？</string>
-    <string name="contact_history_no_info">還沒有任何聯絡紀錄喔！</string>
-    <string name="hire_history_no_info">還沒有任何雇用紀錄喔！</string>
-
-    <string name="reture_problem1">請詳細描述所遇到的問題，並留下常用的電子郵件信箱，我們會盡快聯繫您！</string>
-    <string name="problem">問題描述</string>
-    <string name="hint_problem">請輸入遇到問題的描述</string>
-    <string name="sent">確認送出</string>
-
-    <string name="calender">工作安排</string>
-    <string name="calender_no_info">還沒有任何工作安排！ 是否要去新增工作安排？</string>
-    <string name="spec_no_info">尚在籌畫中...</string>
-
 </resources>

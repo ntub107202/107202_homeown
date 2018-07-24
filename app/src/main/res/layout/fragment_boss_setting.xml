@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="@string/boss_setting"
+                android:text="功能設定"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -36,30 +36,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_description" />
-
-                    <Button
-                        android:id="@+id/btn_hostel_info"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:gravity="left|center_vertical"
-                        android:text="@string/hotel_info"
-                        android:background="#00000000"
-                        android:textColor="@color/fontDark"/>
-
-
-                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -77,7 +53,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginLeft="20dp"
                         android:gravity="left|center_vertical"
-                        android:text="@string/hire_history"
+                        android:text="雇用紀錄"
                         android:background="#00000000"
                         android:textColor="@color/fontDark"/>
 
@@ -102,7 +78,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/contact_history"
+                        android:text="聯絡紀錄"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -123,7 +99,7 @@
                         android:gravity="left|center_vertical"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="40dp"
-                        android:text="@string/system_notice"
+                        android:text="系統通知"
                         android:textColor="@color/fontDark"/>
 
 
@@ -151,7 +127,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/return_problem"
+                        android:text="回報問題"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -172,7 +148,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/about"
+                        android:text="關於我們"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <LinearLayout
@@ -193,7 +169,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/specification"
+                        android:text="相關規範"
                         android:textColor="@color/fontDark" />
                 </LinearLayout>
                 <View
@@ -219,7 +195,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/identity_change"
+                        android:text="身分切換"
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>
@@ -241,7 +217,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/login"
+                        android:text="登入"
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>
@@ -262,7 +238,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/sign"
+                        android:text="註冊"
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>

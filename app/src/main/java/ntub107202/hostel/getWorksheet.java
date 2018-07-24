@@ -28,6 +28,7 @@ public class getWorksheet {
     private static String[] row13= new String[100];
 
     private static int worksheetLength ;
+    public static int jobLength;
 
     public static void getJSON() {
 
@@ -67,7 +68,7 @@ public class getWorksheet {
 
                     JSONArray jsonArray = object.getJSONArray("result");
                     worksheetLength = jsonArray.length();
-
+                    jobLength =worksheetLength;
                     int j=0;
 
                     for (int i = 0 ; i<getWorksheetLength() ; i++){
@@ -102,7 +103,7 @@ public class getWorksheet {
                         row10[i] = jsonArray.getJSONObject(i).getString("row2");
                         row11[i] = jsonArray.getJSONObject(i).getString("row3");
                         row12[i] = jsonArray.getJSONObject(i).getString("row4");
-                        Log.v("Row5", row5[i]);
+//                        Log.v("Row5", row5[i]);
                     }
                 } catch (Exception e) {
                     Log.v("ABC", Log.getStackTraceString(e));

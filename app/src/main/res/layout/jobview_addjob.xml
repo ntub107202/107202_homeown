@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="@string/add_job"
+                android:text="新增刊登職缺"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -49,25 +49,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/publish_hotel"
-                    android:textColor="@color/fontDark" />
-
-                <Spinner
-                    android:id="@+id/spin_hotel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp">
-                </Spinner>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
                     android:background="#CCCCCC"
                     android:padding="12dp"
-                    android:text="@string/job_info"
+                    android:text="職缺資訊"
                     android:textColor="@color/fontDark" />
 
                 <TextView
@@ -75,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="@string/job_title"
+                    android:text="職缺名稱"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -84,14 +68,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="@string/hint_job_title"
+                    android:hint="請輸入職缺名稱"
+                    android:text="打雜工"
                     android:singleLine="true" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/salary"
+                    android:text="待遇"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -103,7 +88,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:hint="@string/hint_salary"
+                        android:hint="請輸入數字金額"
                         android:text="200"
                         android:inputType="number"
                         android:singleLine="true" />
@@ -112,14 +97,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
-                        android:text="@string/salary_day"
+                        android:text="/ 日"
                         android:textColor="@color/fontDark" />
 
                     <RadioButton
                         android:id="@+id/rad_salary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/no"
+                        android:text="無"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -129,7 +114,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/service"
+                    android:text="其他待遇"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -146,14 +131,14 @@
                             android:id="@+id/chk_stay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/stay"
+                            android:text="包含住宿"
                             android:textColor="@color/fontDark" />
 
                         <CheckBox
                             android:id="@+id/chk_snorkel"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/snorkel"
+                            android:text="浮潛"
 
                             android:textColor="@color/fontDark" />
 
@@ -168,7 +153,7 @@
                             android:id="@+id/chk_food"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/food"
+                            android:text="包含吃食"
 
                             android:textColor="@color/fontDark" />
 
@@ -176,7 +161,7 @@
                             android:id="@+id/chk_moto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/moto"
+                            android:text="提供機車"
 
                             android:textColor="@color/fontDark" />
                     </LinearLayout>
@@ -190,7 +175,7 @@
                             android:id="@+id/chk_fish"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/fish"
+                            android:text="釣魚"
 
                             android:textColor="@color/fontDark" />
                     </LinearLayout>
@@ -203,7 +188,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/time"
+                    android:text="時間"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -217,7 +202,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_date"
+                        android:hint="點擊選擇日期"
+                        android:text="2018-4-1"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -236,7 +222,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_date"
+                        android:hint="點擊選擇日期"
+                        android:text="2018-6-1"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -249,7 +236,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/time_1"
+                    android:text="時段 1"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -263,7 +250,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_time"
+                        android:hint="點擊選擇時間"
+                        android:text="10:00"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -282,7 +270,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_time"
+                        android:hint="點擊選擇時間"
+                        android:text="14:00"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -298,14 +287,14 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="20dp"
                     android:background="@color/colorPrimary"
-                    android:text="@string/add_time"
+                    android:text="新增時段"
                     android:textColor="@android:color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/numder_people"
+                    android:text="需求人數"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -314,7 +303,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="@string/hint_number_people"
+                    android:hint="請輸入人數"
                     android:text="2"
                     android:inputType="number"
                     android:singleLine="true" />
@@ -323,14 +312,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/work_content"
+                    android:text="工作內容"
                     android:textColor="@color/fontDark" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="@string/work_item1"
+                    android:text="工作項目 1"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -339,7 +328,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    android:hint="@string/hint_work_content"
+                    android:hint="請輸入工作內容"
+                    android:text="打掃房間，整理床鋪及浴室，如房客有遺漏務須打電話告知"
                     android:singleLine="true" />
 
                 <Button
@@ -349,21 +339,21 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="20dp"
                     android:background="@color/colorPrimary"
-                    android:text="@string/add_work_item"
+                    android:text="新增項目"
                     android:textColor="@android:color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="@string/skill"
+                    android:text="所需技能"
                     android:textColor="@color/fontDark" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="@string/general_skill"
+                    android:text="一般技能"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -380,7 +370,7 @@
                             android:id="@+id/chk_og"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/og"
+                            android:text="庭園整理"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -388,7 +378,7 @@
                             android:id="@+id/chk_cr"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/cr"
+                            android:text="櫃台接待"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -404,7 +394,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/rc"
+                            android:text="房務清潔"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -413,7 +403,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/od"
+                            android:text="資料整理"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -428,7 +418,7 @@
                             android:id="@+id/chk_rs"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/rs"
+                            android:text="餐廳服務"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -441,7 +431,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="@string/profession_skill"
+                    android:text="專業技能"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -458,7 +448,7 @@
                             android:id="@+id/chk_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/cook"
+                            android:text="料理"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -466,7 +456,7 @@
                             android:id="@+id/chk_a"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/art"
+                            android:text="美術設計"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -482,7 +472,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/photograph"
+                            android:text="攝影"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -491,7 +481,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="@string/web"
+                            android:text="網站管理"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -506,7 +496,7 @@
                             android:id="@+id/chk_g"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/gardening"
+                            android:text="園藝"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -519,7 +509,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="@string/show"
+                    android:text="藝術表演"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -532,7 +522,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/dance"
+                        android:text="舞蹈"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -541,7 +531,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/sing"
+                        android:text="唱歌"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -550,7 +540,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/music"
+                        android:text="樂器演奏"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -560,7 +550,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="@string/language_skill"
+                    android:text="語言能力"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -573,7 +563,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/English"
+                        android:text="英文"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -582,7 +572,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/Japanese"
+                        android:text="日文"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -591,7 +581,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/Minnan"
+                        android:text="閩南語"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -601,7 +591,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="@string/driving_skill"
+                    android:text="駕駛技能"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -614,7 +604,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/motorcycle"
+                        android:text="機車駕照"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -623,7 +613,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="@string/car"
+                        android:text="汽車駕照"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -633,7 +623,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="@string/publish_date"
+                    android:text="刊登期間"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -647,7 +637,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_date"
+                        android:hint="點擊選擇時間"
                         android:inputType="none" />
 
                     <TextView
@@ -662,7 +652,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="@string/hint_date"
+                        android:hint="點擊選擇時間"
                         android:inputType="none" />
 
                 </LinearLayout>
@@ -672,7 +662,7 @@
                     android:layout_height="wrap_content"
                     android:background="#CCCCCC"
                     android:padding="12dp"
-                    android:text="@string/contact_info"
+                    android:text="應徵方式"
                     android:textColor="@color/fontDark" />
 
                 <TextView
@@ -680,7 +670,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="@string/contact"
+                    android:text="聯絡人"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -689,7 +679,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="@string/contact_name"
+                    android:hint="請輸入聯絡人姓名"
                     android:singleLine="true" />
 
                 <TextView
@@ -697,7 +687,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="@string/email"
+                    android:text="E-mail"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -706,7 +696,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="@string/hint_email"
+                    android:hint="請輸入聯絡人電子信箱"
                     android:singleLine="true" />
 
                 <TextView
@@ -714,7 +704,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="@string/phone"
+                    android:text="手機"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -723,7 +713,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="@string/hint_phone"
+                    android:hint="請輸入聯絡人電話"
                     android:singleLine="true" />
 
                 <Button
@@ -736,7 +726,7 @@
                     android:layout_marginRight="60dp"
                     android:layout_marginTop="10dp"
                     android:background="@color/colorPrimary"
-                    android:text="@string/add_job"
+                    android:text="新增刊登職缺"
                     android:textColor="@android:color/white" />
             </LinearLayout>
         </ScrollView>

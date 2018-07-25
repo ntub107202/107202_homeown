@@ -32,10 +32,10 @@ public class NavigationActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_publish:
                     getWorksheet.getjobJSON();
-                    Fragment2JobView.setrow5(getWorksheet.getRow5(0));
-                    Fragment2JobView.setrow6(getWorksheet.getRow6(0));
-                    Fragment2JobView.setrow7(getWorksheet.getRow7(0));
-                    Fragment2JobView.setrow8(getWorksheet.getRow8(0));
+//                    Fragment2JobView.setrow5(getWorksheet.getRow5(0));
+//                    Fragment2JobView.setrow6(getWorksheet.getRow6(0));
+//                    Fragment2JobView.setrow7(getWorksheet.getRow7(0));
+//                    Fragment2JobView.setrow8(getWorksheet.getRow8(0));
 //                    if(Fragment2JobView.textView1.getText() != ""){
 //                        Fragment2JobView.textView0.setVisibility(View.GONE);
 //                    }

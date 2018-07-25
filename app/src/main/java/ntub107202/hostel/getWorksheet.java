@@ -70,13 +70,14 @@ public class getWorksheet {
                     worksheetLength = jsonArray.length();
                     jobLength =worksheetLength;
                     int j=0;
-
-                    for (int i = 0 ; i<getWorksheetLength() ; i++){
+                    Log.v("get0000",jobLength + "ergegje");
+                    for (int i = 0 ; i<jobLength ; i++){
                         row5[i] = jsonArray.getJSONObject(i).getString("row1");
                         row6[i] = jsonArray.getJSONObject(i).getString("row2");
                         row7[i] = jsonArray.getJSONObject(i).getString("row3");
                         row8[i] = jsonArray.getJSONObject(i).getString("row4");
                         Log.v("Row5", row5[i]);
+
                     }
                 } catch (Exception e) {
                     Log.v("ABC", Log.getStackTraceString(e));

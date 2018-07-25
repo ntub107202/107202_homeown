@@ -22,33 +22,40 @@ public class Fragment_Jobview extends Fragment {
     static TextView textView2;
     static TextView textView3;
     static TextView textView4;
+    static String[] row = new String[100];
     static String row5;
     static String row6;
     static String row7;
     static String row8;
     static String row00;
+    RecyclerView mList;
+    ArrayList<String> myDataset;
+    MyAdapter  myAdapter;
+    static LinearLayoutManager layoutManager;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_job_view,container,false);
+        setrow();
+
+        myDataset = new ArrayList<>();
         Button button01 = (Button)view.findViewById(R.id.btn_go_add_job);
+        myAdapter = new MyAdapter(myDataset);
+        for(int i = 0; i < getWorksheet.jobLength; i++){
+            myDataset.add(i + "");
+            Log.d("get0000", String.valueOf(getWorksheet.jobLength));
+        }
+        mList = (RecyclerView)view.findViewById(R.id.list_view);
+        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
+        mList.setLayoutManager(layoutManager);
+        mList.setAdapter(myAdapter);
 //        textView0 = (TextView)view.findViewById(R.id.text01);
 //        textView1 = (TextView)view.findViewById(R.id.text02);
 //        textView2 = (TextView)view.findViewById(R.id.text03);
 //        textView3 = (TextView)view.findViewById(R.id.text04);
 //        textView4 = (TextView)view.findViewById(R.id.text05);
-
-        ArrayList<String> myDataset = new ArrayList<>();
-        for(int i = 0; i < getWorksheet.jobLength; i++){
-            myDataset.add(i + "");
-            Log.d("get0000", String.valueOf(getWorksheet.jobLength));
-        }
-        MyAdapter myAdapter = new MyAdapter(myDataset);
-        RecyclerView mList = (RecyclerView)view.findViewById(R.id.list_view);
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        mList.setLayoutManager(layoutManager);
-        mList.setAdapter(myAdapter);
 
 //        if(textView1.getText() != ""){
 //            textView0.setVisibility(View.INVISIBLE);
@@ -62,6 +69,26 @@ public class Fragment_Jobview extends Fragment {
             }
         });
         return view;
+    }
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if(hidden){
+            //pause
+        }else{
+            myDataset = new ArrayList<>();
+            myAdapter = new MyAdapter(myDataset);
+            for(int i = 0; i < getWorksheet.jobLength; i++){
+                myDataset.add(i + "");
+                Log.d("get0000", String.valueOf(getWorksheet.jobLength)+"resume");
+            }
+//            mList = (RecyclerView)view.findViewById(R.id.list_view);
+            layoutManager = new LinearLayoutManager(getActivity());
+            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+            mList.setLayoutManager(layoutManager);
+            mList.setAdapter(myAdapter);
+            //resume
+        }
     }
 
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
@@ -85,8 +112,8 @@ public class Fragment_Jobview extends Fragment {
 
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            View v = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.jobview_item, parent, false);
+
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.jobview_item, parent, false);
             ViewHolder vh = new ViewHolder(v);
             return vh;
         }
@@ -104,13 +131,17 @@ public class Fragment_Jobview extends Fragment {
             return mData.size();
         }
     }
-    //    @Override
-//    public void onResume() {
-//        if(textView1.getText() != ""){
-//            textView0.setVisibility(View.INVISIBLE);
-//        }
-//        super.onResume();
-//    }
+    public static void setrow(){
+        Log.v("get0000",getWorksheet.jobLength + "");
+
+        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
+            row[i] = getWorksheet.getRow5(i);
+
+        }
+        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
+            Log.v("get0000",  row[i]+"xxx");
+        }
+    }
     public static void setrow5(String row){
         row5 = row;
 //        textView1.setText(row5 );

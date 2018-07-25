@@ -113,8 +113,10 @@ public class Jobview_Addjob extends AppCompatActivity {
                 }
                 Log.v("chk_stay", start_date.getText().toString());
                 getWorksheet.postToJob(edit_job_title.getText().toString(), edit_salary.getText().toString(), chk_stayS, chk_foodS, chk_fishS, chk_snorkelS, chk_motoS, start_date.getText().toString(), start_time.getText().toString(), end_date.getText().toString(), end_time.getText().toString(), edit_number_people.getText().toString(), edit_work.getText().toString());
+                Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "post");
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();
+                Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "get");
                 getWorksheet.getcalendarJSON();
                 Intent intent = new Intent(Jobview_Addjob.this,NavigationActivity.class);
                 startActivity(intent);

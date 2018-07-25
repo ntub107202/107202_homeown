@@ -31,6 +31,7 @@ public class NavigationActivity extends AppCompatActivity {
                     showNav(R.id.navigation_people);
                     return true;
                 case R.id.navigation_publish:
+                    getWorksheet.getjobJSON();
                     Fragment2JobView.setrow5(getWorksheet.getRow5(0));
                     Fragment2JobView.setrow6(getWorksheet.getRow6(0));
                     Fragment2JobView.setrow7(getWorksheet.getRow7(0));
@@ -42,6 +43,7 @@ public class NavigationActivity extends AppCompatActivity {
                     showNav(R.id.navigation_publish);
                     return true;
                 case R.id.navigation_work:
+                    getWorksheet.getjobJSON();
                     Fragment3CalenderView.setrow9(getWorksheet.getRow9(0));
                     Fragment3CalenderView.setrow10(getWorksheet.getRow10(0));
                     Fragment3CalenderView.setrow11(getWorksheet.getRow11(0));
@@ -74,6 +76,11 @@ public class NavigationActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+    }
+    @Override
+    public void onResume() {
+        getWorksheet.getjobJSON();
+        super.onResume();
     }
 //    @Override
 //    protected void onStart() {

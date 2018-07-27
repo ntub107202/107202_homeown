@@ -6,6 +6,7 @@ import ntub107202.hostel.Common.Common;
 import ntub107202.hostel.MyAsyncTask.getAsyncTask;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask2;
+import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask3;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -114,6 +115,7 @@ public class getWorksheet {
         myAsyncTask.execute(Common.getCalendar);
     }
 
+
     public static void postToPHP(String row1, String row2, String row3) {
         postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
             @Override
@@ -145,6 +147,17 @@ public class getWorksheet {
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
             myAsyncTask.execute(Common.postCalendar ,row1,row2,row3,row4,row5);
+        }
+    }
+    public static void postToQuestion(String row1) {
+        postUpdateAsyncTask3 myAsyncTask = new postUpdateAsyncTask3(new postUpdateAsyncTask3.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postQuestion ,row1);
         }
     }
 

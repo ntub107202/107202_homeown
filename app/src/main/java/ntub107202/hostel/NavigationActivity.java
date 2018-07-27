@@ -17,7 +17,7 @@ public class NavigationActivity extends AppCompatActivity {
     private Fragment_Jobview Fragment2JobView;
     private Fragment_Calenderview Fragment3CalenderView;
     private Fragment_Bosssetting Fragment4BossSetting;
-
+    BottomNavigationView navigation;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -74,14 +74,54 @@ public class NavigationActivity extends AppCompatActivity {
         init();
 
         mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
     }
+
     @Override
     public void onResume() {
         getWorksheet.getjobJSON();
+        int id = getIntent().getIntExtra("id", 0);
+        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        FragmentTransaction beginTransaction=getFragmentManager().beginTransaction();
+        switch (id){
+            case 1:
+                beginTransaction.hide(Fragment2JobView).hide(Fragment3CalenderView).hide(Fragment4BossSetting);
+                beginTransaction.show(Fragment1HumanSearch);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                navigation.getMenu().getItem(0).setChecked(true);
+                break;
+            case 2:
+                beginTransaction.hide(Fragment1HumanSearch).hide(Fragment3CalenderView).hide(Fragment4BossSetting);
+                beginTransaction.show(Fragment2JobView);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                navigation.getMenu().getItem(1).setChecked(true);
+                break;
+            case 3:
+                beginTransaction.hide(Fragment2JobView).hide(Fragment1HumanSearch).hide(Fragment4BossSetting);
+                beginTransaction.show(Fragment3CalenderView);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                navigation.getMenu().getItem(2).setChecked(true);
+                break;
+            case 4:
+                beginTransaction.hide(Fragment1HumanSearch).hide(Fragment2JobView).hide(Fragment3CalenderView);
+                beginTransaction.show(Fragment4BossSetting);
+                beginTransaction.addToBackStack(null);
+                beginTransaction.commit();
+                mTextMessage.setText("");
+                showNav(R.id.navigation_page);
+                navigation.getMenu().getItem(3).setChecked(true);
+                break;
+        }
+
         super.onResume();
     }
+
 //    @Override
 //    protected void onStart() {
 //        super.onStart();
@@ -139,6 +179,7 @@ public class NavigationActivity extends AppCompatActivity {
 
 
     }
+
 
 
 }

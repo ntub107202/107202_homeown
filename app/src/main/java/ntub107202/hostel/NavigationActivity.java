@@ -23,7 +23,7 @@ public class NavigationActivity extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Log.v("text","abc");
+            Log.v("text", "abc");
 
             switch (item.getItemId()) {
                 case R.id.navigation_people:
@@ -44,14 +44,14 @@ public class NavigationActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_work:
                     getWorksheet.getjobJSON();
-                    Fragment3CalenderView.setrow9(getWorksheet.getRow9(0));
-                    Fragment3CalenderView.setrow10(getWorksheet.getRow10(0));
-                    Fragment3CalenderView.setrow11(getWorksheet.getRow11(0));
-                    Fragment3CalenderView.setrow12(getWorksheet.getRow12(0));
-                    if(Fragment3CalenderView.textView31.getText() != ""){
-                        Fragment3CalenderView.textView30.setVisibility(View.GONE);
-                    }
-                    mTextMessage.setText("");
+//                    Fragment3CalenderView.setrow9(getWorksheet.getRow9(0));
+//                    Fragment3CalenderView.setrow10(getWorksheet.getRow10(0));
+//                    Fragment3CalenderView.setrow11(getWorksheet.getRow11(0));
+//                    Fragment3CalenderView.setrow12(getWorksheet.getRow12(0));
+//                    if(Fragment3CalenderView.textView31.getText() != ""){
+//                        Fragment3CalenderView.textView30.setVisibility(View.GONE);
+//                    }
+//                    mTextMessage.setText("");
                     mTextMessage.setText("");
                     showNav(R.id.navigation_work);
                     return true;
@@ -64,9 +64,11 @@ public class NavigationActivity extends AppCompatActivity {
         }
 
     };
+
     @Override
     public void onBackPressed() {
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,8 +87,8 @@ public class NavigationActivity extends AppCompatActivity {
         getWorksheet.getjobJSON();
         int id = getIntent().getIntExtra("id", 0);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        FragmentTransaction beginTransaction=getFragmentManager().beginTransaction();
-        switch (id){
+        FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();
+        switch (id) {
             case 1:
                 beginTransaction.hide(Fragment2JobView).hide(Fragment3CalenderView).hide(Fragment4BossSetting);
                 beginTransaction.show(Fragment1HumanSearch);
@@ -122,7 +124,7 @@ public class NavigationActivity extends AppCompatActivity {
         super.onResume();
     }
 
-//    @Override
+    //    @Override
 //    protected void onStart() {
 //        super.onStart();
 //        getWorksheet.getjobJSON();
@@ -135,22 +137,23 @@ public class NavigationActivity extends AppCompatActivity {
 //        // The activity has become visible (it is now "resumed").
 //    }
     //init（）用来初始化组件
-    private void init(){
-        Fragment1HumanSearch=new Fragment_Humansearch();
-        Fragment2JobView=new Fragment_Jobview();
-        Fragment3CalenderView=new Fragment_Calenderview();
-        Fragment4BossSetting=new Fragment_Bosssetting();
-        FragmentTransaction beginTransaction=getFragmentManager().beginTransaction();
-        beginTransaction.add(R.id.content,Fragment1HumanSearch).add(R.id.content,Fragment2JobView).add(R.id.content,Fragment3CalenderView).add(R.id.content,Fragment4BossSetting);//开启一个事务将fragment动态加载到组件
+    private void init() {
+        Fragment1HumanSearch = new Fragment_Humansearch();
+        Fragment2JobView = new Fragment_Jobview();
+        Fragment3CalenderView = new Fragment_Calenderview();
+        Fragment4BossSetting = new Fragment_Bosssetting();
+        FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();
+        beginTransaction.add(R.id.content, Fragment1HumanSearch).add(R.id.content, Fragment2JobView).add(R.id.content, Fragment3CalenderView).add(R.id.content, Fragment4BossSetting);//开启一个事务将fragment动态加载到组件
         beginTransaction.hide(Fragment1HumanSearch).hide(Fragment2JobView).hide(Fragment3CalenderView).hide(Fragment4BossSetting);//隐藏fragment
         beginTransaction.addToBackStack(null);//返回到上一个显示的fragment
         beginTransaction.commit();//每一个事务最后操作必须是commit（），否则看不见效果
         showNav(R.id.navigation_people);
 
     }
-    private void showNav(int navid){
-        FragmentTransaction beginTransaction=getFragmentManager().beginTransaction();
-        switch (navid){
+
+    private void showNav(int navid) {
+        FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();
+        switch (navid) {
             case R.id.navigation_people:
                 beginTransaction.hide(Fragment2JobView).hide(Fragment3CalenderView).hide(Fragment4BossSetting);
                 beginTransaction.show(Fragment1HumanSearch);
@@ -176,10 +179,5 @@ public class NavigationActivity extends AppCompatActivity {
                 beginTransaction.commit();
                 break;
         }
-
-
     }
-
-
-
 }

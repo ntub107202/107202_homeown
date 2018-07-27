@@ -85,6 +85,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:hint="@string/hint_job_title"
+                    android:text="12345678"
                     android:singleLine="true" />
 
                 <TextView
@@ -219,6 +220,7 @@
                         android:layout_marginRight="20dp"
                         android:hint="@string/hint_date"
                         android:inputType="none"
+                        android:text="2018-06-29"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"
@@ -238,6 +240,7 @@
                         android:layout_marginRight="20dp"
                         android:hint="@string/hint_date"
                         android:inputType="none"
+                        android:text="2018-09-29"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"
@@ -264,6 +267,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:hint="@string/hint_time"
+                        android:text="09:00"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -283,6 +287,7 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:hint="@string/hint_time"
+                        android:text="18:00"
                         android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
@@ -340,6 +345,7 @@
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
                     android:hint="@string/hint_work_content"
+                    android:text="aaaaaaaa"
                     android:singleLine="true" />
 
                 <Button

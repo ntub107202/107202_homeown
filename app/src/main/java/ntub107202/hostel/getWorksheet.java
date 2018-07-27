@@ -30,6 +30,7 @@ public class getWorksheet {
 
     private static int worksheetLength ;
     public static int jobLength;
+    public static int calendarLength;
 
     public static void getJSON() {
 
@@ -69,7 +70,7 @@ public class getWorksheet {
 
                     JSONArray jsonArray = object.getJSONArray("result");
                     worksheetLength = jsonArray.length();
-                    jobLength =worksheetLength;
+                    jobLength = worksheetLength;
                     int j=0;
                     Log.v("get0000",jobLength + "ergegje");
                     for (int i = 0 ; i<jobLength ; i++){
@@ -97,7 +98,7 @@ public class getWorksheet {
 
                     JSONArray jsonArray = object.getJSONArray("result");
                     worksheetLength = jsonArray.length();
-
+                    calendarLength = worksheetLength;
                     int j=0;
 
                     for (int i = 0 ; i<getWorksheetLength() ; i++){

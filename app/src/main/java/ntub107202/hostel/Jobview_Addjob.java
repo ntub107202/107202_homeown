@@ -119,6 +119,7 @@ public class Jobview_Addjob extends AppCompatActivity {
                 Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "get");
                 getWorksheet.getcalendarJSON();
                 Intent intent = new Intent(Jobview_Addjob.this,NavigationActivity.class);
+                intent.putExtra("id",2);
                 startActivity(intent);
             }
         });

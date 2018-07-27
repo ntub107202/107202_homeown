@@ -1,6 +1,7 @@
 package ntub107202.hostel;
 
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment_Jobview extends Fragment {
+    private Fragment_Jobview Fragment2JobView;
     static TextView textView0;
     static TextView textView1;
     static TextView textView2;
@@ -39,7 +41,7 @@ public class Fragment_Jobview extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_job_view,container,false);
-        setrow();
+//        setrow();
 
 //        myDataset = new ArrayList<>();
 //        myDataset2 = new ArrayList<>();
@@ -65,6 +67,7 @@ public class Fragment_Jobview extends Fragment {
 
 //        if(textView1.getText() != ""){
 //            textView0.setVisibility(View.INVISIBLE);
+
 //        }
         button01.setOnClickListener(new Button.OnClickListener(){
             @Override
@@ -77,33 +80,44 @@ public class Fragment_Jobview extends Fragment {
         return view;
     }
     @Override
+    public void onResume() {
+        setJobview();
+        super.onResume();
+    }
+    @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
         if(hidden){
+
             //pause
         }else{
-            myDataset = new ArrayList<>();
-            myDataset2 = new ArrayList<>();
-            myDataset3 = new ArrayList<>();
-            myDataset4 = new ArrayList<>();
-            myAdapter = new MyAdapter(myDataset);
-            for(int i = 0; i < getWorksheet.jobLength; i++){
-//                myDataset.add(i + "");
-                myDataset.add(getWorksheet.getRow5(i));
-                myDataset2.add(getWorksheet.getRow6(i));
-                myDataset3.add(getWorksheet.getRow7(i));
-                myDataset4.add(getWorksheet.getRow8(i));
-                Log.d("get0000", String.valueOf(getWorksheet.jobLength)+"resume");
-            }
-//            mList = (RecyclerView)view.findViewById(R.id.list_view);
-            layoutManager = new LinearLayoutManager(getActivity());
-            layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-            mList.setLayoutManager(layoutManager);
-            mList.setAdapter(myAdapter);
+            setJobview();
             //resume
         }
     }
+    public static void callsetJobview(){
 
+    }
+    public void  setJobview(){
+        myDataset = new ArrayList<>();
+        myDataset2 = new ArrayList<>();
+        myDataset3 = new ArrayList<>();
+        myDataset4 = new ArrayList<>();
+        myAdapter = new MyAdapter(myDataset);
+        for(int i = 0; i < getWorksheet.jobLength; i++){
+//                myDataset.add(i + "");
+            myDataset.add(getWorksheet.getRow5(i));
+            myDataset2.add(getWorksheet.getRow6(i));
+            myDataset3.add(getWorksheet.getRow7(i));
+            myDataset4.add(getWorksheet.getRow8(i));
+            Log.d("get0000", String.valueOf(getWorksheet.jobLength)+"resume");
+        }
+//            mList = (RecyclerView)view.findViewById(R.id.list_view);
+        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mList.setLayoutManager(layoutManager);
+        mList.setAdapter(myAdapter);
+    }
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         private List<String> mData;
 
@@ -145,17 +159,17 @@ public class Fragment_Jobview extends Fragment {
             return mData.size();
         }
     }
-    public static void setrow(){
-        Log.v("get0000",getWorksheet.jobLength + "");
-
-        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
-            row[i] = getWorksheet.getRow5(i);
-
-        }
-        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
-            Log.v("get0000",  row[i]+"xxx");
-        }
-    }
+//    public static void setrow(){
+//        Log.v("get0000",getWorksheet.jobLength + "");
+//
+//        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
+//            row[i] = getWorksheet.getRow5(i);
+//
+//        }
+//        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
+//            Log.v("get0000",  row[i]+"xxx");
+//        }
+//    }
 //    public static void setrow5(String row){
 //        row5 = row;
 ////        textView1.setText(row5 );

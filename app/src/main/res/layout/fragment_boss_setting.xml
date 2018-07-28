@@ -266,18 +266,8 @@
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>
-
-
-
-
-
             </LinearLayout>
         </ScrollView>
-
-
-
-
     </LinearLayout>
-
 
 </LinearLayout>

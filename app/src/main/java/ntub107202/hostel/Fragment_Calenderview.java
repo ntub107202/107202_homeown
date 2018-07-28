@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -39,20 +40,33 @@ public class Fragment_Calenderview extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_calender_view,container,false);
-        Button button01 = (Button)view.findViewById(R.id.btn_go_add_calendar);
+
+//        Button button01 = (Button)view.findViewById(R.id.btn_go_add_calendar);
+
         textView30 = (TextView)view.findViewById(R.id.text001);
 //        textView31 = (TextView)view.findViewById(R.id.text002);
 //        textView32 = (TextView)view.findViewById(R.id.text003);
 //        textView33 = (TextView)view.findViewById(R.id.text004);
 //        textView34 = (TextView)view.findViewById(R.id.text005);
+
         mList = (RecyclerView)view.findViewById(R.id.list_view);
-        button01.setOnClickListener(new Button.OnClickListener(){
+
+//        button01.setOnClickListener(new Button.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(),Calenderview_Addcalender.class);//              startActivity(intent);
+//            }
+//        });
+
+        FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab_go_to_add_calendar) ;
+        fab.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),Calenderview_Addcalender.class);
                 startActivity(intent);
             }
         });
+
         return view;
     }
     @Override

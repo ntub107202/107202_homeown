@@ -14,6 +14,7 @@ public class MainActivityBypass extends AppCompatActivity {
         setContentView(R.layout.activity_bypass);
         //取得伺服器上JSON資料
         getWorksheet.getJSON();
+        getWorksheet.gethumansearchJSON();
         getWorksheet.getjobJSON();
         getWorksheet.getcalendarJSON();
 

@@ -1,6 +1,7 @@
 package ntub107202.hostel;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
@@ -37,10 +38,14 @@ public class Fragment_Jobview extends Fragment {
     ArrayList<String> myDataset4;
     MyAdapter  myAdapter;
     static LinearLayoutManager layoutManager;
+    FragmentTransaction beginTransaction;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_job_view,container,false);
+        FragmentManager fragmentMgr = getFragmentManager();
+        beginTransaction = getFragmentManager().beginTransaction();
+
 //        setrow();
 
 //        myDataset = new ArrayList<>();
@@ -72,17 +77,11 @@ public class Fragment_Jobview extends Fragment {
         button01.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(getActivity(),Jobview_Addjob.class);
                 startActivity(intent);
             }
         });
         return view;
-    }
-    @Override
-    public void onResume() {
-        setJobview();
-        super.onResume();
     }
     @Override
     public void onHiddenChanged(boolean hidden) {

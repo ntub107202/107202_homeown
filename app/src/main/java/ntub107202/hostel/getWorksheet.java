@@ -27,8 +27,12 @@ public class getWorksheet {
     private static String[] row11= new String[100];
     private static String[] row12= new String[100];
     private static String[] row13= new String[100];
+    private static String[] row14= new String[100];
+    private static String[] row15= new String[100];
+    private static String[] row16= new String[100];
 
     private static int worksheetLength ;
+    public static int humanLength;
     public static int jobLength;
     public static int calendarLength;
 
@@ -58,6 +62,34 @@ public class getWorksheet {
             }
         });
         myAsyncTask.execute(Common.getUrl);
+    }
+    public static void gethumansearchJSON() {
+
+        getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    humanLength = worksheetLength;
+                    int j=0;
+                    Log.v("get0000",humanLength + "human");
+                    for (int i = 0 ; i<humanLength ; i++){
+                        row13[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row14[i] = jsonArray.getJSONObject(i).getString("row2");
+                        row15[i] = jsonArray.getJSONObject(i).getString("row3");
+                        row16[i] = jsonArray.getJSONObject(i).getString("row4");
+                        Log.v("Row5", row5[i]);
+
+                    }
+                } catch (Exception e) {
+                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myAsyncTask.execute(Common.getHumanSearch);
     }
 
     public static void getjobJSON() {
@@ -201,6 +233,18 @@ public class getWorksheet {
     }
     public static String getRow12(int i){
         return row12[i];
+    }
+    public static String getRow13(int i){
+        return row13[i];
+    }
+    public static String getRow14(int i){
+        return row14[i];
+    }
+    public static String getRow15(int i){
+        return row15[i];
+    }
+    public static String getRow16(int i){
+        return row16[i];
     }
 
 }

@@ -27,6 +27,7 @@ public class NavigationActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.navigation_people:
+                    getWorksheet.gethumansearchJSON();
                     mTextMessage.setText("");
                     showNav(R.id.navigation_people);
                     return true;

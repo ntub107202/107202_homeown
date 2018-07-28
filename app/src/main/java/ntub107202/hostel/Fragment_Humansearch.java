@@ -3,17 +3,104 @@ package ntub107202.hostel;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class Fragment_Humansearch extends Fragment {
+    RecyclerView mList;
+    ArrayList<String> myDataset;
+    ArrayList<String> myDataset2;
+    ArrayList<String> myDataset3;
+    ArrayList<String> myDataset4;
+    MyAdapter myAdapter;
+    static LinearLayoutManager layoutManager;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_humansearch,container,false);
+        mList = (RecyclerView)view.findViewById(R.id.list_view);
+        setJobview();
         return view;
+    }
+    @Override
+    public void onHiddenChanged(boolean hidden) {
+        super.onHiddenChanged(hidden);
+        if(hidden){
+
+            //pause
+        }else{
+            setJobview();
+            //resume
+        }
+    }
+    public void  setJobview(){
+        myDataset = new ArrayList<>();
+        myDataset2 = new ArrayList<>();
+        myDataset3 = new ArrayList<>();
+        myDataset4 = new ArrayList<>();
+        myAdapter = new MyAdapter(myDataset);
+        for(int i = 0; i < getWorksheet.humanLength; i++){
+//                myDataset.add(i + "");
+            myDataset.add(getWorksheet.getRow13(i));
+            myDataset2.add(getWorksheet.getRow14(i));
+            myDataset3.add(getWorksheet.getRow15(i));
+            myDataset4.add(getWorksheet.getRow16(i));
+            Log.d("get0000", String.valueOf(getWorksheet.humanLength)+"resume");
+        }
+//            mList = (RecyclerView)view.findViewById(R.id.list_view);
+        layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mList.setLayoutManager(layoutManager);
+        mList.setAdapter(myAdapter);
+    }
+    public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+        private List<String> mData;
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004;
+
+            public ViewHolder(View v) {
+                super(v);
+                TextView0001 = (TextView) v.findViewById(R.id.textView0001);
+                TextView0002 = (TextView) v.findViewById(R.id.textView0002);
+                TextView0003 = (TextView) v.findViewById(R.id.textView0003);
+                TextView0004 = (TextView) v.findViewById(R.id.textView0004);
+            }
+        }
+
+        public MyAdapter(List<String> data) {
+            mData = data;
+        }
+
+
+        @Override
+        public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.jobview_item, parent, false);
+            MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
+            return vh;
+        }
+
+        @Override
+        public void onBindViewHolder(ViewHolder holder, int position) {
+            holder.TextView0001.setText(mData.get(position));
+            holder.TextView0002.setText(myDataset2.get(position));
+            holder.TextView0003.setText(myDataset3.get(position));
+            holder.TextView0004.setText(myDataset4.get(position));
+        }
+
+        @Override
+        public int getItemCount() {
+            return mData.size();
+        }
     }
 }

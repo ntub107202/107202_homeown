@@ -112,13 +112,13 @@
     <string name="hotel_info">民宿資訊</string>
     <string name="hire_history">雇用紀錄</string>
     <string name="contact_history">聯絡紀錄</string>
-    <string name="system_notice">系統通知</string>
+    <string name="notice">通知設定</string>
     <string name="return_problem">回報問題</string>
     <string name="about">關於我們</string>
     <string name="specification">相關規範</string>
     <string name="identity_change">身分切換</string>
     <string name="login">登入</string>
-    <string name="sign">註冊</string>
+    <string name="register">註冊</string>
 
     <string name="add_calender">新增工作安排</string>
     <string name="work_info">工作資訊</string>
@@ -132,17 +132,25 @@
 
     <string name="human_search">人才搜尋</string>
     <string name="job_view">刊登職缺</string>
-    <string name="job_view_no_info">還沒有刊登任何職缺資訊喔！ 是否要去刊登新的職缺？</string>
+    <string name="job_view_no_info">還沒有刊登任何職缺資訊喔！</string>
     <string name="contact_history_no_info">還沒有任何聯絡紀錄喔！</string>
     <string name="hire_history_no_info">還沒有任何雇用紀錄喔！</string>
 
-    <string name="reture_problem1">請詳細描述所遇到的問題，並留下常用的電子郵件信箱，我們會盡快聯繫您！</string>
+    <string name="reture_problem1">請盡可能詳細描述所遇到的問題與狀況，相關工作人員會盡快處理！感謝您的配合與協助！</string>
     <string name="problem">問題描述</string>
-    <string name="hint_problem">請輸入遇到問題的描述</string>
+    <string name="hint_problem">請輸入遇到問題的描述，越詳細越好喔！</string>
     <string name="sent">確認送出</string>
 
     <string name="calender">工作安排</string>
-    <string name="calender_no_info">還沒有任何工作安排！ 是否要去新增工作安排？</string>
+    <string name="calender_no_info">還沒有任何工作安排！</string>
     <string name="spec_no_info">尚在籌畫中...</string>
+
+    <string name="publish_job">刊登職缺</string>
+    <string name="publish_job_no_info">還沒有刊登任何職缺資訊喔！</string>
+
+    <string name="hire_notice">雇用通知</string>
+    <string name="message_notice">訊息通知</string>
+    <string name="system_notice">系統通知</string>
+
 
 </resources>

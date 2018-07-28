@@ -116,15 +116,15 @@
                         android:layout_gravity="center_vertical"
                         android:src="@drawable/ic_volume_up_black_24dp" />
 
-                    <Switch
-                        android:id="@+id/switch_notice"
+                    <Button
+                        android:id="@+id/btn_contact_history"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="left|center_vertical"
                         android:layout_marginLeft="20dp"
-                        android:layout_marginRight="40dp"
-                        android:text="@string/system_notice"
-                        android:textColor="@color/fontDark"/>
+                        android:background="#00000000"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/notice"
+                        android:textColor="@color/fontDark" />
 
 
                 </LinearLayout>
@@ -262,7 +262,7 @@
                         android:layout_marginLeft="20dp"
                         android:background="#00000000"
                         android:gravity="left|center_vertical"
-                        android:text="@string/sign"
+                        android:text="@string/register"
                         android:textColor="@color/fontDark" />
 
                 </LinearLayout>

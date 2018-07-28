@@ -117,7 +117,7 @@
                         android:src="@drawable/ic_volume_up_black_24dp" />
 
                     <Button
-                        android:id="@+id/btn_contact_history"
+                        android:id="@+id/btn_notification"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginLeft="20dp"

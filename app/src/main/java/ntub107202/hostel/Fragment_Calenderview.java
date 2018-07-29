@@ -120,7 +120,7 @@ public class Fragment_Calenderview extends Fragment {
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.jobview_item, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.calenderview_item, parent, false);
             ViewHolder vh = new ViewHolder(v);
             return vh;
         }

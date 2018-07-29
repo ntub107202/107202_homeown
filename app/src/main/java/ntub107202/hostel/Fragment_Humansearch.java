@@ -85,7 +85,7 @@ public class Fragment_Humansearch extends Fragment {
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.jobview_item, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.humansearch_item, parent, false);
             MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
             return vh;
         }

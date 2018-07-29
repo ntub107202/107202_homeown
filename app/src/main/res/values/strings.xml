@@ -17,8 +17,8 @@
     <string name="title_humansearch">人才搜尋</string>
     <string name="lbl_intro">自我介紹</string>
     <string name="lbl_interest">興趣</string>
-    <string name="lbl_skill">一般技能(可複選)</string>
-    <string name="lbl_pro_skill">專業技能()</string>
+    <string name="lbl_skill">一般技能</string>
+    <string name="lbl_pro_skill">專業技能</string>
     <string name="lbl_drive">駕駛技能</string>
     <string name="lbl_talentperf">才藝表演</string>
     <string name="lbl_language">外語能力</string>

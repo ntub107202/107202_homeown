@@ -6,6 +6,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -52,7 +53,9 @@ public class Fragment_Jobview extends Fragment {
 //        myDataset2 = new ArrayList<>();
 //        myDataset3 = new ArrayList<>();
 //        myDataset4 = new ArrayList<>();
-        Button button01 = (Button)view.findViewById(R.id.btn_go_add_job);
+
+//        Button button01 = (Button)view.findViewById(R.id.btn_go_add_job);
+
 //        myAdapter = new MyAdapter(myDataset);
 //        for(int i = 0; i < getWorksheet.jobLength; i++){
 //            myDataset.add(i + "");
@@ -74,7 +77,16 @@ public class Fragment_Jobview extends Fragment {
 //            textView0.setVisibility(View.INVISIBLE);
 
 //        }
-        button01.setOnClickListener(new Button.OnClickListener(){
+
+//        button01.setOnClickListener(new Button.OnClickListener(){
+//            @Override
+//           public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(),Jobview_Addjob.class);
+//               startActivity(intent);//          }
+//        });
+
+        FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab_go_to_add_job) ;
+        fab.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),Jobview_Addjob.class);

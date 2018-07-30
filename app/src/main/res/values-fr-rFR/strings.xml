@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">一家順順</string>
+    <string name="title_people">Modifier l'historique</string>
+    <string name="title_publish">Publication d'informations</string>
+    <string name="title_work">Arrangement de travail</string>
+    <string name="title_page">Page Employeur</string>
+    <string name="lbl_indiv_info">Informations personnelles</string>
+    <string name="lbl_upload_photo">Télécharger une grande photo</string>
+    <string name="lbl_inputName">S'il vous plaît entrer un nom</string>
+    <string name="lbl_plzinputName">S'il vous plaît entrez votre nom</string>
+    <string name="lbl_gender">Genre</string>
+    <string name="lbl_birth">Anniversaire</string>
+    <string name="lbl_home">Adresse résidentielle</string>
+    <string name="lbl_school">Ecole</string>
+    <string name="lbl_depart">Nom du département</string>
+    <string name="lbl_state_study">La fréquentation scolaire</string>
+    <string name="title_humansearch">Recherche de talents</string>
+    <string name="lbl_intro">Auto-introduction</string>
+    <string name="lbl_interest">Intérêt</string>
+    <string name="lbl_skill">Compétence générale</string>
+    <string name="lbl_pro_skill">Compétences professionnelles</string>
+    <string name="lbl_drive">Compétences de conduite</string>
+    <string name="lbl_talentperf">Spectacle de talent</string>
+    <string name="lbl_language">Capacité en langue étrangère</string>
+    <string name="lbl_workexp">Expérience de travail</string>
+    <string name="lbl_reason">Raison du logement</string>
+    <string name="lbl_eathabit">Habitudes alimentaires</string>
+    <string name="lbl_wrkperiod">Pendant la période d'hébergement</string>
+    <string name="lbl_contact">Informations de contact</string>
+    <string name="lbl_liang">Personne à contacter</string>
+    <string name="lbl_phone">Téléphone portable</string>
+    <string name="lbl_lifephoto">Photo de la vie</string>
+    <string name="title_humaninfo">Informations sur les talents</string>
+
+    <string name="title_bnb">Vous cherchez un logement</string>
+    <string name="title_forum">Expérience d'échange</string>
+    <string name="title_schedule">Horaire de travail</string>
+    <string name="title_student">Page personnelle</string>
+
+    <string name="about1">Notre équipe espère que le développement d'applications mobiles rendra le travail et l'hébergement plus pratiques et efficaces, et résoudra le problème de l'asymétrie et de la sécurité de l'information.</string>
+    <string name="about2">Comme une plate-forme pour les marieurs et les étudiants, notre logo est une abeille et une ruche, représentant la relation entre l'étudiant et le propriétaire. Les abeilles symbolisent le fait que les élèves peuvent toujours maintenir l'esprit de diligence, d'autodiscipline et de travail d'équipe lorsqu'ils changent d'hébergement.La ruche hexagonale symbolise le fait que la maison est comme la résidence secondaire des élèves. Ce nom est dérivé de notre attente de l'accommodement, tout le monde aime une famille pour prendre soin les uns des autres, et de coopérer en douceur les uns avec les autres.</string>
+
+
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="add_job">Nouvelles offres d'emploi</string>
+    <string name="publish_hotel">Annonce Homestay</string>
+    <string name="job_info">Informations sur l'emploi</string>
+    <string name="job_title">Titre du poste</string>
+    <string name="hint_job_title">Veuillez entrer un nom de titre d'emploi</string>
+    <string name="salary">Traitement</string>
+    <string name="hint_salary">Veuillez entrer un montant numérique</string>
+    <string name="salary_day">/ Jour</string>
+    <string name="no">Non</string>
+    <string name="service">Autre traitement</string>
+    <string name="stay">Y compris l'hébergement</string>
+    <string name="snorkel">Snorkeling</string>
+    <string name="food">Y compris manger</string>
+    <string name="moto">Fournir une locomotive</string>
+    <string name="fish">Pêche</string>
+    <string name="time">Date</string>
+    <string name="hint_date">Cliquez pour sélectionner la date</string>
+    <string name="time_1">Fente horaire 1</string>
+    <string name="hint_time">Cliquez pour sélectionner l'heure</string>
+    <string name="add_time">Nouvelle heure</string>
+    <string name="numder_people">Nombre de personnes requises</string>
+    <string name="hint_number_people">S'il vous plaît entrez le nombre de personnes</string>
+    <string name="work_content">Contenu du travail</string>
+    <string name="work_item1">Point de travail 1</string>
+    <string name="hint_work_content">Veuillez entrer votre contenu professionnel</string>
+    <string name="add_work_item">Nouvel élément</string>
+    <string name="skill">Compétences requises</string>
+    <string name="general_skill">Compétence générale</string>
+    <string name="og">Finition de jardin</string>
+    <string name="cr">Comptoir de réception</string>
+    <string name="rc">Ménage</string>
+    <string name="od">Organisation de données</string>
+    <string name="rs">Service de restaurant</string>
+    <string name="profession_skill">Compétences professionnelles</string>
+    <string name="cook">Cuisine</string>
+    <string name="art">Conception d'art</string>
+    <string name="photograph">Photographie</string>
+    <string name="web">Gestion de site Web</string>
+    <string name="gardening">Jardinage</string>
+    <string name="show">Performance artistique</string>
+    <string name="dance">Danse</string>
+    <string name="sing">Chanter</string>
+    <string name="music">Instrument de musique</string>
+    <string name="language_skill">Capacité linguistique</string>
+    <string name="English">Anglais</string>
+    <string name="Japanese">Japonais</string>
+    <string name="Minnan">Minnan</string>
+    <string name="driving_skill">Compétences de conduite</string>
+    <string name="motorcycle">Permis de conduire de locomotive</string>
+    <string name="car">Permis de conduire de voiture</string>
+    <string name="publish_date">Pendant la publication</string>
+    <string name="contact_info">Méthode d'application</string>
+    <string name="contact">Personne à contacter</string>
+    <string name="contact_name">Veuillez entrer le nom du contact</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">Veuillez entrer l'adresse e-mail du contact</string>
+    <string name="phone">Téléphone portable</string>
+    <string name="hint_phone">S'il vous plaît entrer le numéro de contact</string>
+
+    <string name="boss_setting">Page Employeur</string>
+    <string name="hotel_info">Information sur l'hébergement chez l'habitant</string>
+    <string name="hire_history">Dossier d'emploi</string>
+    <string name="contact_history">Enregistrement de contact</string>
+    <string name="notice">Paramètre de notification</string>
+    <string name="return_problem">Problème de retour</string>
+    <string name="about">À propos de nous</string>
+    <string name="specification">Spécifications connexes</string>
+    <string name="identity_change">Commutation d'identité</string>
+    <string name="login">Connexion</string>
+    <string name="register">Inscription</string>
+
+    <string name="add_calender">Nouvel arrangement de travail</string>
+    <string name="work_info">Informations sur l'emploi</string>
+    <string name="work_title">Titre du poste</string>
+    <string name="hint_work_title">Veuillez entrer un titre d'emploi</string>
+    <string name="work_type">Type de travail</string>
+    <string name="everyday_work">Travail quotidien</string>
+    <string name="once_work">Travail ponctuel</string>
+    <string name="work_time">Temps de travail</string>
+    <string name="member">Organiser du personnel</string>
+
+    <string name="human_search">Recherche de talents</string>
+    <string name="job_view">Afficher des offres d'emploi</string>
+    <string name="job_view_no_info">Vous n'avez pas encore posté d'informations sur votre travail!</string>
+    <string name="contact_history_no_info">Il n'y a pas encore d'enregistrement de contact!</string>
+    <string name="hire_history_no_info">Il n'y a pas encore de dossier d'emploi!</string>
+
+    <string name="reture_problem1">Veuillez décrire autant que possible les problèmes et les conditions rencontrés, et le personnel concerné les traitera dès que possible! Merci pour votre coopération et votre aide!</string>
+    <string name="problem">Description du problème</string>
+    <string name="hint_problem">S'il vous plaît entrer une description du problème, le plus détaillé le mieux!</string>
+    <string name="sent">Envoyer</string>
+
+    <string name="calender">Arrangement de travail</string>
+    <string name="calender_no_info">Il n'y a pas encore d'arrangement de travail!</string>
+    <string name="spec_no_info">Toujours planifier</string>
+
+    <string name="publish_job">Afficher des offres d'emploi</string>
+    <string name="publish_job_no_info">Vous n'avez pas encore posté d'informations sur votre travail!</string>
+
+    <string name="hire_notice">Avis d'emploi</string>
+    <string name="message_notice">Notification de message</string>
+    <string name="system_notice">Notification système</string>
+</resources>

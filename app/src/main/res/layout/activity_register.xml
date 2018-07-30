@@ -34,7 +34,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/emailedt_hostel"
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
@@ -49,7 +49,7 @@
                 android:textSize="12sp" />
 
             <EditText
-                android:id="@+id/pwdedt_hostel"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
@@ -64,7 +64,7 @@
                 android:textSize="12sp" />
 
             <EditText
-                android:id="@+id/pwdedt2_hostel"
+                android:id="@+id/password1"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="20dp"
@@ -111,69 +111,12 @@
                 android:layout_marginTop="10dp"
                 android:background="@drawable/shape_white"
                 android:drawableLeft="@drawable/emailtype"
-                android:ems="10"
+                android:maxLength="10"
                 android:hint="　請輸入您的手機號碼"
                 android:inputType="phone"
                 android:textColorHint="#707487"
                 android:textSize="12sp" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="民宿資料"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/hostel_hostel"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shape_white"
-                android:drawableLeft="@drawable/emailtype"
-                android:ems="10"
-                android:hint="　請輸入您的真實姓名"
-                android:inputType="textPersonName"
-                android:textColorHint="#707487"
-                android:textSize="12sp" />
-
-            <EditText
-                android:id="@+id/address_hostel"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shape_white"
-                android:drawableLeft="@drawable/emailtype"
-                android:ems="10"
-                android:hint="　請輸入您的手機號碼"
-                android:inputType="phone"
-                android:textColorHint="#707487"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="上傳營業登記證明"
-                android:textSize="18sp" />
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/shape"
-                app:srcCompat="@android:drawable/ic_menu_upload" />
         </LinearLayout>
 
         <LinearLayout

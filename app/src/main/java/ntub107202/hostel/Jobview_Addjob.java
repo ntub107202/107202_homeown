@@ -46,6 +46,7 @@ public class Jobview_Addjob extends AppCompatActivity {
         end_date = (EditText) findViewById(R.id.end_date);
         end_time = (EditText) findViewById(R.id.end_time);
 
+
         start_date.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 showDatePickerDialogStart();

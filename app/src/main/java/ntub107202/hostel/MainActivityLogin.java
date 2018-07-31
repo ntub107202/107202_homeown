@@ -128,19 +128,5 @@ public class MainActivityLogin extends AppCompatActivity {
             }
         }
     };
-//    private void showDialog(){
-//        AlertDialog dialog;
-//        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityLogin.this);
-//        builder.setTitle("登入錯誤").setIcon(android.R.drawable.stat_notify_error);
-//        builder.setMessage("您輸入的帳號格式有問題，請修改後登入!");
-//        builder.setPositiveButton("确定", new DialogInterface.OnClickListener(){
-//            @Override
-//            public void onClick(DialogInterface dialog, int which) {
-//                // TODO Auto-generated method stub
-//
-//            }
-//        });
-//        dialog = builder.create();
-//        dialog.show();
-//    }
+
 }

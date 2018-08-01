@@ -166,10 +166,38 @@ public class MainActivityRegister extends AppCompatActivity {
         public void Is_Valid_Email(EditText edt) {
             try {
                 //if ((heighText.getText().toString())!=null)
-                Integer.parseInt(name_hostel.getText().toString());
+                if(isInteger(edt.getText().toString()) ==true)
                 edt.setError("不能為數字");
             } catch (Exception e) {
 
+            }
+        }
+        boolean isNumber(String value) {
+            return isInteger(value) || isDouble(value);
+        } // end of TextWatcher (email)
+        /**
+         * 判断字符串是否是整数
+         */
+         boolean isInteger(String value) {
+            try {
+                Integer.parseInt(value);
+                return true;
+            } catch (NumberFormatException e) {
+                return false;
+            }
+        }
+
+        /**
+         * 判断字符串是否是浮点数
+         */
+        boolean isDouble(String value) {
+            try {
+                Double.parseDouble(value);
+                if (value.contains("."))
+                    return true;
+                return false;
+            } catch (NumberFormatException e) {
+                return false;
             }
         }
     };

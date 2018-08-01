@@ -3,6 +3,8 @@ package ntub107202.hostel;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +17,7 @@ import java.util.Calendar;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.widget.DatePicker;
+import android.widget.RadioButton;
 import android.widget.TimePicker;
 
 public class Jobview_Addjob extends AppCompatActivity {
@@ -36,6 +39,9 @@ public class Jobview_Addjob extends AppCompatActivity {
     String chk_motoS;
     EditText edit_number_people;
     EditText edit_work;
+    RadioButton rad_salary;
+
+    private String valid_edit_salary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +51,26 @@ public class Jobview_Addjob extends AppCompatActivity {
         start_time = (EditText) findViewById(R.id.start_time);
         end_date = (EditText) findViewById(R.id.end_date);
         end_time = (EditText) findViewById(R.id.end_time);
+        rad_salary=(RadioButton)findViewById(R.id.rad_salary);
+        final GlobalValue globalValue = new GlobalValue();
 
+
+        rad_salary.setOnClickListener(new RadioButton.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                boolean isCheck = globalValue.isCheck();
+                if(isCheck) {
+                    if(v==rad_salary)rad_salary.setChecked(false);
+
+                }
+                else {
+                    if(v==rad_salary)rad_salary.setChecked(true);
+                     edit_salary.setFocusable(false);
+                }
+                globalValue.setCheck(!isCheck);
+            }
+        });
 
         start_date.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -79,6 +104,8 @@ public class Jobview_Addjob extends AppCompatActivity {
         edit_number_people = (EditText) findViewById(R.id.edit_number_people);
         edit_work = (EditText) findViewById(R.id.edit_work);
         Button button01 = (Button) findViewById(R.id.btn_add_job);
+
+        edit_salary.addTextChangedListener(textWatcher);
 
 
         //--------------------------
@@ -126,7 +153,17 @@ public class Jobview_Addjob extends AppCompatActivity {
         });
     }
 
+    public class GlobalValue {
+        public boolean isCheck() {
+            return isCheck;
+        }
 
+        public void setCheck(boolean check) {
+            isCheck = check;
+        }
+
+        private boolean isCheck;
+    }
 
     public void showDatePickerDialogStart() {
         // 設定初始日期
@@ -210,4 +247,38 @@ public class Jobview_Addjob extends AppCompatActivity {
                 }, mHour, mMinute, false);
         tpd.show();
     }
+
+    private TextWatcher textWatcher = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+            Is_Valid_Email(edit_salary);
+        }
+        public void Is_Valid_Email(EditText edt) {
+            if (edt.getText().toString().matches("0")) {
+                edt.setError("數字不得為0開頭!");
+                edt.setText("");
+            }
+        }
+
+        boolean isEmailValid(CharSequence email) {
+            return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
+                    .matches();
+        } // end of TextWatcher (email)
+    };
 }

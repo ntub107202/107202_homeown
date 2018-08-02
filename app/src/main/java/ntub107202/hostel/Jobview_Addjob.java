@@ -12,7 +12,9 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -40,8 +42,13 @@ public class Jobview_Addjob extends AppCompatActivity {
     EditText edit_number_people;
     EditText edit_work;
     RadioButton rad_salary;
+    EditText edit_contact;
+    EditText edit_email;
+    EditText edit_phone;
+
 
     private String valid_edit_salary;
+    private String valid_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,10 +110,19 @@ public class Jobview_Addjob extends AppCompatActivity {
         chk_moto = (CheckBox) findViewById(R.id.chk_moto);
         edit_number_people = (EditText) findViewById(R.id.edit_number_people);
         edit_work = (EditText) findViewById(R.id.edit_work);
+        edit_contact= (EditText) findViewById(R.id.edit_contact);
+        edit_email= (EditText) findViewById(R.id.edit_email);
+        edit_phone= (EditText) findViewById(R.id.edit_phone);
+
         Button button01 = (Button) findViewById(R.id.btn_add_job);
 
         edit_salary.addTextChangedListener(textWatcher);
-
+        edit_number_people.addTextChangedListener(textWatcher1);
+        edit_contact.addTextChangedListener(textWatcher2);
+        edit_email.addTextChangedListener(textWatcher3);
+        edit_phone.addTextChangedListener(textWatcher4);
+        start_date.addTextChangedListener(textWatcher6);
+        end_date.addTextChangedListener(textWatcher5);
 
         //--------------------------
         //取得伺服器上JSON資料
@@ -280,5 +296,249 @@ public class Jobview_Addjob extends AppCompatActivity {
             return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
                     .matches();
         } // end of TextWatcher (email)
+    };
+
+    private TextWatcher textWatcher1 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+            Is_Valid_Email(edit_number_people);
+        }
+        public void Is_Valid_Email(EditText edt) {
+            if (edt.getText().toString().matches("0")) {
+                edt.setError("數字不得為0開頭!");
+                edt.setText("");
+            }
+        }
+    };
+
+    private TextWatcher textWatcher3 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(edit_email);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            if (edt.getText().toString().equals("")) {
+                edt.setError("電子郵件不得為空!");
+                valid_email = null;
+            } else if (isEmailValid(edt.getText().toString()) == false) {
+                edt.setError("無效的電子郵件格式!");
+                valid_email = null;
+            } else {
+                valid_email = edt.getText().toString();
+            }
+        }
+
+        boolean isEmailValid(CharSequence email) {
+            return android.util.Patterns.EMAIL_ADDRESS.matcher(email)
+                    .matches();
+        } // end of TextWatcher (email)
+    };
+
+    private TextWatcher textWatcher2 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(edit_contact);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            try {
+                //if ((heighText.getText().toString())!=null)
+                if(isInteger(edt.getText().toString()) ==true)
+                    edt.setError("不能為數字");
+            } catch (Exception e) {
+
+            }
+        }
+        boolean isNumber(String value) {
+            return isInteger(value) || isDouble(value);
+        } // end of TextWatcher (email)
+        /**
+         * 判断字符串是否是整数
+         */
+        boolean isInteger(String value) {
+            try {
+                Integer.parseInt(value);
+                return true;
+            } catch (NumberFormatException e) {
+                return false;
+            }
+        }
+
+        /**
+         * 判断字符串是否是浮点数
+         */
+        boolean isDouble(String value) {
+            try {
+                Double.parseDouble(value);
+                if (value.contains("."))
+                    return true;
+                return false;
+            } catch (NumberFormatException e) {
+                return false;
+            }
+        }
+    };
+
+    private TextWatcher textWatcher4 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            if (edit_phone.length()<2){
+                edit_phone.setError("長度不為10碼");
+            }else if (s.length() != 10) {
+                edit_phone.setError("長度不為10碼");
+            }else if(!(edit_phone.getText().toString().substring(0,2).equals("09"))) {
+                edit_phone.setError("手機格式不符合");
+                Log.d("TAGGGGGGGGGGG", edit_phone.getText().toString().substring(0,2) );
+            }else{
+
+            }
+//
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+
+        }
+    };
+
+    private TextWatcher textWatcher5 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(end_date);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                Date d1 = sdf.parse(start_date.getText().toString());
+                Date d2 = sdf.parse(end_date.getText().toString());
+                long result = d1.getTime()-d2.getTime();
+                Log.d("dateeee", String.valueOf(d1.getTime()-d2.getTime()));
+                if (result<0){
+                    end_date.setError(null);
+                }else if (result == 0) {
+                    end_date.setError("結束日期等於初始日期");
+                }else if(result>0){
+                    end_date.setError("結束日期小於初始日期");
+                }
+            } catch (Exception e) {
+
+            }
+        }
+    };
+
+    private TextWatcher textWatcher6 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(start_date);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                Date d1 = sdf.parse(start_date.getText().toString());
+                Date d2 = sdf.parse(end_date.getText().toString());
+                long result = d1.getTime()-d2.getTime();
+                Log.d("dateeee", String.valueOf(d1.getTime()-d2.getTime()));
+                if (result<0){
+                    end_date.setError(null);
+                }else if (result == 0) {
+                    end_date.setError("結束日期等於初始日期");
+                }else if(result>0){
+                    end_date.setError("結束日期小於初始日期");
+                }
+            } catch (Exception e) {
+
+            }
+        }
     };
 }

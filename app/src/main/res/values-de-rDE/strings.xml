@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="equipment">設備</string>
+    <string name="table">桌子</string>
+    <string name="chair">椅子</string>
+    <string name="wardrobe">衣櫃</string>
+    <string name="bed">床</string>
+    <string name="refrigerator">冰箱</string>
+    <string name="air_conditioning">冷氣</string>
+    <string name="tv">電視</string>
+    <string name="water_heater">熱水器</string>
+    <string name="washing_machine">洗衣機</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="ch4">第四台</string>
+    <string name="gas">天然瓦斯</string>
+</resources>

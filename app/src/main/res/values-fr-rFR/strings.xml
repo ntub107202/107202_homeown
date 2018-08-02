@@ -152,4 +152,18 @@
     <string name="hire_notice">Avis d'emploi</string>
     <string name="message_notice">Notification de message</string>
     <string name="system_notice">Notification système</string>
+
+    <string name="equipment">Equipement</string>
+    <string name="table">Tableau</string>
+    <string name="chair">Chaise</string>
+    <string name="wardrobe">Armoire</string>
+    <string name="bed">Lit</string>
+    <string name="refrigerator">Réfrigérateur</string>
+    <string name="air_conditioning">Climatisation</string>
+    <string name="tv">Télévision</string>
+    <string name="water_heater">Chauffe-eau</string>
+    <string name="washing_machine">Machine à laver</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="ch4">Canal 4</string>
+    <string name="gas">Gaz naturel</string>
 </resources>

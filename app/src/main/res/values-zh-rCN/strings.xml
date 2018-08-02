@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">一家顺顺</string>
+        <string name="app_name">一家顺顺</string>
         <string name="title_people">编辑履历</string>
         <string name="title_publish">刊登资讯</string>
         <string name="title_work">工作安排</string>

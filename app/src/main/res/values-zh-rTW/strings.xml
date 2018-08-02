@@ -41,7 +41,6 @@
         <string name="about1">我們團隊希望可以藉由手機應用程式的開發讓打工換宿變得更方便也更有效率，並解決雙方資訊不對稱與安全性問題。</string>
         <string name="about2">作為一個媒合民宿主和學生的平台，我們的logo是一隻蜜蜂，同時也是個蜂巢，代表著學生與民宿主的關係。蜜蜂象徵著學生們在換宿時依舊能保持勤奮、自律、團隊工作的精神，六邊形的蜂巢象徵著民宿就像是學生們的第二個家。一家順順這個名字源自於我們對換宿的期望，大家像個一家人互相照顧，順心順利的相互合作。</string>
 
-
         <string name="title_activity_navigation">NavigationActivity</string>
         <string name="title_home">Home</string>
         <string name="title_dashboard">Dashboard</string>

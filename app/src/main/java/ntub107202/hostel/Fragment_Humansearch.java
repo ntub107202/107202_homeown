@@ -1,14 +1,18 @@
 package ntub107202.hostel;
 
 import android.app.Fragment;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -21,6 +25,7 @@ public class Fragment_Humansearch extends Fragment {
     ArrayList<String> myDataset2;
     ArrayList<String> myDataset3;
     ArrayList<String> myDataset4;
+    ArrayList<String> myDataset5;
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
     @Nullable
@@ -47,6 +52,7 @@ public class Fragment_Humansearch extends Fragment {
         myDataset2 = new ArrayList<>();
         myDataset3 = new ArrayList<>();
         myDataset4 = new ArrayList<>();
+        myDataset5 = new ArrayList<>();
         myAdapter = new MyAdapter(myDataset);
         for(int i = 0; i < getWorksheet.humanLength; i++){
 //                myDataset.add(i + "");
@@ -54,7 +60,8 @@ public class Fragment_Humansearch extends Fragment {
             myDataset2.add(getWorksheet.getRow14(i));
             myDataset3.add(getWorksheet.getRow15(i));
             myDataset4.add(getWorksheet.getRow16(i));
-            Log.d("get0000", String.valueOf(getWorksheet.humanLength)+"resume");
+            myDataset5.add(getWorksheet.getRow17(i));
+            Log.d("get0000", myDataset5.get(i)+"resume");
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
         layoutManager = new LinearLayoutManager(getActivity());
@@ -67,13 +74,14 @@ public class Fragment_Humansearch extends Fragment {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             public TextView TextView0001, TextView0002 ,TextView0003, TextView0004;
-
+            public ImageView Img01;
             public ViewHolder(View v) {
                 super(v);
                 TextView0001 = (TextView) v.findViewById(R.id.textView0001);
                 TextView0002 = (TextView) v.findViewById(R.id.textView0002);
                 TextView0003 = (TextView) v.findViewById(R.id.textView0003);
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
+                Img01 = (ImageView) v.findViewById(R.id.img01);
             }
         }
 
@@ -96,11 +104,26 @@ public class Fragment_Humansearch extends Fragment {
             holder.TextView0002.setText(myDataset2.get(position));
             holder.TextView0003.setText(myDataset3.get(position));
             holder.TextView0004.setText(myDataset4.get(position));
+            holder.Img01.setImageBitmap(stringToBitmap(myDataset5.get(position)));
+            Log.d("get0000", "position" + myDataset5.get(position));
         }
 
         @Override
         public int getItemCount() {
             return mData.size();
         }
+    }
+    public Bitmap stringToBitmap(String string) {
+        Bitmap bitmap = null;
+        try {
+            byte[] bitmapArray = Base64.decode(string, Base64.DEFAULT);
+            bitmap = BitmapFactory.decodeByteArray(bitmapArray, 0, bitmapArray.length);
+            return bitmap;
+        } catch (NullPointerException e) {
+            e.getMessage();
+            return null;
+        } catch (OutOfMemoryError e) {
+            return null;
+    }
     }
 }

@@ -75,7 +75,6 @@ public class NavigationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
         init();
-
         mTextMessage = (TextView) findViewById(R.id.message);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -85,7 +84,9 @@ public class NavigationActivity extends AppCompatActivity {
 
     @Override
     public void onResume() {
+        getWorksheet.gethumansearchJSON();
         getWorksheet.getjobJSON();
+        getWorksheet.getcalendarJSON();
         int id = getIntent().getIntExtra("id", 0);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();

@@ -27,7 +27,9 @@ public class MainActivityLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        getWorksheet.gethumansearchJSON();
+        getWorksheet.getjobJSON();
+        getWorksheet.getcalendarJSON();
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
         email.addTextChangedListener(textWatcher);
@@ -50,7 +52,7 @@ public class MainActivityLogin extends AppCompatActivity {
     }
 
     public void openBypass() {
-        Intent intent = new Intent(this, MainActivityBypass.class);
+        Intent intent = new Intent(this, NavigationActivity.class);
         startActivity(intent);
     }
 

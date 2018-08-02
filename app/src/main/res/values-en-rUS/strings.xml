@@ -152,4 +152,18 @@
     <string name="hire_notice">Hire Notice</string>
     <string name="message_notice">Message Notice</string>
     <string name="system_notice">System Notice</string>
+
+    <string name="equipment">Equipment</string>
+    <string name="table">Table</string>
+    <string name="chair">Chair</string>
+    <string name="wardrobe">Wardrobe</string>
+    <string name="bed">Bed</string>
+    <string name="refrigerator">Refrigerator</string>
+    <string name="air_conditioning">Air conditioning</string>
+    <string name="tv">TV</string>
+    <string name="water_heater">Water heater</string>
+    <string name="washing_machine">Washing machine</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="ch4">Channel 4</string>
+    <string name="gas">Gas</string>
 </resources>

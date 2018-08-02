@@ -152,4 +152,18 @@
     <string name="hire_notice">雇用通知</string>
     <string name="message_notice">メッセージ通知</string>
     <string name="system_notice">システム通知</string>
+
+    <string name="equipment">デバイス</string>
+    <string name="table">テーブル</string>
+    <string name="chair">椅子</ string>
+    <string name="wardrobe">クローゼット</string>
+    <string name="bed">ベッド</string>
+    <string name="refrigerator">冷蔵庫</string>
+    <string name="air_conditioning">空調</string>
+    <string name="tv">テレビ</string>
+    <string name="water_heater">温水器</string>
+    <string name="washing_machine">洗濯機</string>
+    <string name="wi_fi"> Wi-Fi </string>
+    <string name="ch4"> 4番目の</string>
+    <string name="gas">天然ガス</string>
 </resources>

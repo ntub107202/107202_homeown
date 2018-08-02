@@ -151,4 +151,18 @@
     <string name = "hire_notice">aviso de contratación</string>
     <string name = "message_notice">Notificación de mensaje</string>
     <string name = "system_notice">notificación del sistema</string>
+
+    <string name="equipment">Equipo</string>
+    <string name="table">Tabla</string>
+    <string name="chair">Presidente</string>
+    <string name="wardrobe">Armario</string>
+    <string name="bed">Cama</string>
+    <string name="refrigerator">Refrigerador</string>
+    <string name="air_conditioning">Aire acondicionado</string>
+    <string name="tv">Televisión</string>
+    <string name="water_heater">Calentador de agua</string>
+    <string name="washing_machine">Lavadora</string>
+    <string name="wi_fi">Wi-Fi</string>
+    <string name="ch4">Canal 4</string>
+    <string name="gas">Gas natural</string>
 </resources>

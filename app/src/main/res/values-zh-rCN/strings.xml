@@ -165,6 +165,14 @@
         <string name="wi_fi">Wi-Fi</string>
         <string name="ch4">第四台</string>
         <string name="gas">天然瓦斯</string>
-    <string name="hotel_no_info">還沒有任何民宿資訊喔！</string>
-    <string name="add_hotel_info">新增民宿資訊</string>
+
+        <string name="hotel_no_info">还没有任何民宿资讯喔！ </string>
+        <string name="add_hotel_info">新增民宿资讯</string>
+        <string name="hotel_name">民宿店名</string>
+        <string name="hint_hotel_name">请输入民宿店名</string>
+        <string name="hotel_address">民宿地址</string>
+        <string name="hint_hotel_address">请输入民宿地址</string>
+        <string name="hotel_phone">民宿电话</string>
+        <string name="hint_hotel_phone">请输入民宿电话</string>
+        <string name="license">营业执照</string>
 </resources>

@@ -151,7 +151,8 @@
         <string name="hire_notice">雇用通知</string>
         <string name="message_notice">訊息通知</string>
         <string name="system_notice">系統通知</string>
-    <string name="equipment">設備</string>
+
+        <string name="equipment">設備</string>
         <string name="table">桌子</string>
         <string name="chair">椅子</string>
         <string name="wardrobe">衣櫃</string>
@@ -164,4 +165,6 @@
         <string name="wi_fi">Wi-Fi</string>
         <string name="ch4">第四台</string>
         <string name="gas">天然瓦斯</string>
+    <string name="hotel_no_info">還沒有任何民宿資訊喔！</string>
+    <string name="add_hotel_info">新增民宿資訊</string>
 </resources>

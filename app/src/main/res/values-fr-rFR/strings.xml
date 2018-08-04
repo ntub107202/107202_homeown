@@ -166,4 +166,6 @@
     <string name="wi_fi">Wi-Fi</string>
     <string name="ch4">Canal 4</string>
     <string name="gas">Gaz naturel</string>
+    <string name="hotel_no_info">還沒有任何民宿資訊喔！</string>
+    <string name="add_hotel_info">新增民宿資訊</string>
 </resources>

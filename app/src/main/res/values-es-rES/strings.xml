@@ -165,4 +165,14 @@
     <string name="wi_fi">Wi-Fi</string>
     <string name="ch4">Canal 4</string>
     <string name="gas">Gas natural</string>
+
+    <string name="hotel_no_info">¡Aún no hay información de Casa de familia!</string>
+    <string name="add_hotel_info">Añadir información de Casa de familia</string>
+    <string name="hotel_name">Casa de familia nombre</string>
+    <string name="hint_hotel_name">Por favor ingrese el nombre del hotel</string>
+    <string name="hotel_address">Dirección de Casa de familia</string>
+    <string name="hint_hotel_address">Por favor ingrese la dirección particular</string>
+    <string name="hotel_phone">Teléfono de la casa de familia</string>
+    <string name="hint_hotel_phone">Por favor ingrese el número de teléfono de su casa</string>
+    <string name="license">Licencia comercial</string>
 </resources>

@@ -166,4 +166,13 @@
     <string name="wi_fi">Wi-Fi</string>
     <string name="ch4">Channel 4</string>
     <string name="gas">Gas</string>
+    <string name="hotel_no_info">There is no homestay information yet!</string>
+    <string name="add_hotel_info">Add homestay Information</string>
+    <string name="hotel_name">Homestay name</string>
+    <string name="hint_hotel_name">Please enter the name of the homestay</string>
+    <string name="hotel_address">Homestay address</string>
+    <string name="hint_hotel_address">Please enter the address of the homestay</string>
+    <string name="hotel_phone">Homestay phone</string>
+    <string name="hint_hotel_phone">Please enter the homestay phone number</string>
+    <string name="license">Business license</string>
 </resources>

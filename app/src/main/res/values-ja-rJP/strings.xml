@@ -166,4 +166,14 @@
     <string name="wi_fi"> Wi-Fi </string>
     <string name="ch4"> 4番目の</string>
     <string name="gas">天然ガス</string>
+
+    <string name = "hotel_no_info">ホームステイ情報はまだありません！</string>
+    <string name = "add_hotel_info">新しい家の情報を追加する</string>
+    <string name = "hotel_name"> ホームステイ名</string>
+    <string name = "hint_hotel_name">ホテルの店舗名を入力してください</string>
+    <string name = "hotel_address"> ホームステイアドレス</string>
+    <string name = "hint_hotel_address">ホームステイの住所を入力してください</string>
+    <string name = "hotel_phone">ホームステイ電話</string>
+    <string name = "hint_hotel_phone">ホームステイの電話番号を入力してください</string>
+    <string name = "license">ビジネスライセンス</string>
 </resources>

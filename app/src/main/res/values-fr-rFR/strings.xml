@@ -166,4 +166,13 @@
     <string name="wi_fi">Wi-Fi</string>
     <string name="ch4">Canal 4</string>
     <string name="gas">Gaz naturel</string>
+    <string name="hotel_no_info">Il n'y a pas encore d'information Chez l'habitant!</string>
+    <string name="add_hotel_info">Ajouter des informations sur le Chez l'habitant</string>
+    <string name="hotel_name">Nom Chez l'habitant</string>
+    <string name="hint_hotel_name">Veuillez entrer le nom de l'hôtel</string>
+    <string name="hotel_address">Adresse Chez l'habitant</string>
+    <string name="hint_hotel_address">S'il vous plaît entrer l'adresse du domicile</string>
+    <string name="hotel_phone">Téléphone chez l'habitant</string>
+    <string name="hint_hotel_phone">Veuillez entrer le numéro de téléphone du domicile</string>
+    <string name="license">Licence d'entreprise</string>
 </resources>

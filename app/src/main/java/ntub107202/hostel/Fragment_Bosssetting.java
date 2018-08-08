@@ -15,6 +15,7 @@ public class Fragment_Bosssetting extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_boss_setting,container,false);
+        Button btn_hotelinfo =(Button)view.findViewById(R.id.btn_hotel_info);
         Button button01 = (Button)view.findViewById(R.id.btn_hire_history);
         Button button02 = (Button)view.findViewById(R.id.btn_contact_history);
         Button btn_notification = (Button)view.findViewById(R.id.btn_notification);
@@ -26,6 +27,14 @@ public class Fragment_Bosssetting extends Fragment {
         Button button08 = (Button)view.findViewById(R.id.btn_reg);
 
 
+        btn_hotelinfo.setOnClickListener(new Button.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getActivity(),Setting_Hotelinfo.class);
+                startActivity(intent);
+            }
+        });
         button01.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {

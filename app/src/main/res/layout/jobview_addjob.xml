@@ -111,10 +111,11 @@
                         android:text="@string/salary_day"
                         android:textColor="@color/fontDark" />
 
-                    <RadioButton
-                        android:id="@+id/rad_salary"
+                    <CheckBox
+                        android:id="@+id/chk_salary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:text="@string/no"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />

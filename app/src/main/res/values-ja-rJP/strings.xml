@@ -176,4 +176,11 @@
     <string name = "hotel_phone">ホームステイ電話</string>
     <string name = "hint_hotel_phone">ホームステイの電話番号を入力してください</string>
     <string name = "license">ビジネスライセンス</string>
+
+    <string name="hint_license">點擊上傳營業執照</string>
+    <string name="hotel_photo">民宿照片</string>
+    <string name="hint_hotel_photo">點擊上傳民宿照片</string>
+    <string name="school_depart">就讀學校與科系</string>
+    <string name="name">姓名</string>
+    <string name="basic_info">基本資訊</string>
 </resources>

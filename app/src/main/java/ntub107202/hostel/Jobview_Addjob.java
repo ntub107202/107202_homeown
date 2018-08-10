@@ -41,7 +41,7 @@ public class Jobview_Addjob extends AppCompatActivity {
     String chk_motoS;
     EditText edit_number_people;
     EditText edit_work;
-    RadioButton rad_salary;
+    CheckBox chk_salary;
     EditText edit_contact;
     EditText edit_email;
     EditText edit_phone;
@@ -58,24 +58,20 @@ public class Jobview_Addjob extends AppCompatActivity {
         start_time = (EditText) findViewById(R.id.start_time);
         end_date = (EditText) findViewById(R.id.end_date);
         end_time = (EditText) findViewById(R.id.end_time);
-        rad_salary=(RadioButton)findViewById(R.id.rad_salary);
-        final GlobalValue globalValue = new GlobalValue();
+        chk_salary=(CheckBox) findViewById(R.id.chk_salary);
 
-
-        rad_salary.setOnClickListener(new RadioButton.OnClickListener() {
+        chk_salary.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-
-                boolean isCheck = globalValue.isCheck();
-                if(isCheck) {
-                    if(v==rad_salary)rad_salary.setChecked(false);
-
+                if(chk_salary.isChecked()){
+                    edit_salary.setFocusable(false);
+                }else {
+                    edit_salary.setFocusable(true);
+                    edit_salary.setFocusableInTouchMode(true);
+                    edit_salary.requestFocus();
+                    edit_salary.requestFocusFromTouch();
                 }
-                else {
-                    if(v==rad_salary)rad_salary.setChecked(true);
-                     edit_salary.setFocusable(false);
-                }
-                globalValue.setCheck(!isCheck);
+                return;
             }
         });
 
@@ -121,9 +117,10 @@ public class Jobview_Addjob extends AppCompatActivity {
         edit_contact.addTextChangedListener(textWatcher2);
         edit_email.addTextChangedListener(textWatcher3);
         edit_phone.addTextChangedListener(textWatcher4);
-        start_date.addTextChangedListener(textWatcher6);
         end_date.addTextChangedListener(textWatcher5);
-
+        start_date.addTextChangedListener(textWatcher6);
+        end_time.addTextChangedListener(textWatcher7);
+        start_time.addTextChangedListener(textWatcher8);
         //--------------------------
         //取得伺服器上JSON資料
         //--------------------------
@@ -167,18 +164,6 @@ public class Jobview_Addjob extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    public class GlobalValue {
-        public boolean isCheck() {
-            return isCheck;
-        }
-
-        public void setCheck(boolean check) {
-            isCheck = check;
-        }
-
-        private boolean isCheck;
     }
 
     public void showDatePickerDialogStart() {
@@ -488,10 +473,10 @@ public class Jobview_Addjob extends AppCompatActivity {
                 Date d2 = sdf.parse(end_date.getText().toString());
                 long result = d1.getTime()-d2.getTime();
                 Log.d("dateeee", String.valueOf(d1.getTime()-d2.getTime()));
-                if (result<0){
+                if (result<=0){
                     end_date.setError(null);
-                }else if (result == 0) {
-                    end_date.setError("結束日期等於初始日期");
+//                }else if (result == 0) {
+//                    end_date.setError("結束日期等於初始日期");
                 }else if(result>0){
                     end_date.setError("結束日期小於初始日期");
                 }
@@ -529,13 +514,97 @@ public class Jobview_Addjob extends AppCompatActivity {
                 Date d2 = sdf.parse(end_date.getText().toString());
                 long result = d1.getTime()-d2.getTime();
                 Log.d("dateeee", String.valueOf(d1.getTime()-d2.getTime()));
-                if (result<0){
+                if (result<=0){
                     end_date.setError(null);
-                }else if (result == 0) {
-                    end_date.setError("結束日期等於初始日期");
+//                }else if (result == 0) {
+//                    end_date.setError("結束日期等於初始日期");
                 }else if(result>0){
                     end_date.setError("結束日期小於初始日期");
                 }
+            } catch (Exception e) {
+
+            }
+        }
+    };
+
+    private TextWatcher textWatcher7 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(end_time);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                Date d1 = sdf.parse(start_time.getText().toString());
+                Date d2 = sdf.parse(end_time.getText().toString());
+                long result = d1.getTime()-d2.getTime();
+                Log.d("timeeee", String.valueOf(d1.getTime()-d2.getTime()));
+                if (result<0){
+                    end_time.setError(null);
+                }else if (result == 0) {
+                    end_time.setError("結束時間等於開始時間");
+                }else if(result>0){
+                    end_time.setError("結束時間小於開始時間");
+                }
+
+            } catch (Exception e) {
+
+            }
+        }
+    };
+
+    private TextWatcher textWatcher8 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(start_time);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                Date d1 = sdf.parse(start_time.getText().toString());
+                Date d2 = sdf.parse(end_time.getText().toString());
+                long result = d1.getTime()-d2.getTime();
+                Log.d("timeeee", String.valueOf(d1.getTime()-d2.getTime()));
+                if (result<0){
+                    end_time.setError(null);
+                }else if (result == 0) {
+                    end_time.setError("結束時間等於開始時間");
+                }else if(result>0){
+                    end_time.setError("結束時間小於開始時間");
+                }
+
             } catch (Exception e) {
 
             }

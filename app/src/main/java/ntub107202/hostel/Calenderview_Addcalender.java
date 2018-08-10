@@ -4,6 +4,8 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +13,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TimePicker;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class Calenderview_Addcalender extends AppCompatActivity {
 
@@ -50,6 +54,8 @@ public class Calenderview_Addcalender extends AppCompatActivity {
 
         Button button01 = (Button) findViewById(R.id.btn_add_calendar);
 
+        work_start_time.addTextChangedListener(textWatcher1);
+        work_end_time.addTextChangedListener(textWatcher2);
 
         rad_work_type_always.setChecked(true);
 //        Log.v("1123",rad_work_type_alwaysS);
@@ -117,4 +123,87 @@ public class Calenderview_Addcalender extends AppCompatActivity {
                 }, mHour, mMinute, false);
         tpd.show();
     }
+    private TextWatcher textWatcher1 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(work_start_time);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                Date d1 = sdf.parse(work_start_time.getText().toString());
+                Date d2 = sdf.parse(work_end_time.getText().toString());
+                long result = d1.getTime()-d2.getTime();
+                Log.d("timeeee", String.valueOf(d1.getTime()-d2.getTime()));
+                if (result<0){
+                    work_end_time.setError(null);
+                }else if (result == 0) {
+                    work_end_time.setError("結束時間等於開始時間");
+                }else if(result>0){
+                    work_end_time.setError("結束時間小於開始時間");
+                }
+
+            } catch (Exception e) {
+
+            }
+        }
+    };
+
+    private TextWatcher textWatcher2 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(work_end_time);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+            try {
+                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+                Date d1 = sdf.parse(work_start_time.getText().toString());
+                Date d2 = sdf.parse(work_end_time.getText().toString());
+                long result = d1.getTime()-d2.getTime();
+                Log.d("timeeee", String.valueOf(d1.getTime()-d2.getTime()));
+                if (result<0){
+                    work_end_time.setError(null);
+                }else if (result == 0) {
+                    work_end_time.setError("結束時間等於開始時間");
+                }else if(result>0){
+                    work_end_time.setError("結束時間小於開始時間");
+                }
+
+            } catch (Exception e) {
+
+            }
+        }
+    };
 }

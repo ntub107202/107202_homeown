@@ -65,11 +65,13 @@ public class Jobview_Addjob extends AppCompatActivity {
             public void onClick(View v) {
                 if(chk_salary.isChecked()){
                     edit_salary.setFocusable(false);
+                    edit_salary.setText("0");
                 }else {
                     edit_salary.setFocusable(true);
                     edit_salary.setFocusableInTouchMode(true);
                     edit_salary.requestFocus();
                     edit_salary.requestFocusFromTouch();
+                    edit_salary.setText("");
                 }
                 return;
             }
@@ -269,13 +271,19 @@ public class Jobview_Addjob extends AppCompatActivity {
                                   int count) {
             Log.d("TAG", "onTextChanged--------------->");
             Is_Valid_Email(edit_salary);
+
         }
         public void Is_Valid_Email(EditText edt) {
-            if (edt.getText().toString().matches("0")) {
-                edt.setError("數字不得為0開頭!");
-                edt.setText("");
+            if(edit_salary.isFocusable()) {
+                if (edt.getText().toString().matches("0")) {
+                    edt.setError("數字不得為0開頭!");
+                    edt.setText("");
+                }
+            }else {
+
             }
         }
+
 
         boolean isEmailValid(CharSequence email) {
             return android.util.Patterns.EMAIL_ADDRESS.matcher(email)

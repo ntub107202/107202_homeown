@@ -26,6 +26,7 @@ public class Fragment_Jobview extends Fragment {
     static TextView textView2;
     static TextView textView3;
     static TextView textView4;
+    static TextView textView30;
     static String[] row = new String[100];
     static String row5;
     static String row6;
@@ -46,7 +47,7 @@ public class Fragment_Jobview extends Fragment {
         View view=inflater.inflate(R.layout.fragment_job_view,container,false);
         FragmentManager fragmentMgr = getFragmentManager();
         beginTransaction = getFragmentManager().beginTransaction();
-
+        textView30 = (TextView)view.findViewById(R.id.text01);
 //        setrow();
 
 //        myDataset = new ArrayList<>();
@@ -62,6 +63,10 @@ public class Fragment_Jobview extends Fragment {
 //            Log.d("get0000", String.valueOf(getWorksheet.jobLength));
 //        }
         mList = (RecyclerView)view.findViewById(R.id.list_view);
+
+        if(getWorksheet.getRow5(0) != null){
+            textView30.setVisibility(View.INVISIBLE);
+        }
 //        layoutManager = new LinearLayoutManager(getActivity());
 //        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 //

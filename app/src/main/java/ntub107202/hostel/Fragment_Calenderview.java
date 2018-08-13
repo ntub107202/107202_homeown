@@ -51,6 +51,10 @@ public class Fragment_Calenderview extends Fragment {
 
         mList = (RecyclerView)view.findViewById(R.id.list_view);
 
+        if(getWorksheet.getRow9(0) != null){
+            textView30.setVisibility(View.INVISIBLE);
+        }
+
 //        button01.setOnClickListener(new Button.OnClickListener(){
 //            @Override
 //            public void onClick(View v) {

@@ -22,7 +22,6 @@ public class Fragment_Bosssetting extends Fragment {
         Button button03 = (Button)view.findViewById(R.id.btn_return);
         Button button04 = (Button)view.findViewById(R.id.btn_about);
         Button button05 = (Button)view.findViewById(R.id.btn_specification);
-        Button button06 = (Button)view.findViewById(R.id.btn_change);
         Button button07 = (Button)view.findViewById(R.id.btn_login);
         Button button08 = (Button)view.findViewById(R.id.btn_reg);
 
@@ -80,14 +79,6 @@ public class Fragment_Bosssetting extends Fragment {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getActivity(),Setting_Specification.class);
-                startActivity(intent);
-            }
-        });
-        button06.setOnClickListener(new Button.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getActivity(),MainActivityBypass.class);
                 startActivity(intent);
             }
         });

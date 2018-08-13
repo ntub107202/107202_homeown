@@ -198,28 +198,7 @@
                     android:layout_height="1dp"
                     android:background="@color/txt_font"
                     android:layout_marginTop="10dp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_gravity="center_vertical"
-                        android:src="@drawable/ic_swap_horiz_black_24dp" />
 
-                    <Button
-                        android:id="@+id/btn_change"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="20dp"
-                        android:background="#00000000"
-                        android:gravity="left|center_vertical"
-                        android:text="@string/identity_change"
-                        android:textColor="@color/fontDark" />
-
-                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

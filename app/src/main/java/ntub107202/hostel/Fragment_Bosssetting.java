@@ -25,7 +25,6 @@ public class Fragment_Bosssetting extends Fragment {
         Button button07 = (Button)view.findViewById(R.id.btn_login);
         Button button08 = (Button)view.findViewById(R.id.btn_reg);
 
-
         btn_hotelinfo.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {

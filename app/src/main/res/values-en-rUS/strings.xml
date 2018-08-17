@@ -176,10 +176,12 @@
     <string name="hint_hotel_phone">Please enter the homestay phone number</string>
     <string name="license">Business license</string>
 
-    <string name="hint_license">點擊上傳營業執照</string>
-    <string name="hotel_photo">民宿照片</string>
-    <string name="hint_hotel_photo">點擊上傳民宿照片</string>
-    <string name="school_depart">就讀學校與科系</string>
-    <string name="name">姓名</string>
-    <string name="basic_info">基本資訊</string>
+    <string name="hint_license">Click to upload business license</string>
+    <string name="hotel_photo">Homestay Photo</string>
+    <string name="hint_hotel_photo">Click to upload Homestay photos</string>
+    <string name="school_depart">Studying at school and department</string>
+    <string name="name">Name</string>
+    <string name="basic_info">Basic information</string>
+    <string name="inbox">Resume inbox</string>
+    <string name="inbox_no_info">Haven't received any resumes yet!</string>
 </resources>

@@ -176,10 +176,12 @@
     <string name="hint_hotel_phone">Por favor ingrese el número de teléfono de su casa</string>
     <string name="license">Licencia comercial</string>
 
-    <string name="hint_license">點擊上傳營業執照</string>
-    <string name="hotel_photo">民宿照片</string>
-    <string name="hint_hotel_photo">點擊上傳民宿照片</string>
-    <string name="school_depart">就讀學校與科系</string>
-    <string name="name">姓名</string>
-    <string name="basic_info">基本資訊</string>
+    <string name="hint_license">Haga clic para cargar la licencia comercial</string>
+    <string name="hotel_photo">Foto de Casa de familia</string>
+    <string name="hint_hotel_photo">Haz clic para subir fotos de Casa de familia</string>
+    <string name="school_depart">Estudiando en la escuela y el departamento</string>
+    <string name="name">Nombre</string>
+    <string name="basic_info">Información básica</string>
+    <string name="inbox">Reanudar bandeja de entrada</string>
+    <string name="inbox_no_info">¡Todavía no hemos recibido ningún currículum!</string>
 </resources>

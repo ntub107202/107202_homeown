@@ -176,10 +176,12 @@
     <string name="hint_hotel_phone">Veuillez entrer le numéro de téléphone du domicile</string>
     <string name="license">Licence d'entreprise</string>
 
-    <string name="hint_license">點擊上傳營業執照</string>
-    <string name="hotel_photo">民宿照片</string>
-    <string name="hint_hotel_photo">點擊上傳民宿照片</string>
-    <string name="school_depart">就讀學校與科系</string>
-    <string name="name">姓名</string>
-    <string name="basic_info">基本資訊</string>
+    <string name="hint_license">Cliquez pour télécharger la licence d'entreprise</string>
+    <string name="hotel_photo">Chez l'habitant Photo</string>
+    <string name="hint_hotel_photo">Cliquez pour télécharger des photos de Chez l'habitant</string>
+    <string name="school_depart">Étudier à l'école et au département</string>
+    <string name="name">Nom</string>
+    <string name="basic_info">Informations de base</string>
+    <string name="inbox">Reprendre la boîte de réception</string>
+    <string name="inbox_no_info">Je n'ai pas encore reçu de CV!</string>
 </resources>

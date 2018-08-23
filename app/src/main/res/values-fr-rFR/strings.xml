@@ -184,4 +184,11 @@
     <string name="basic_info">Informations de base</string>
     <string name="inbox">Reprendre la boîte de réception</string>
     <string name="inbox_no_info">Je n'ai pas encore reçu de CV!</string>
+
+    <string-array name="address_list">
+        <item>台北市</item>
+        <item>新北市</item>
+    </string-array>
+    <string name="spin_address">請選擇縣市</string>
+    <string name="spin_area">請選擇區域</string>
 </resources>

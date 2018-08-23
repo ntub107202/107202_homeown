@@ -50,6 +50,30 @@
                 android:layout_marginLeft="20dp"
                 android:text="@string/hotel_address"
                 android:textColor="@color/fontDark" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:weightSum="2">
+
+                <Spinner
+                    android:id="@+id/spin_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:entries="@array/address_list"
+                    android:spinnerMode="dialog"
+                    android:prompt="@string/spin_address"/>
+                <Spinner
+                    android:id="@+id/spin_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:spinnerMode="dialog"
+                    android:prompt="@string/spin_area"/>
+
+            </LinearLayout>
             <EditText
                 android:id="@+id/edit_hotel_address"
                 android:layout_width="match_parent"
@@ -58,6 +82,7 @@
                 android:layout_marginRight="20dp"
                 android:hint="@string/hint_hotel_address"
                 android:singleLine="true" />
+
 
             <TextView
                 android:layout_width="match_parent"

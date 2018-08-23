@@ -184,4 +184,11 @@
     <string name="basic_info">Información básica</string>
     <string name="inbox">Reanudar bandeja de entrada</string>
     <string name="inbox_no_info">¡Todavía no hemos recibido ningún currículum!</string>
+
+    <string-array name="address_list">
+        <item>台北市</item>
+        <item>新北市</item>
+    </string-array>
+    <string name="spin_address">請選擇縣市</string>
+    <string name="spin_area">請選擇區域</string>
 </resources>

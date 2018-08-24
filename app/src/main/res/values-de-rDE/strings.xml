@@ -1,36 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="equipment">設備</string>
-    <string name="table">桌子</string>
-    <string name="chair">椅子</string>
-    <string name="wardrobe">衣櫃</string>
-    <string name="bed">床</string>
-    <string name="refrigerator">冰箱</string>
-    <string name="air_conditioning">冷氣</string>
-    <string name="tv">電視</string>
-    <string name="water_heater">熱水器</string>
-    <string name="washing_machine">洗衣機</string>
-    <string name="wi_fi">Wi-Fi</string>
-    <string name="ch4">第四台</string>
-    <string name="gas">天然瓦斯</string>
+    <string name="app_name">一家順順</string>
+    <string name="title_people">Verlauf bearbeiten</string>
+    <string name="title_publish">Buchungsinformationen</string>
+    <string name="title_work">Arbeitsanordnung </string>
+    <string name="title_page">Arbeitgeberseite </string>
+    <string name="lbl_indiv_info">Persönliche Informationen</string>
+    <string name="lbl_upload_photo">Laden Sie ein großes Foto</string>
+    <string name="lbl_inputName">Bitte geben Sie einen Namen ein</string>
+    <string name="lbl_plzinputName">Bitte geben Sie Ihren Namen</string>
+    <string name="lbl_gender">Geschlecht</string>
+    <string name="lbl_birth">Geburtstag</string>
+    <string name="lbl_home">Wohnort</string>
+    <string name="lbl_school">Schule</string>
+    <string name="lbl_depart">Abteilungsname</string>
+    <string name="lbl_state_study">Schulstatus</string>
+    <string name="title_humansearch">Talent Suche</string>
+    <string name="lbl_intro">Selbstvorstellung</string>
+    <string name="lbl_interest">Interesse </string>
+    <string name="lbl_skill">Allgemeine Fähigkeiten</string>
+    <string name="lbl_pro_skill">professionelle Fähigkeiten</string>
+    <string name="lbl_drive">Fahrfähigkeiten</string>
+    <string name="lbl_talentperf">Talentshow</string>
+    <string name="lbl_language">Fremdsprachigkeit</string>
+    <string name="lbl_workexp">Arbeitserfahrung</string>
+    <string name="lbl_reason">Gründe für Arbeit und Aufenthalt</string>
+    <string name="lbl_eathabit">Essgewohnheiten</string>
+    <string name="lbl_wrkperiod">Während der Arbeit und Unterkunft</string>
+    <string name="lbl_contact">Kontakt</string>
+    <string name="lbl_liang">Kontakt</string>
+    <string name="lbl_phone">mobil</string>
+    <string name="lbl_lifephoto">Lebensfoto</string>
+    <string name="title_humaninfo">Talentinformationen</string>
 
-    <string name="hotel_no_info">還沒有任何民宿資訊喔！</string>
-    <string name="add_hotel_info">新增民宿資訊</string>
-    <string name="hotel_name">民宿店名</string>
-    <string name="hint_hotel_name">請輸入民宿店名</string>
-    <string name="hotel_address">民宿地址</string>
-    <string name="hint_hotel_address">請輸入民宿地址</string>
-    <string name="hotel_phone">民宿電話</string>
-    <string name="hint_hotel_phone">請輸入民宿電話</string>
-    <string name="license">營業執照</string>
-    <string name="hint_license">點擊上傳營業執照</string>
-    <string name="hotel_photo">民宿照片</string>
-    <string name="hint_hotel_photo">點擊上傳民宿照片</string>
-    <string name="school_depart">就讀學校與科系</string>
-    <string name="name">姓名</string>
-    <string name="basic_info">基本資訊</string>
-    <string name="inbox">履歷收件匣</string>
-    <string name="inbox_no_info">還沒有收到任何履歷喔！</string>
+    <string name="title_bnb">Suche nach einer Unterkunft</string>
+    <string name="title_forum">Erfahrungsaustausch</string>
+    <string name="title_schedule">Arbeitsplanung</string>
+    <string name="title_student">persönliche Seite</string>
+
+    <string name="about1">Unser Team hofft, dass die Entwicklung von mobilen Anwendungen das Arbeiten und Wohnen komfortabler und effizienter macht und das Problem der Informationsasymmetrie und Sicherheit löst.</string>
+    <string name="about2">Als Plattform für Heiratsvermittler und Studenten ist unser Logo eine Biene und ein Bienenstock, die die Beziehung zwischen dem Schüler und dem Besitzer darstellen. Die Bienen symbolisieren, dass die Schüler beim Wechsel der Unterkunft noch den Geist von Fleiß, Selbstdisziplin und Teamwork beibehalten können: Der sechseckige Bienenstock symbolisiert, dass das Zuhause wie das zweite Zuhause der Schüler ist. Dieser Name ist abgeleitet von unserer Erwartung einer Unterkunft, jeder wie eine Familie, die sich umeinander kümmert und reibungslos miteinander kooperiert.</string>
+
+
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="add_job">Einen neuen Job hinzufügen</string>
+    <string name="publish_hotel">veröffentlichte Häuser</string>
+    <string name="job_info">Auftragsinformationen</string>
+    <string name="job_title">Jobname</string>
+    <string name="hint_job_title">Bitte geben Sie einen Job Titel</string>
+    <string name="salary">Gehalt</string>
+    <string name="hint_salary">Bitte geben Sie den Betrag</string>
+    <string name="salary_day">/ Tag</string>
+    <string name="no">Nein</string>
+    <string name="service">Andere Behandlung</string>
+    <string name="stay">Unterkunft</string>
+    <string name="snorkel">schnorcheln</string>
+    <string name="food">essen</string>
+    <string name="moto">Lokomotive bereitstellen</string>
+    <string name="fish">Angeln</string>
+    <string name="time">Datum</string>
+    <string name="hint_date">Klicken Sie, um das Datum</string>
+    <string name="time_1">Zeitfenster 1</string>
+    <string name="hint_time">Klicken Sie hier, um die Zeit</string>
+    <string name="add_time">neuer Zeitraum</string>
+    <string name="numder_people">Anzahl der benötigten Personen</string>
+    <string name="hint_number_people">Bitte geben Sie die Anzahl der Personen ein</string>
+    <string name="work_content">Arbeitsinhalt </string>
+    <string name="work_item1">Arbeitselement 1 </string>
+    <string name="hint_work_content">Bitte geben Sie den Arbeitsinhalt ein</string>
+    <string name="add_work_item">Hinzufügen eines neuen Elements</string>
+    <string name="skill">erforderliche Fähigkeiten</string>
+    <string name="general_skill">allgemeine Fähigkeiten</string>
+    <string name="og">Gartenbearbeitung</string>
+    <string name="cr">Zählerempfang</string>
+    <string name="rc">Haushaltsreinigung</string>
+    <string name="od">Datensortierung</string>
+    <string name="rs">Restaurantservice</string>
+    <string name="profession_skill">berufliche Fähigkeiten</string>
+    <string name="cook">kochen</string>
+    <string name="art">Kunstdesign</string>
+    <string name="photograph">Fotografie</string>
+    <string name="web">Websiteverwaltung</string>
+    <string name="gardening">Gartenarbeit</string>
+    <string name="show">Kunstleistung</string>
+    <string name="dance">tanz</string>
+    <string name="sing">singen</string>
+    <string name="music">Musikinstrument-Leistung</string>
+    <string name="language_skill">Sprachfähigkeit</string>
+    <string name="English">Englisch</string>
+    <string name="Japanese">Japanisch</string>
+    <string name="Minnan">Minnan</string>
+    <string name="driving_skill">Fahrfähigkeiten</string>
+    <string name="motorcycle">Lokführerschein</string>
+    <string name="car">Autoführerschein</string>
+    <string name="publish_date">Veröffentlichungszeitraum</string>
+    <string name="contact_info">Anwendungsmethode</string>
+    <string name="contact">Kontakt</string>
+    <string name="contact_name">Geben Sie den Kontaktnamen</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">Bitte geben Sie die Kontakt-E-Mail</string>
+    <string name="phone">Telefon</string>
+    <string name="hint_phone">Bitte geben Sie die Kontakttelefonnummer</string>
+
+    <string name="boss_setting">Arbeitgeberseite</string>
+    <string name="hotel_info">Informationen zu Gastfamilien</string>
+    <string name="hire_history">Beschäftigungseintrag</string>
+    <string name="contact_history">Kontaktdatensatz</string>
+    <string name="notice">Benachrichtigungseinstellungen</string>
+    <string name="return_problem">gibt das Problem zurück</string>
+    <string name="about">über uns</string>
+    <string name="specification">zugehörige Spezifikationen</string>
+    <string name="identity_change">Identitätswechsel</string>
+    <string name="login">Anmeldung</string>
+    <string name="register">register</string>
+
+    <string name="add_calender">Arbeitsablaufplan hinzufügen</string>
+    <string name="work_info">Auftragsinformationen</string>
+    <string name="work_title">Arbeitstitel</string>
+    <string name="hint_work_title">Bitte geben Sie den Jobtitel</string>
+    <string name="work_type">Arbeitstyp</string>
+    <string name="everyday_work">routine work</string>
+    <string name="once_work">Einmal</string>
+    <string name="work_time">arbeitszeit</string>
+    <string name="member">Mitarbeiter anordnen</string>
+
+    <string name="human_search">Talent Suche</string>
+    <string name="job_view">Job veröffentlichen </string>
+    <string name="job_view_no_info">Es wurden noch keine Job-Informationen veröffentlicht!！</string>
+    <string name="contact_history_no_info">Noch keine Kontaktdatensätze!</string>
+    <string name="hire_history_no_info">Noch keine Beschäftigungsdaten!</string>
+
+    <string name="reture_problem1">Bitte beschreiben Sie so weit wie möglich die aufgetretenen Probleme und Bedingungen und die zuständigen Mitarbeiter werden sich so schnell wie möglich mit ihnen befassen! Danke für Ihre Mitarbeit und Hilfe!</string>
+    <string name="problem">problembeschreibung </string>
+    <string name="hint_problem">Bitte geben Sie eine Beschreibung des Problems ein, je detaillierter, desto besser!</string>
+    <string name="sent">senden</string>
+
+    <string name="calender">Arbeitsanordnung </string>
+    <string name="calender_no_info">Noch keine Arbeitsvorbereitungen!</string>
+    <string name="spec_no_info">noch im Planungsprozess</string>
+
+    <string name="publish_job">Öffentlicher Job</string>
+    <string name="publish_job_no_info">Es wurden noch keine Job-Informationen veröffentlicht!</string>
+
+    <string name="hire_notice">Einstellungshinweis</string>
+    <string name="message_notice">Nachrichtenbenachrichtigung</string>
+    <string name="system_notice">Systembenachrichtigung</string>
+
+    <string name="equipment">Gerät</string>
+    <string name="table">Tabelle</string>
+    <string name="chair">Stuhl</string>
+    <string name="wardrobe">Schrank</string>
+    <string name="bed">bett </string>
+    <string name="refrigerator">Kühlschrank</string>
+    <string name="air_conditioning">Klimaanlage</string>
+    <string name="tv">TV</string>
+    <string name="water_heater">Warmwasserbereiter</string>
+    <string name="washing_machine">Waschmaschine</string>
+    <string name="wi_fi">WLAN</string>
+    <string name="ch4">Kanal 4</string>
+    <string name="gas">Erdgas</string>
+
+    <string name="hotel_no_info">Noch keine Gastfamilien Informationen!</string>
+    <string name="add_hotel_info">Fügen Sie Gastfamilie Informationen hinzu</string>
+    <string name="hotel_name">Gastfamilie Name</string>
+    <string name="hint_hotel_name">Bitte geben Sie den Namen der Immobilie ein</string>
+    <string name="hotel_address">Gastfamilie Adresse</string>
+    <string name="hint_hotel_address">Bitte geben Sie die Heimatadresse ein</string>
+    <string name="hotel_phone">Gastfamilie Telefon</string>
+    <string name="hint_hotel_phone">Bitte geben Sie die private Telefonnummer ein</string>
+    <string name="license">Geschäftslizenz</string>
+    <string name="hint_license">Klicken Sie, um eine Geschäftslizenz hochzuladen</string>
+    <string name="hotel_photo">Gastfamilie Foto</string>
+    <string name="hint_hotel_photo">Klicken Sie hier, um Gastfamilie-Fotos hochzuladen</string>
+
+    <string name="school_depart">Schule und Abteilung besuchen</string>
+    <string name="name">Name</string>
+    <string name="basic_info">Grundlegende Informationen</string>
+    <string name="inbox">Posteingang fortsetzen</string>
+    <string name="inbox_no_info">Es wurden noch keine Bewerbungen erhalten!</string>
 
     <string-array name="address_list">
         <item>台北市</item>

@@ -1,6 +1,7 @@
 package ntub107202.hostel.MyAsyncTask;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -61,8 +62,11 @@ public class postUpdateAsyncTask3 extends AsyncTask<String, Integer, String> {
             //  傳給主機的參數(name, amount, deliverDate)
             //----------------------------------------------
             //params[1] 是myNavigationAsyncTask.execute(Common.updateUrl, getId);的第二個參數
+
+
             String args =
                     "row1=" + URLEncoder.encode(params[1], "UTF-8");
+            Log.v("TTTTTTTTTTTTTTTTTTTT", "TTTTTTTTTTTTTTTTTTTT:"+args);
             //-----------------------------這裡寫你要接的參數
 
             OutputStream os = conn.getOutputStream();

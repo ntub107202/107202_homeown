@@ -19,10 +19,12 @@ public class Setting_Returnproblem extends AppCompatActivity {
         button01.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 getWorksheet.postToQuestion(edit_problem.getText().toString());
                 Intent intent = new Intent(Setting_Returnproblem.this,NavigationActivity.class);
                 intent.putExtra("id",4);
                 startActivity(intent);
+
             }
         });
     }

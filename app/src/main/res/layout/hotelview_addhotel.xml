@@ -107,6 +107,7 @@
                 android:layout_marginLeft="20dp"
                 android:text="@string/license"
                 android:textColor="@color/fontDark" />
+            <!--
             <Button
                 android:id="@+id/btn_license"
                 android:layout_width="match_parent"
@@ -119,18 +120,25 @@
                 android:background="@color/colorPrimary"
                 android:text="@string/hint_license"
                 android:textColor="@android:color/white" />
+                -->
             <ImageView
                 android:id="@+id/img_license"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"/>
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="60dp"
+                android:background="@color/txt_font"
+                android:src="@drawable/ic_photo_white"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:text="@string/hotel_photo"
                 android:textColor="@color/fontDark" />
+            <!--
             <Button
                 android:id="@+id/btn_hotel_photo"
                 android:layout_width="match_parent"
@@ -143,12 +151,18 @@
                 android:background="@color/colorPrimary"
                 android:text="@string/hint_hotel_photo"
                 android:textColor="@android:color/white" />
+                -->
             <ImageView
                 android:id="@+id/img_hotel_photo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"/>
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:padding="60dp"
+                android:background="@color/txt_font"
+                android:src="@drawable/ic_photo_camera_white"/>
             <Button
                 android:id="@+id/btn_add_hotel"
                 android:layout_width="match_parent"

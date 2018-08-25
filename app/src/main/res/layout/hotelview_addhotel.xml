@@ -50,6 +50,7 @@
                 android:layout_marginLeft="20dp"
                 android:text="@string/hotel_address"
                 android:textColor="@color/fontDark" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -63,15 +64,16 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:entries="@array/address_list"
-                    android:spinnerMode="dialog"
-                    android:prompt="@string/spin_address"/>
+                    android:prompt="@string/spin_address"
+                    android:spinnerMode="dialog" />
+
                 <Spinner
                     android:id="@+id/spin_area"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:spinnerMode="dialog"
-                    android:prompt="@string/spin_area"/>
+                    android:prompt="@string/spin_area"
+                    android:spinnerMode="dialog" />
 
             </LinearLayout>
             <EditText

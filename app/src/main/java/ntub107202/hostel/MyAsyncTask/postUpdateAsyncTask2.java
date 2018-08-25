@@ -1,6 +1,7 @@
 package ntub107202.hostel.MyAsyncTask;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -68,6 +69,8 @@ public class postUpdateAsyncTask2 extends AsyncTask<String, Integer, String> {
                             "&row4=" + URLEncoder.encode(params[4], "UTF-8")+
                             "&row5=" + URLEncoder.encode(params[5], "UTF-8");
             //-----------------------------這裡寫你要接的參數
+
+            Log.v("POST args", "POST args:" + args);
 
             OutputStream os = conn.getOutputStream();
             BufferedWriter writer = new BufferedWriter(

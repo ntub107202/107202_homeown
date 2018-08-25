@@ -70,7 +70,11 @@ public class Calenderview_Addcalender extends AppCompatActivity {
                 }else{
                     rad_work_type_alwaysS="0";
                 }
-                Log.v("1123",rad_work_type_alwaysS);
+                Log.v("edit_work_title", edit_work_title.getText().toString());
+                Log.v("rad_work_type_alwaysS",rad_work_type_alwaysS);
+                Log.v("work_start_time",work_start_time.getText().toString());
+                Log.v("work_end_time",work_end_time.getText().toString());
+                Log.v("edit_work",edit_work.getText().toString());
                 getWorksheet.postToCalendar(edit_work_title.getText().toString(), rad_work_type_alwaysS, work_start_time.getText().toString(), work_end_time.getText().toString(), edit_work.getText().toString());
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();

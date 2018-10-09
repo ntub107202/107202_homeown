@@ -252,8 +252,7 @@
     <string name="spe37"> Sauf pour le contenu de NTUB, y compris, mais sans s’y limiter, les pages liées par cette application, NTUB ne sera pas responsable des accidents (y compris des infections par des virus informatiques ou de téléphones portables), de l’embarras, de la violation des droits d’auteur. NTUB n’assume aucune responsabilité ni dommages directs, indirects, accessoires, spéciaux, dérivés, punitifs ou immatériels, résultant de droits de propriété intellectuelle, y compris mais non limités à des bénéfices, de l’achalandage, de l’utilisation, de la perte de données ou d’autres pertes intangibles. Que vous utilisiez ou non les services de cette application pour télécharger ou obtenir des informations, vous le ferez à vos propres risques et périls. </string>
     <string name="spe38"> 6, loi applicable et tribunal compétent </string>
     <string name="spe39"> L’interprétation et l’application de ces règles et déclarations d’utilisation ainsi que les litiges ou litiges découlant de l’utilisation de cette appli par vos utilisateurs doivent être conformes à la législation de Taïwan. Traitement. </string>
-    <string name="spin_address">請選擇縣市</string>
-    <string name="spin_area">請選擇區域</string>
-    <string name="hint_hotel_info">請輸入民宿簡介資訊</string>
+
+    <string name="hint_hotel_info">S’il vous plaît entrer les informations de la propriété</string>
 </resources>
 

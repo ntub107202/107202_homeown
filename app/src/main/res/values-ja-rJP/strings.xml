@@ -254,9 +254,5 @@
     <string name="spe39">本利用規約の解釈と適用、およびユーザーによる本アプリケーションの使用に起因する紛争または紛争は、台湾の法律に準拠します。</string>
 
 
-
-
-    <string name="spin_address">請選擇縣市</string>
-    <string name="spin_area">請選擇區域</string>
-    <string name="hint_hotel_info">請輸入民宿簡介資訊</string>
+    <string name="hint_hotel_info">プロパティ情報を入力してください</string>
 </resources>

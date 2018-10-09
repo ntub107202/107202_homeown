@@ -253,7 +253,5 @@
     <string name="spe38"> 6, anwendbares Recht und Gerichtsstand </string>
     <string name="spe39"> Die Auslegung und Anwendung dieser Benutzungsregeln und die Streitigkeiten oder Streitigkeiten, die sich aus der Nutzung dieser App durch Ihre Benutzer ergeben, müssen den Gesetzen von Taiwan entsprechen. Verarbeitung. </string>
 
-    <string name="spin_address">請選擇縣市</string>
-    <string name="spin_area">請選擇區域</string>
-    <string name="hint_hotel_info">請輸入民宿簡介資訊</string>
+    <string name="hint_hotel_info">Bitte geben Sie die Immobilieninformationen ein</string>
 </resources>

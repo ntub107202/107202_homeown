@@ -253,7 +253,5 @@
     <string name="spe38">6, the law of law and the court of jurisdiction </string>
     <string name="spe39">The interpretation and application of this "Rules and Statements of Use" and the disputes or disputes arising out of the use of this App by your users shall be in accordance with the laws of Taiwan. deal with. </string>
 
-    <string name="spin_address">請選擇縣市</string>
-    <string name="spin_area">請選擇區域</string>
-    <string name="hint_hotel_info">請輸入民宿簡介資訊</string>
+    <string name="hint_hotel_info">Please enter the property information</string>
 </resources>

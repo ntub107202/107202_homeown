@@ -193,4 +193,5 @@
     </string-array>
     <string name="spin_address">請選擇縣市</string>
     <string name="spin_area">請選擇區域</string>
+    <string name="hint_hotel_info">請輸入民宿簡介資訊</string>
 </resources>

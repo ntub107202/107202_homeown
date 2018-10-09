@@ -7,6 +7,7 @@ import ntub107202.hostel.MyAsyncTask.getAsyncTask;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask2;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask3;
+import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask4;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -193,6 +194,17 @@ public class getWorksheet {
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
             myAsyncTask.execute(Common.postQuestion ,row1);
+        }
+    }
+    public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6) {
+        postUpdateAsyncTask4 myAsyncTask = new postUpdateAsyncTask4(new postUpdateAsyncTask4.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6);
         }
     }
 

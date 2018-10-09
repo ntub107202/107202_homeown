@@ -1,18 +1,71 @@
 package ntub107202.hostel;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Hotelview_Addhotel extends AppCompatActivity {
+    EditText edit_hotel_name;
+    Spinner spin_address;
+    Spinner spin_area;
+    EditText edit_hotel_address;
+    EditText edit_hotel_phone;
+    EditText edit_hotel_info;
+    Button btn_add_hotel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hotelview_addhotel);
+        edit_hotel_name = (EditText) findViewById(R.id.edit_hotel_name);
+        spin_address = (Spinner) findViewById(R.id.spin_address);
+        spin_area = (Spinner) findViewById(R.id.spin_area);
+        edit_hotel_address = (EditText) findViewById(R.id.edit_hotel_address);
+        edit_hotel_phone=(EditText) findViewById(R.id.edit_hotel_phone);
+        edit_hotel_info=(EditText) findViewById(R.id.edit_hotel_info);
+
+        Button button01 = (Button) findViewById(R.id.btn_add_hotel);
+
+        //--------------------------
+        //取得伺服器上JSON資料
+        //--------------------------
+        button01.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.v("8888888", spin_address.getSelectedItem().toString());
+                Log.v("8888888", spin_area.getSelectedItem().toString());
+                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString());
+                Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "post");
+                getWorksheet.getJSON();
+                getWorksheet.getjobJSON();
+                Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "get");
+                getWorksheet.getcalendarJSON();
+                Intent intent = new Intent(Hotelview_Addhotel.this,Setting_Hotelinfo.class);
+                intent.putExtra("id",2);
+                startActivity(intent);
+            }
+        });
         final Spinner spin_address = (Spinner)findViewById(R.id.spin_address);
         final Spinner spin_area = (Spinner)findViewById(R.id.spin_area);
         final String[] Keelung = {"仁愛區","中正區","信義區","中山區","安樂區","暖暖區","七堵區"};

@@ -19,6 +19,7 @@ public class Common {
     public static String getHumanSearch="http://140.131.114.153/getHumanSearch";
     public static String getjob="http://140.131.114.153/getjob";
     public static String getCalendar="http://140.131.114.153/getcalendar";
+    public static String postHotel="http://140.131.114.153/postHotel";
 
 
 }

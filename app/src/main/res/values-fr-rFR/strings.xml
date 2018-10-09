@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">一家順順</string>
-    <string name="title_people">Modifier l'historique</string>
-    <string name="title_publish">Publication d'informations</string>
+    <string name="title_people">Modifier l’historique</string>
+    <string name="title_publish">Publication d’informations</string>
     <string name="title_work">Arrangement de travail</string>
     <string name="title_page">Page Employeur</string>
     <string name="lbl_indiv_info">Informations personnelles</string>
     <string name="lbl_upload_photo">Télécharger une grande photo</string>
-    <string name="lbl_inputName">S'il vous plaît entrer un nom</string>
-    <string name="lbl_plzinputName">S'il vous plaît entrez votre nom</string>
+    <string name="lbl_inputName">S’il vous plaît entrer un nom</string>
+    <string name="lbl_plzinputName">S’il vous plaît entrez votre nom</string>
     <string name="lbl_gender">Genre</string>
     <string name="lbl_birth">Anniversaire</string>
     <string name="lbl_home">Adresse résidentielle</string>
@@ -26,7 +26,7 @@
     <string name="lbl_workexp">Expérience de travail</string>
     <string name="lbl_reason">Raison du logement</string>
     <string name="lbl_eathabit">Habitudes alimentaires</string>
-    <string name="lbl_wrkperiod">Pendant la période d'hébergement</string>
+    <string name="lbl_wrkperiod">Pendant la période d’hébergement</string>
     <string name="lbl_contact">Informations de contact</string>
     <string name="lbl_liang">Personne à contacter</string>
     <string name="lbl_phone">Téléphone portable</string>
@@ -34,12 +34,12 @@
     <string name="title_humaninfo">Informations sur les talents</string>
 
     <string name="title_bnb">Vous cherchez un logement</string>
-    <string name="title_forum">Expérience d'échange</string>
+    <string name="title_forum">Expérience d’échange</string>
     <string name="title_schedule">Horaire de travail</string>
     <string name="title_student">Page personnelle</string>
 
-    <string name="about1">Notre équipe espère que le développement d'applications mobiles rendra le travail et l'hébergement plus pratiques et efficaces, et résoudra le problème de l'asymétrie et de la sécurité de l'information.</string>
-    <string name="about2">Comme une plate-forme pour les marieurs et les étudiants, notre logo est une abeille et une ruche, représentant la relation entre l'étudiant et le propriétaire. Les abeilles symbolisent le fait que les élèves peuvent toujours maintenir l'esprit de diligence, d'autodiscipline et de travail d'équipe lorsqu'ils changent d'hébergement.La ruche hexagonale symbolise le fait que la maison est comme la résidence secondaire des élèves. Ce nom est dérivé de notre attente de l'accommodement, tout le monde aime une famille pour prendre soin les uns des autres, et de coopérer en douceur les uns avec les autres.</string>
+    <string name="about1">Notre équipe espère que le développement d’applications mobiles rendra le travail et l’hébergement plus pratiques et efficaces, et résoudra le problème de l’asymétrie et de la sécurité de l’information.</string>
+    <string name="about2">Comme une plate-forme pour les marieurs et les étudiants, notre logo est une abeille et une ruche, représentant la relation entre l’étudiant et le propriétaire. Les abeilles symbolisent le fait que les élèves peuvent toujours maintenir l’esprit de diligence, d’autodiscipline et de travail d’équipe lorsqu’ils changent d’hébergement.La ruche hexagonale symbolise le fait que la maison est comme la résidence secondaire des élèves. Ce nom est dérivé de notre attente de l’accommodement, tout le monde aime une famille pour prendre soin les uns des autres, et de coopérer en douceur les uns avec les autres.</string>
 
 
     <string name="title_activity_navigation">NavigationActivity</string>
@@ -50,17 +50,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="add_job">Nouvelles offres d'emploi</string>
+    <string name="add_job">Nouvelles offres d’emploi</string>
     <string name="publish_hotel">Annonce Homestay</string>
-    <string name="job_info">Informations sur l'emploi</string>
+    <string name="job_info">Informations sur l’emploi</string>
     <string name="job_title">Titre du poste</string>
-    <string name="hint_job_title">Veuillez entrer un nom de titre d'emploi</string>
+    <string name="hint_job_title">Veuillez entrer un nom de titre d’emploi</string>
     <string name="salary">Traitement</string>
     <string name="hint_salary">Veuillez entrer un montant numérique</string>
     <string name="salary_day">/ Jour</string>
     <string name="no">Non</string>
     <string name="service">Autre traitement</string>
-    <string name="stay">Y compris l'hébergement</string>
+    <string name="stay">Y compris l’hébergement</string>
     <string name="snorkel">Snorkeling</string>
     <string name="food">Y compris manger</string>
     <string name="moto">Fournir une locomotive</string>
@@ -68,10 +68,10 @@
     <string name="time">Date</string>
     <string name="hint_date">Cliquez pour sélectionner la date</string>
     <string name="time_1">Fente horaire 1</string>
-    <string name="hint_time">Cliquez pour sélectionner l'heure</string>
+    <string name="hint_time">Cliquez pour sélectionner l’heure</string>
     <string name="add_time">Nouvelle heure</string>
     <string name="numder_people">Nombre de personnes requises</string>
-    <string name="hint_number_people">S'il vous plaît entrez le nombre de personnes</string>
+    <string name="hint_number_people">S’il vous plaît entrez le nombre de personnes</string>
     <string name="work_content">Contenu du travail</string>
     <string name="work_item1">Point de travail 1</string>
     <string name="hint_work_content">Veuillez entrer votre contenu professionnel</string>
@@ -85,7 +85,7 @@
     <string name="rs">Service de restaurant</string>
     <string name="profession_skill">Compétences professionnelles</string>
     <string name="cook">Cuisine</string>
-    <string name="art">Conception d'art</string>
+    <string name="art">Conception d’art</string>
     <string name="photograph">Photographie</string>
     <string name="web">Gestion de site Web</string>
     <string name="gardening">Jardinage</string>
@@ -101,30 +101,30 @@
     <string name="motorcycle">Permis de conduire de locomotive</string>
     <string name="car">Permis de conduire de voiture</string>
     <string name="publish_date">Pendant la publication</string>
-    <string name="contact_info">Méthode d'application</string>
+    <string name="contact_info">Méthode d’application</string>
     <string name="contact">Personne à contacter</string>
     <string name="contact_name">Veuillez entrer le nom du contact</string>
     <string name="email">E-mail</string>
-    <string name="hint_email">Veuillez entrer l'adresse e-mail du contact</string>
+    <string name="hint_email">Veuillez entrer l’adresse e-mail du contact</string>
     <string name="phone">Téléphone portable</string>
-    <string name="hint_phone">S'il vous plaît entrer le numéro de contact</string>
+    <string name="hint_phone">S’il vous plaît entrer le numéro de contact</string>
 
     <string name="boss_setting">Page Employeur</string>
-    <string name="hotel_info">Information sur l'hébergement chez l'habitant</string>
-    <string name="hire_history">Dossier d'emploi</string>
+    <string name="hotel_info">Information sur l’hébergement chez l’habitant</string>
+    <string name="hire_history">Dossier d’emploi</string>
     <string name="contact_history">Enregistrement de contact</string>
     <string name="notice">Paramètre de notification</string>
     <string name="return_problem">Problème de retour</string>
     <string name="about">À propos de nous</string>
     <string name="specification">Spécifications connexes</string>
-    <string name="identity_change">Commutation d'identité</string>
+    <string name="identity_change">Commutation d’identité</string>
     <string name="login">Connexion</string>
     <string name="register">Inscription</string>
 
     <string name="add_calender">Nouvel arrangement de travail</string>
-    <string name="work_info">Informations sur l'emploi</string>
+    <string name="work_info">Informations sur l’emploi</string>
     <string name="work_title">Titre du poste</string>
-    <string name="hint_work_title">Veuillez entrer un titre d'emploi</string>
+    <string name="hint_work_title">Veuillez entrer un titre d’emploi</string>
     <string name="work_type">Type de travail</string>
     <string name="everyday_work">Travail quotidien</string>
     <string name="once_work">Travail ponctuel</string>
@@ -132,24 +132,24 @@
     <string name="member">Organiser du personnel</string>
 
     <string name="human_search">Recherche de talents</string>
-    <string name="job_view">Afficher des offres d'emploi</string>
-    <string name="job_view_no_info">Vous n'avez pas encore posté d'informations sur votre travail!</string>
-    <string name="contact_history_no_info">Il n'y a pas encore d'enregistrement de contact!</string>
-    <string name="hire_history_no_info">Il n'y a pas encore de dossier d'emploi!</string>
+    <string name="job_view">Afficher des offres d’emploi</string>
+    <string name="job_view_no_info">Vous n’avez pas encore posté d’informations sur votre travail!</string>
+    <string name="contact_history_no_info">Il n’y a pas encore d’enregistrement de contact!</string>
+    <string name="hire_history_no_info">Il n’y a pas encore de dossier d’emploi!</string>
 
     <string name="reture_problem1">Veuillez décrire autant que possible les problèmes et les conditions rencontrés, et le personnel concerné les traitera dès que possible! Merci pour votre coopération et votre aide!</string>
     <string name="problem">Description du problème</string>
-    <string name="hint_problem">S'il vous plaît entrer une description du problème, le plus détaillé le mieux!</string>
+    <string name="hint_problem">S’il vous plaît entrer une description du problème, le plus détaillé le mieux!</string>
     <string name="sent">Envoyer</string>
 
     <string name="calender">Arrangement de travail</string>
-    <string name="calender_no_info">Il n'y a pas encore d'arrangement de travail!</string>
+    <string name="calender_no_info">Il n’y a pas encore d’arrangement de travail!</string>
     <string name="spec_no_info">Toujours planifier</string>
 
-    <string name="publish_job">Afficher des offres d'emploi</string>
-    <string name="publish_job_no_info">Vous n'avez pas encore posté d'informations sur votre travail!</string>
+    <string name="publish_job">Afficher des offres d’emploi</string>
+    <string name="publish_job_no_info">Vous n’avez pas encore posté d’informations sur votre travail!</string>
 
-    <string name="hire_notice">Avis d'emploi</string>
+    <string name="hire_notice">Avis d’emploi</string>
     <string name="message_notice">Notification de message</string>
     <string name="system_notice">Notification système</string>
 
@@ -166,30 +166,94 @@
     <string name="wi_fi">Wi-Fi</string>
     <string name="ch4">Canal 4</string>
     <string name="gas">Gaz naturel</string>
-    <string name="hotel_no_info">Il n'y a pas encore d'information Chez l'habitant!</string>
-    <string name="add_hotel_info">Ajouter des informations sur le Chez l'habitant</string>
-    <string name="hotel_name">Nom Chez l'habitant</string>
-    <string name="hint_hotel_name">Veuillez entrer le nom de l'hôtel</string>
-    <string name="hotel_address">Adresse Chez l'habitant</string>
-    <string name="hint_hotel_address">S'il vous plaît entrer l'adresse du domicile</string>
-    <string name="hotel_phone">Téléphone chez l'habitant</string>
+    <string name="hotel_no_info">Il n’y a pas encore d’information Chez l’habitant!</string>
+    <string name="add_hotel_info">Ajouter des informations sur le Chez l’habitant</string>
+    <string name="hotel_name">Nom Chez l’habitant</string>
+    <string name="hint_hotel_name">Veuillez entrer le nom de l’hôtel</string>
+    <string name="hotel_address">Adresse Chez l’habitant</string>
+    <string name="hint_hotel_address">S’il vous plaît entrer l’adresse du domicile</string>
+    <string name="hotel_phone">Téléphone chez l’habitant</string>
     <string name="hint_hotel_phone">Veuillez entrer le numéro de téléphone du domicile</string>
-    <string name="license">Licence d'entreprise</string>
+    <string name="license">Licence d’entreprise</string>
 
-    <string name="hint_license">Cliquez pour télécharger la licence d'entreprise</string>
-    <string name="hotel_photo">Chez l'habitant Photo</string>
-    <string name="hint_hotel_photo">Cliquez pour télécharger des photos de Chez l'habitant</string>
-    <string name="school_depart">Étudier à l'école et au département</string>
+    <string name="hint_license">Cliquez pour télécharger la licence d’entreprise</string>
+    <string name="hotel_photo">Chez l’habitant Photo</string>
+    <string name="hint_hotel_photo">Cliquez pour télécharger des photos de Chez l’habitant</string>
+    <string name="school_depart">Étudier à l’école et au département</string>
     <string name="name">Nom</string>
     <string name="basic_info">Informations de base</string>
     <string name="inbox">Reprendre la boîte de réception</string>
-    <string name="inbox_no_info">Je n'ai pas encore reçu de CV!</string>
+    <string name="inbox_no_info">Je n’ai pas encore reçu de CV!</string>
 
     <string-array name="address_list">
+        <item>基隆市</item>
         <item>台北市</item>
         <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
     </string-array>
+    <string name="spin_address">S’il vous plaît sélectionner le comté</string>
+    <string name="spin_area">Veuillez sélectionner une région</string>
+
+    <!--相關規範-->
+    <string name="spe1">Bienvenue dans lapplication 一家順順 (ci-après dénommée APP) développée par l’Université nationale des affaires de Taipei (NTUB). Lorsque vous entrez dans cette application pour parcourir ou accéder aux informations, vous êtes Lisez, comprenez, acceptez et acceptez les termes et conditions suivants:</string>
+    <string name="spe2">1, l’utilisation de spécifications</string>
+    <string name="spe3">Vos utilisateurs sont d’accord:</string>
+    <string name="spe4">Respectez les lois applicables, les conditions convenues et les bonnes manières et respectez la vie privée des autres.</string>
+    <string name="spe5">Utilisez cette application uniquement pour un usage privé et non commercial.</string>
+    <string name="spe6">Obtenez tout consentement, permission ou autorisation nécessaire pour publier, poster ou soumettre des informations ou du matériel, et assumez toute responsabilité résultant de l’affichage, de la publication ou de la soumission d’informations ou de matériel.</string>
+    <string name="spe7">Ne postez pas, ne postez pas et ne soumettez pas d’informations illégales, trompeuses, insultantes, diffamatoires, harcelantes, gênantes ou inappropriées, ne distribuez pas et ne publiez pas de spam, de très gros fichiers dépassant une capacité raisonnable, de virus, etc.</string>
+    <string name="spe8">Vous ne pouvez pas modifier, traduire, revendre, concéder en sous-licence, louer l’APP ou procéder à un reverse engineering, ni supprimer, contourner, décoder, altérer ou obstruer les spécifications d’utilisation applicables ou tenter de contourner la protection contre la copie du contenu de l’APP. Une fonctionnalité ou toute autre technologie utilisée pour contrôler l’accès ou l’utilisation du contenu ou de ses éléments d’identification.</string>
+    <string name="spe9">N’utilisez aucune autre technologie susceptible de nuire aux intérêts ou à la propriété de cette application ou d’autres utilisateurs.</string>
+    <string name="spe10">N’utilisez aucun système ou méthode automatisé fourni par une université autre que la Chine du Nord pour connecter, acquérir, copier ou contrôler une partie quelconque de cette application.</string>
+    <string name="spe11">Votre utilisateur s’engage à fournir des informations véridiques et complètes au moment de l’enregistrement de cette application et à maintenir ces informations à jour. Vous devez soigneusement enregistrer le nom de votre utilisateur et votre mot de passe pour empêcher toute utilisation incorrecte par des tiers et assumer toute responsabilité résultant de l’utilisation de cette appli.</string>
+    <string name="spe12">2, autorisations NTUB</string>
+    <string name = "spe13"> Vous comprenez et accordez à NTUB, à ses fournisseurs de services et à ses partenaires les droits suivants: </string>
+    <string name="spe14"> Utilisez, modifiez, réécrivez, reproduisez, distribuez, publiez et affichez librement vos utilisateurs postés, postés ou soumis dans la zone publique ou partagée de l’APP dans la portée nécessaire pour fournir le service. Informations ou matériaux, y compris d’autres informations ou matériaux liés au contenu fourni par vos utilisateurs. </string>
+    <string name="spe15"> a le droit mais pas l’obligation de superviser, d’ajuster ou de supprimer le contenu de cette application ou les informations ou documents postés, postés ou soumis par vos utilisateurs. </string>
+    <string name="spe16"> Afin de protéger cette application, le fournisseur de l’application, le fournisseur d’accès Internet ou d’autres utilisateurs concernés ou potentiellement concernés, vous avez le droit de restreindre l’utilisation de cette application ou de supprimer le compte que votre utilisateur a enregistré. </string>
+    <string name="spe17"> Vous pouvez à tout moment résilier ou modifier l’application, son contenu et les conditions associées, sans préavis à vos utilisateurs. </string>
+    <string name = "spe18"> 3, déclaration de confidentialité </string>
+    <string name="spe19"> Les informations personnelles de NTUB collectées par vos utilisateurs à l’aide de cette application seront protégées par la politique de confidentialité. En vous inscrivant en tant que membre de cette application, vous indiquez que vous avez lu, compris et entièrement accepté les instructions suivantes: </string>
+    <string name="spe20"> Utilisateur APP NTUB </string>
+    <string name="spe21"> Portée de la politique de confidentialité </string>
+    <string name="spe22"> Informations collectées par NTUB </string>
+    <string name="spe23"> Comment NTUB utilisera les informations collectées </string>
+    <string name="spe24"> Informations partagées par l’utilisateur (transparence des informations et options) </string>
+    <string name="spe25"> Accéder à vos informations personnelles et les mettre à jour </string>
+    <string name="spe26"> Nouvelles informations partagées par l’Université de commerce de Beijing </string>
+    <string name="spe27"> Période de conservation du profil utilisateur </string>
+    <string name="spe28"> Sécurité de l’information </string>
+    <string name="spe29"> Mise en œuvre de la politique et coopération avec l’autorité compétente </string>
+    <string name="spe30"> Modifier et contacter </string>
+    <string name = "spe31"> 4, déclaration de droits de propriété intellectuelle </string>
+    <string name="spe32"> Propriété, droits d’auteur et autres informations relatives à cette application et à son contenu (à l’exclusion des informations et des documents postés, publiés ou soumis par les utilisateurs sur le mur des messages, les espaces publics ou les espaces partagés de cette application) Les droits de propriété appartiennent à NTUB. </string>
+    <string name="spe33"> 5, clause de non responsabilité </string>
+    <string name="spe34"> Vous êtes responsable de tous les risques liés à l’utilisation de cette application. L’Université de Beishang n’est pas responsable des pertes causées par la navigation ou l’utilisation de cette application, ni ne fournit aucune garantie, expresse ou implicite, quelle qu’elle soit. </string>
+    <string name="spe35"> NTUB s’engage à assurer l’exactitude et l’exhaustivité du contenu de cette application. NTUB n’assume aucune responsabilité pour les erreurs ou les omissions. </string>
+    <string name="spe36"> NTUB s’engage à maintenir le fonctionnement et l’exécution de cette application, mais NTUB n’est pas responsable des pertes causées par une interruption (y compris, mais sans limitation, une interférence et une interruption des services de télécommunication) par vos utilisateurs. </string>
+    <string name="spe37"> Sauf pour le contenu de NTUB, y compris, mais sans s’y limiter, les pages liées par cette application, NTUB ne sera pas responsable des accidents (y compris des infections par des virus informatiques ou de téléphones portables), de l’embarras, de la violation des droits d’auteur. NTUB n’assume aucune responsabilité ni dommages directs, indirects, accessoires, spéciaux, dérivés, punitifs ou immatériels, résultant de droits de propriété intellectuelle, y compris mais non limités à des bénéfices, de l’achalandage, de l’utilisation, de la perte de données ou d’autres pertes intangibles. Que vous utilisiez ou non les services de cette application pour télécharger ou obtenir des informations, vous le ferez à vos propres risques et périls. </string>
+    <string name="spe38"> 6, loi applicable et tribunal compétent </string>
+    <string name="spe39"> L’interprétation et l’application de ces règles et déclarations d’utilisation ainsi que les litiges ou litiges découlant de l’utilisation de cette appli par vos utilisateurs doivent être conformes à la législation de Taïwan. Traitement. </string>
     <string name="spin_address">請選擇縣市</string>
     <string name="spin_area">請選擇區域</string>
     <string name="hint_hotel_info">請輸入民宿簡介資訊</string>
 </resources>
+

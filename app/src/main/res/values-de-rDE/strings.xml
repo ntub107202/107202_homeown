@@ -187,9 +187,72 @@
     <string name="inbox_no_info">Es wurden noch keine Bewerbungen erhalten!</string>
 
     <string-array name="address_list">
+        <item>基隆市</item>
         <item>台北市</item>
         <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
     </string-array>
+    <string name="spin_address">Bitte wählen Sie den Landkreis</string>
+    <string name="spin_area">Bitte wählen Sie eine Region</string>
+
+    <string name="spe1">Willkommen bei der App 一家順順 (nachfolgend als APP bezeichnet), die von der National Taipei University of Business (im Folgenden NTUB) entwickelt wurde. Wenn Sie diese App aufrufen, können Sie die Informationen und Informationen, die Sie gelesen haben, durchsuchen , verstehen, akzeptieren und stimmen zu, die folgenden Bedingungen zu beachten:</string>
+    <string name="spe2"> 1, verwenden Sie die Angabe </string>
+    <string name="spe3"> Ihr Benutzer stimmt zu: </string>
+    <string name="spe4"> Befolgen Sie alle geltenden Gesetze, vereinbarten Bedingungen und guten Manieren und respektieren Sie die Privatsphäre anderer. </string>
+    <string name="spe5"> Verwenden Sie diese App nur für private, nicht kommerzielle Zwecke. </string>
+    <string name="spe6"> Um Zustimmung, Genehmigung oder Genehmigung zu erhalten, um Informationen oder Materialien zu posten, zu posten oder zu übermitteln, und um jegliche Verantwortung zu übernehmen, die sich aus der Veröffentlichung, Veröffentlichung oder Übermittlung von Informationen oder Materialien ergibt. </string>
+    <string name="spe7"> nicht rechtswidrig geschrieben, veröffentlicht oder übermittelt werden, irreführend, beleidigend, obszön, belästigend, verleumderisch oder anderweitig unangemessen von Informationen, nicht verteilen oder senden Spam, Überschreitung der angemessenen Kapazität von großen Dateien, Viren, usw. . </string>
+    <string name="spe8"> kann nicht ändern, übersetzen, verkaufen sie wieder, weiter lizenzieren, mieten diese APP oder APP des Reverse Engineering, auch nicht entfernen, umgehen, zu dekodieren oder auf andere Weise mit der Verwendung geltenden Spezifikationen ändern oder stören, Oder versuchen, die Content Copy Protection-Funktion von APP oder eine andere Technologie zu umgehen, die den Zugriff oder die Nutzung des Inhalts oder des identifizierten Materials steuert. </string>
+    <string name="spe9"> Verwenden Sie keine andere Technologie, die den Interessen oder dem Eigentum dieser APP oder anderer Benutzer schaden könnte. </string>
+    <string name="spe10"> ohne die Verwendung eines automatisierten Systems oder mittels eines nicht-NTUB Verbindung zur Verfügung gestellt, erhalten, oder einen beliebigen Teil der Kopie des APP überwachen. </string>
+    <string name="spe11"> Sie stimmen zu, bei der Registrierung für diese Anwendung zutreffende und vollständige Informationen anzugeben und diese Informationen auf dem neuesten Stand zu halten. Sie müssen den Nutzernamen und das Passwort sorgfältig speichern, um eine missbräuchliche Verwendung durch Dritte zu verhindern, und jegliche Verantwortung übernehmen, die sich aus der Nutzung dieser App ergibt. </string>
+    <string name="spe12"> 2, NTUB-Berechtigungen </string>
+    <string name="spe13"> Sie bestätigen und folgende Rechte NTUB, ihre Dienstleister und Partner gewähren: </string>
+    <string name="spe14"> innerhalb des erforderlichen Bereichs von Dienstleistungen, kostenlos zu benutzen, modifizieren, anzupassen, vervielfältigen, verbreiten, veröffentlichen und zeigen Sie Ihre Benutzer auf diesem APP gemeinsamen Bereich geschrieben oder Bereiche geteilt, die Entsendung oder Unterwerfung Informationen oder Materialien, einschließlich anderer Informationen oder Materialien, die sich auf den von Ihren Nutzern bereitgestellten Inhalt beziehen. </string>
+    <string name="spe15"> hat das Recht, aber nicht die Pflicht, den Inhalt dieser App oder die von Ihren Nutzern geposteten, geposteten oder übermittelten Informationen oder Materialien zu überwachen, anzupassen oder zu löschen. </string>
+    <string name="spe16"> Um die APP, APP diesen Anbieter, Netzbetreiber oder andere betroffen zu schützen oder kann durch den Benutzer, rechts berührt das Recht zu begrenzen diese APP zu verwenden oder die registrierte Benutzer von Ihrem Konto zu löschen. </string>
+    <string name="spe17"> Sie können die APP und ihren Inhalt sowie die zugehörigen Bedingungen jederzeit ohne vorherige Benachrichtigung Ihrer Benutzer beenden oder ändern. </string>
+    <string name="spe18"> 3, Datenschutzerklärung </string>
+    <string name="spe19"> Daten NTUB weil Sie Ihre Kunden die APP verwenden und die Sammlung wird “Datenschutzbestimmungen” des Schutzes sein. Mit der Registrierung als Mitglied dieser APP geben Sie an, dass Sie die folgenden Anweisungen gelesen, verstanden und voll und ganz akzeptiert haben: </string>
+    <string name="spe20"> NTUB APP-Benutzer </string>
+    <string name="spe21"> Umfang der Datenschutzrichtlinie </string>
+    <string name="spe22"> Von NTUB gesammelte Informationen </string>
+    <string name="spe23"> Wie NTUB die gesammelten Informationen verwendet </string>
+    <string name="spe24"> Freigegebene Informationen (Informationstransparenz und Optionen) </string>
+    <string name="spe25"> Greifen Sie auf Ihre persönlichen Daten zu und aktualisieren Sie sie. </string>
+    <string name="spe26"> Geteilte NTUB-Informationen </string>
+    <string name="spe27"> Speicherdauer für Benutzerprofile </string>
+    <string name="spe28"> Informationssicherheit </string>
+    <string name="spe29"> Umsetzung der Richtlinien und Zusammenarbeit mit der zuständigen Behörde </string>
+    <string name="spe30"> Ändern und kontaktieren </string>
+    <string name="spe31"> 4, Erklärung zum geistigen Eigentum </string>
+    <string name="spe32"> diese APP und dessen Inhalt (aber nicht enthält Ihre Benutzer diese Nachricht Wand an APP, die Region auf einem öffentlichen oder gemeinsam genutzten Bereichen, in denen, Informationen oder Material gebucht oder übermittelt) wurde das Eigentum, Urheberrecht und anderen geistigen Eigentumsrechte gehören NTUB. </string>
+    <string name="spe33"> 5, Haftungsausschluss </string>
+    <string name="spe34"> alle Gefahren des APP, NTUB verantwortlich für die aus dem Zugang oder verwenden Sie diese APP entstandenen Verlust, noch irgendeine Art, weder ausdrückliche oder implizierte Garantie. </string>
+    <string name="spe35"> NTUB Engagement Richtigkeit und Vollständigkeit der Inhalte dieser APP zu suchen, sondern unterliegen Fehler oder Auslassungen nicht NTUB keine Haftung übernehmen. </string>
+    <string name="spe36"> NTUB zur Aufrechterhaltung dieses APP-Operationen und Ausführung verpflichtet, sondern weil der Benutzer eine Unterbrechung auftreten (einschließlich, aber nicht beschränkt auf Telekommunikationsdienste von Störungen und Unterbrechungen begrenzt) verursachte einen Verlust, NTUB keine Verantwortung. </string>
+    <string name="spe37"> Neben den Inhalt NTUB Produktion angegeben, alle anderen Inhalte, einschließlich, aber nicht beschränkt auf, durch die Seiten dieses APP Link wird NTUB nicht übernimmt die Verantwortung für den Unfall (einschließlich einer Infektion durch Computer oder Handy-Virus), Verleumdung, Verletzung des Urheberrechts oder Rechte an geistigem Eigentum durch den Verlust oder Haftung verursacht werden, einschließlich, aber nicht beschränkt auf, Gewinne, Goodwill, Nutzung, Datenverlust oder andere immaterielle Verluste begrenzt sein NTUB keine Haftung für direkte, indirekte, zufällige, spezielle, Folge- oder Strafschadenersatz und Haftung. Ob den Dienst nutzt diese APP in herunterzuladen oder die gewünschten Informationen zu erhalten, die Sie sollten keine Informationen Benutzer eigenes Risiko und aufgrund vor der Eröffnung sein die Herunterladen oder eine Folge von Schäden erhalten oder Ihrem Benutzer-Computer oder Mobiltelefon-Systemen Verlust, nicht NTUB keine Verantwortung übernehmen. </string>
+    <string name="spe38"> 6, anwendbares Recht und Gerichtsstand </string>
+    <string name="spe39"> Die Auslegung und Anwendung dieser Benutzungsregeln und die Streitigkeiten oder Streitigkeiten, die sich aus der Nutzung dieser App durch Ihre Benutzer ergeben, müssen den Gesetzen von Taiwan entsprechen. Verarbeitung. </string>
+
     <string name="spin_address">請選擇縣市</string>
     <string name="spin_area">請選擇區域</string>
     <string name="hint_hotel_info">請輸入民宿簡介資訊</string>

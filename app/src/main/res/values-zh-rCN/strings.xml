@@ -1,125 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="app_name">一家顺顺</string>
-        <string name="title_people">编辑履历</string>
-        <string name="title_publish">刊登资讯</string>
-        <string name="title_work">工作安排</string>
-        <string name="title_page">雇主页面</string>
-        <string name="lbl_indiv_info">个人资讯</string>
-        <string name="lbl_upload_photo">上传大头照</string>
-        <string name="lbl_inputName">请输入姓名</string>
-        <string name="lbl_plzinputName">请输入您的姓名</string>
-        <string name="lbl_gender">性别</string>
-        <string name="lbl_birth">生日</string>
-        <string name="lbl_home">居住地</string>
-        <string name="lbl_school">就读学校</string>
-        <string name="lbl_depart">科系名称</string>
-        <string name="lbl_state_study">就学状态</string>
-        <string name="title_humansearch">人才搜寻</string>
-        <string name="lbl_intro">自我介绍</string>
-        <string name="lbl_interest">兴趣</string>
-        <string name="lbl_skill">一般技能</string>
-        <string name="lbl_pro_skill">专业技能</string>
-        <string name="lbl_drive">驾驶技能</string>
-        <string name="lbl_talentperf">才艺表演</string>
-        <string name="lbl_language">外语能力</string>
-        <string name="lbl_workexp">工作经验</string>
-        <string name="lbl_reason">换宿原因</string>
-        <string name="lbl_eathabit">饮食习惯</string>
-        <string name="lbl_wrkperiod">换宿期间</string>
-        <string name="lbl_contact">联络方式</string>
-        <string name="lbl_liang">联络人</string>
-        <string name="lbl_phone">手机</string>
-        <string name="lbl_lifephoto">生活照片</string>
-        <string name="title_humaninfo">人才资讯</string>
+    <string name="app_name">一家顺顺</string>
+    <string name="title_people">编辑履历</string>
+    <string name="title_publish">刊登资讯</string>
+    <string name="title_work">工作安排</string>
+    <string name="title_page">雇主页面</string>
+    <string name="lbl_indiv_info">个人资讯</string>
+    <string name="lbl_upload_photo">上传大头照</string>
+    <string name="lbl_inputName">请输入姓名</string>
+    <string name="lbl_plzinputName">请输入您的姓名</string>
+    <string name="lbl_gender">性别</string>
+    <string name="lbl_birth">生日</string>
+    <string name="lbl_home">居住地</string>    
+    <string name="lbl_school">就读学校</string>
+    <string name="lbl_depart">科系名称</string>
+    <string name="lbl_state_study">就学状态</string>
+    <string name="title_humansearch">人才搜寻</string>
+    <string name="lbl_intro">自我介绍</string>
+    <string name="lbl_interest">兴趣</string>
+    <string name="lbl_skill">一般技能</string>
+    <string name="lbl_pro_skill">专业技能</string>
+    <string name="lbl_drive">驾驶技能</string>
+    <string name="lbl_talentperf">才艺表演</string>
+    <string name="lbl_language">外语能力</string>
+    <string name="lbl_workexp">工作经验</string>
+    <string name="lbl_reason">换宿原因</string>
+    <string name="lbl_eathabit">饮食习惯</string>
+    <string name="lbl_wrkperiod">换宿期间</string>
+    <string name="lbl_contact">联络方式</string>
+    <string name="lbl_liang">联络人</string>
+    <string name="lbl_phone">手机</string>
+    <string name="lbl_lifephoto">生活照片</string>
+    <string name="title_humaninfo">人才资讯</string>
+        
+    <string name="title_bnb">找换宿</string>
+    <string name="title_forum">交换心得</string>
+    <string name="title_schedule">工作排程</string>
+    <string name="title_student">个人页面</string>
+        
+    <string name="about1">我们团队希望可以藉由手机应用程式的开发让打工换宿变得更方便也更有效率，并解决双方资讯不对称与安全性问题。 </string>
+    <string name="about2">作为一个媒合民宿主和学生的平台，我们的logo是一只蜜蜂，同时也是个蜂巢，代表着学生与民宿主的关系。蜜蜂象征着学生们在换宿时依旧能保持勤奋、自律、团队工作的精神，六边形的蜂巢象征着民宿就像是学生们的第二个家。一家顺顺这个名字源自于我们对换宿的期望，大家像个一家人互相照顾，顺心顺利的相互合作。 </string>
 
-        <string name="title_bnb">找换宿</string>
-        <string name="title_forum">交换心得</string>
-        <string name="title_schedule">工作排程</string>
-        <string name="title_student">个人页面</string>
-
-        <string name="about1">我们团队希望可以藉由手机应用程式的开发让打工换宿变得更方便也更有效率，并解决双方资讯不对称与安全性问题。 </string>
-        <string name="about2">作为一个媒合民宿主和学生的平台，我们的logo是一只蜜蜂，同时也是个蜂巢，代表着学生与民宿主的关系。蜜蜂象征着学生们在换宿时依旧能保持勤奋、自律、团队工作的精神，六边形的蜂巢象征着民宿就像是学生们的第二个家。一家顺顺这个名字源自于我们对换宿的期望，大家像个一家人互相照顾，顺心顺利的相互合作。 </string>
-
-        <string name="title_activity_navigation">NavigationActivity</string>
-        <string name="title_home">Home</string>
-        <string name="title_dashboard">Dashboard</string>
-        <string name="title_notifications">Notifications</string>
-
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
         <!-- TODO: Remove or change this placeholder text -->
-        <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-        <string name="add_job">新增刊登职缺</string>
-        <string name="publish_hotel">刊登民宿</string>
-        <string name="job_info">职缺资讯</string>
-        <string name="job_title">职缺名称</string>
-        <string name="hint_job_title">请输入职缺名称</string>
-        <string name="salary">待遇</string>
-        <string name="hint_salary">请输入数字金额</string>
-        <string name="salary_day">/ 日</string>
-        <string name="no">无</string>
-        <string name="service">其他待遇</string>
-        <string name="stay">包含住宿</string>
-        <string name="snorkel">浮潜</string>
-        <string name="food">包含吃食</string>
-        <string name="moto">提供机车</string>
-        <string name="fish">钓鱼</string>
-        <string name="time">时间</string>
-        <string name="hint_date">点击选择日期</string>
-        <string name="time_1">时段 1</string>
-        <string name="hint_time">点击选择时间</string>
-        <string name="add_time">新增时段</string>
-        <string name="numder_people">需求人数</string>
-        <string name="hint_number_people">请输入人数</string>
-        <string name="work_content">工作内容</string>
-        <string name="work_item1">工作项目 1</string>
-        <string name="hint_work_content">请输入工作内容</string>
-        <string name="add_work_item">新增项目</string>
-        <string name="skill">所需技能</string>
-        <string name="general_skill">一般技能</string>
-        <string name="og">庭园整理</string>
-        <string name="cr">柜台接待</string>
-        <string name="rc">房务清洁</string>
-        <string name="od">资料整理</string>
-        <string name="rs">餐厅服务</string>
-        <string name="profession_skill">专业技能</string>
-        <string name="cook">料理</string>
-        <string name="art">美术设计</string>
-        <string name="photograph">摄影</string>
-        <string name="web">网站管理</string>
-        <string name="gardening">园艺</string>
-        <string name="show">艺术表演</string>
-        <string name="dance">舞蹈</string>
-        <string name="sing">唱歌</string>
-        <string name="music">乐器演奏</string>
-        <string name="language_skill">语言能力</string>
-        <string name="English">英文</string>
-        <string name="Japanese">日文</string>
-        <string name="Minnan">闽南语</string>
-        <string name="driving_skill">驾驶技能</string>
-        <string name="motorcycle">机车驾照</string>
-        <string name="car">汽车驾照</string>
-        <string name="publish_date">刊登期间</string>
-        <string name="contact_info">应征方式</string>
-        <string name="contact">联络人</string>
-        <string name="contact_name">请输入联络人姓名</string>
-        <string name="email">E-mail</string>
-        <string name="hint_email">请输入联络人电子信箱</string>
-        <string name="phone">手机</string>
-        <string name="hint_phone">请输入联络人电话</string>
+    <string name="add_job">新增刊登职缺</string>
+    <string name="publish_hotel">刊登民宿</string>
+    <string name="job_info">职缺资讯</string>
+    <string name="job_title">职缺名称</string>
+    <string name="hint_job_title">请输入职缺名称</string>
+    <string name="salary">待遇</string>
+    <string name="hint_salary">请输入数字金额</string>
+    <string name="salary_day">/ 日</string>
+    <string name="no">无</string>
+    <string name="service">其他待遇</string>
+    <string name="stay">包含住宿</string>
+    <string name="snorkel">浮潜</string>
+    <string name="food">包含吃食</string>
+    <string name="moto">提供机车</string>
+    <string name="fish">钓鱼</string>
+    <string name="time">时间</string>
+    <string name="hint_date">点击选择日期</string>
+    <string name="time_1">时段 1</string>
+    <string name="hint_time">点击选择时间</string>
+    <string name="add_time">新增时段</string>
+    <string name="numder_people">需求人数</string>
+    <string name="hint_number_people">请输入人数</string>
+    <string name="work_content">工作内容</string>
+    <string name="work_item1">工作项目 1</string>
+    <string name="hint_work_content">请输入工作内容</string>
+    <string name="add_work_item">新增项目</string>
+    <string name="skill">所需技能</string>
+    <string name="general_skill">一般技能</string>
+    <string name="og">庭园整理</string>
+    <string name="cr">柜台接待</string>
+    <string name="rc">房务清洁</string>
+    <string name="od">资料整理</string>
+    <string name="rs">餐厅服务</string>
+    <string name="profession_skill">专业技能</string>
+    <string name="cook">料理</string>
+    <string name="art">美术设计</string>
+    <string name="photograph">摄影</string>
+    <string name="web">网站管理</string>
+    <string name="gardening">园艺</string>
+    <string name="show">艺术表演</string>
+    <string name="dance">舞蹈</string>
+    <string name="sing">唱歌</string>
+    <string name="music">乐器演奏</string>
+    <string name="language_skill">语言能力</string>
+    <string name="English">英文</string>
+    <string name="Japanese">日文</string>
+    <string name="Minnan">闽南语</string>
+    <string name="driving_skill">驾驶技能</string>
+    <string name="motorcycle">机车驾照</string>
+    <string name="car">汽车驾照</string>
+    <string name="publish_date">刊登期间</string>
+    <string name="contact_info">应征方式</string>
+    <string name="contact">联络人</string>
+    <string name="contact_name">请输入联络人姓名</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">请输入联络人电子信箱</string>
+    <string name="phone">手机</string>
+    <string name="hint_phone">请输入联络人电话</string>
+        
+    <string name="boss_setting">雇主页面</string>
+    <string name="hotel_info">民宿资讯</string>
+    <string name="hire_history">雇用纪录</string>
+    <string name="contact_history">联络纪录</string>
+    <string name="notice">通知设定</string>
+    <string name="return_problem">回报问题</string>
+    <string name="about">关于我们</string>
+    <string name="specification">相关规范</string>
+    <string name="identity_change">身分切换</string>
+    <string name="login">登入</string>
+    <string name="register">注册</string>
+        
+    <string name="add_calender">新增工作安排</string>
+    <string name="work_info">工作资讯</string>
+    <string name="work_title">工作标题</string>
+    <string name="hint_work_title">请输入工作标题</string>
+    <string name="work_type">工作类型</string>
+    <string name="everyday_work">日常性工作</string>
+    <string name="once_work">一次性工作</string>
+    <string name="work_time">工作时间</string>
+    <string name="member">安排人员</string>    
+    <string name="human_search">人才搜寻</string>
+    <string name="job_view">刊登职缺</string>
+    <string name="job_view_no_info">还没有刊登任何职缺资讯喔！ </string>
+    <string name="contact_history_no_info">还没有任何联络纪录喔！ </string>
+    <string name="hire_history_no_info">还没有任何雇用纪录喔！ </string>
+        
+    <string name="reture_problem1">请尽可能详细描述所遇到的问题与状况，相关工作人员会尽快处理！感谢您的配合与协助！ </string>
+    <string name="problem">问题描述</string>
+    <string name="hint_problem">请输入遇到问题的描述，越详细越好喔！ </string>
+    <string name="sent">确认送出</string>
+        
+    <string name="calender">工作安排</string>
+    <string name="calender_no_info">还没有任何工作安排！ </string>
+    <string name="spec_no_info">尚在筹画中...</string>    
+    <string name="publish_job">刊登职缺</string>
+    <string name="publish_job_no_info">还没有刊登任何职缺资讯喔！ </string>    
+    <string name="hire_notice">雇用通知</string>
+    <string name="message_notice">讯息通知</string>
+    <string name="system_notice">系统通知</string>
+    <string name="equipment">设备</string>
+    <string name="table">桌子</string>
+    <string name="chair">椅子</string>
+    <string name="wardrobe">衣柜</string>
+    <string name="bed">床</string>
+    <string name="refrigerator">冰箱</string>
+    <string name="air_conditioning">冷气</string>
+    <string name="tv">电视</string>
+    <string name="water_heater">热水器</string>
+    <string name="washing_machine">洗衣机</string>
+    <string name="wi_fi">Wi-Fi</string>    
+    <string name="ch4">第四台</string>
+    <string name="gas">天然瓦斯</string>
+    <string name="hotel_no_info">还没有任何民宿资讯喔！ </string>
+    <string name="add_hotel_info">新增民宿资讯</string>
+    <string name="hotel_name">民宿店名</string>
+    <string name="hint_hotel_name">请输入民宿店名</string>
+    <string name="hotel_address">民宿地址</string>
+    <string name="hint_hotel_address">请输入民宿地址</string>
+    <string name="hotel_phone">民宿电话</string>
+    <string name="hint_hotel_phone">请输入民宿电话</string>
+    <string name="license">营业执照</string>
+    <string name="hint_license">点击上传营业执照</string>
+    <string name="hotel_photo">民宿照片</string>
+    <string name="hint_hotel_photo">点击上传民宿照片</string>
+    <string name="school_depart">就读学校与科系</string>
+    <string name="name">姓名</string>
+    <string name="basic_info">基本资讯</string>
+    <string name="inbox">履历收件匣</string>
+    <string name="inbox_no_info">还没有收到任何履历喔！</string>
 
-        <string name="boss_setting">雇主页面</string>
-        <string name="hotel_info">民宿资讯</string>
-        <string name="hire_history">雇用纪录</string>
-        <string name="contact_history">联络纪录</string>
-        <string name="notice">通知设定</string>
-        <string name="return_problem">回报问题</string>
-        <string name="about">关于我们</string>
-        <string name="specification">相关规范</string>
-        <string name="identity_change">身分切换</string>
-        <string name="login">登入</string>
-        <string name="register">注册</string>
+    <string-array name="address_list">
+        <item>基隆市</item>
+        <item>台北市</item>
+        <item>新北市</item>
+        <item>桃园市</item>
+        <item>新竹市</item>
+        <item>新竹县</item>
+        <item>苗栗县</item>
+        <item>台中市</item>
+        <item>南投县</item>
+        <item>彰化县</item>
+        <item>云林县</item>
+        <item>嘉义市</item>
+        <item>嘉义县</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏东县</item>
+        <item>宜兰县</item>
+        <item>花莲县</item>
+        <item>台东县</item>
+        <item>澎湖县</item>
+        <item>金门县</item>
+        <item>连江县</item>
+    </string-array>
+    <string name="spin_address">请选择县市</string>
+    <string name="spin_area">请选择区域</string>
 
+    <string name="spe1">欢迎使用国立台北商业大学（以下称「北商大」）所开发之「一家顺顺」应用程式（以下称「APP」），当您进入本APP浏览或存取其中之资料与资讯，即表示您已阅读、了解、接受并同意遵守以下条款与条件：</string>
+    <string name="spe2">一、使用规范</string>
+    <string name="spe3">贵用户同意：</string>
+    <string name="spe4">遵守任何适用之法律、约定条款以及良好的礼仪，并尊重他人隐私。 </string>
+    <string name="spe5">仅基于私人非商业用途使用本APP。 </string>
+    <string name="spe6">取得张贴、发布或提交资讯或资料所需之任何同意、允许或授权，并承担张贴、发布或提交资讯或资料所衍生之任何责任。 </string>
+    <string name="spe7">不张贴、发布或提交违法、误导性、侮辱性、猥亵、骚扰、诽谤或其他不适当之资讯，不散发或张贴垃圾邮件、超过合理容量之特大档案、病毒等。 </string>
+    <string name="spe8">不得修改、翻译、转售、再授权、租赁本APP或对本APP进行逆向工程，亦不得移除、规避、解码或以其它方式变更或妨碍任何适用之使用规范、或企图规避APP之内容复制保护功能或任何其他用于控制有关内容或其识别资料的存取或使用之科技。 </string>
+    <string name="spe9">不使用可能损害本APP或其他用户之利益或财产的任何其他科技。 </string>
+    <string name="spe10">不使用任何非北商大提供之自动系统或方式连接、获取、复制或监控本APP的任何部分。 </string>
+    <string name="spe11">贵用户同意在办理本APP注册时提供真实且完整资料，并保持该等资料为最新资料。贵用户必须谨慎保管用户名称及密码以防遭他人不当使用，并承担使用本APP所衍生之任何责任。 </string>
+    <string name="spe12">二、北商大之权限</string>
+    <string name="spe13">贵用户了解并授与北商大、其服务提供者及合作伙伴下列权利：</string>
+    <string name="spe14">于提供服务所必要之范围内，无偿使用、修改、改写、重制、散布、出版及展示贵用户于本APP公用区域或共享区域上所张贴、发布或提交之资讯或资料，包括与贵用户提供之内容有关之其他资讯或资料。 </string>
+    <string name="spe15">有权但无义务监督、调整或删除本APP之内容或 贵用户所张贴、发布或提交之资讯或资料。 </string>
+    <string name="spe16">为了保护本APP、本APP提供者、网路业者或是其他受影响或可能受影响之用户，有权限制使用本APP之权利或删除贵用户已注册之帐号。 </string>
+    <string name="spe17">得随时终止或变更APP与其内容以及有关条款而毋须事前通知贵用户。 </string>
+    <string name="spe18">三、隐私声明</string>
+    <string name="spe19">北商大因贵用户使用本APP而搜集之个人资讯将受到《隐私权政策》之保护。如 贵用户注册为本APP会员时即表示已阅读、理解并完全同意接受以下说明：</string>
+    <string name="spe20">北商大APP使用者</string>
+    <string name="spe21">《隐私权政策》适用范围</string>
+    <string name="spe22">北商大会收集的资讯</string>
+    <string name="spe23">北商大会如何使用收集到的资讯</string>
+    <string name="spe24">用户分享的资讯（资讯透明化和选择权）</string>
+    <string name="spe25">存取及更新您的个人资讯</string>
+    <string name="spe26">北商大分享的资讯</string>
+    <string name="spe27">用户个人资料保留期限</string>
+    <string name="spe28">资讯安全</string>
+    <string name="spe29">政策执行以及与主管机关配合情形</string>
+    <string name="spe30">变更及联系方式</string>
+    <string name="spe31">四、智慧财产权声明</string>
+    <string name="spe32">本APP及其内容（但不包含贵用户于本APP的讯息墙、公用区域或共享区域上所张贴、发布或提交之资讯或资料）之所有权、著作权及其他智慧财产权系属北商大所有。 </string>
+    <string name="spe33">五、免责声明</string>
+    <string name="spe34">贵用户须自行承担使用本APP之一切风险，北商大不负责任何因浏览或使用本APP而引致之损失，亦不提供任何种类、明示或默示的担保。 </string>
+    <string name="spe35">北商大承诺力求本APP内容之准确性及完整性，但内容如有错误或遗漏，北商大不承担任何赔偿责任。 </string>
+    <string name="spe36">北商大致力于维持本APP运作及执行，但对于贵用户因遭遇任何中断（包含但不限于电信服务之干扰及中断）所致之任何损失，北商大不负任何责任。 </string>
+    <string name="spe37">除注明北商大制作之内容外，其他任何内容，包括但不限于经由本APP连结的网页，北商大概不承担因意外（包括感染电脑或手机病毒）、诽谤、侵犯版权或智慧财产权所造成的损失或责任，包括但不限于利润、商誉、使用、资料损失或其他无形损失，北商大不承担任何直接、间接、附带、特别、衍生性或惩罚性赔偿或责任。是否使用本APP之服务下载或取得任何资料应由贵用户自行考量且自负风险，因前开任何资料之下载或取得而导致贵用户电脑或手机系统之任何损坏或资料流失，北商大不承担任何责任。 </string>
+    <string name="spe38">六、准据法及管辖法院</string>
+    <string name="spe39">本「使用规范与声明」之解释与适用，以及与本「使用规范与声明」有关或贵用户因使用本APP而产生之争议或纠纷，应依照台湾之法律予以处理。 </string>
         <string name="add_calender">新增工作安排</string>
         <string name="work_info">工作资讯</string>
         <string name="work_title">工作标题</string>

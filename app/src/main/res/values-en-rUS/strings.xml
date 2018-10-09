@@ -98,8 +98,8 @@
     <string name="Japanese">Japanese</string>
     <string name="Minnan">Minnan</string>
     <string name="driving_skill">Driving Skills</string>
-    <string name="motorcycle">Scooter driver's license</string>
-    <string name="car">Car driver's license</string>
+    <string name="motorcycle">Scooter driver’s license</string>
+    <string name="car">Car driver’s license</string>
     <string name="publish_date">Publish Date</string>
     <string name="contact_info">Contact Information</string>
     <string name="contact">Contact Person</string>
@@ -133,7 +133,7 @@
 
     <string name="human_search">Talent Search</string>
     <string name="job_view">Publish Job</string>
-    <string name="job_view_no_info">Haven't posted any job information yet!</string>
+    <string name="job_view_no_info">Haven’t posted any job information yet!</string>
     <string name="contact_history_no_info">There are no contact history yet!</string>
     <string name="hire_history_no_info">There are no hire history yet!</string>
 
@@ -183,12 +183,76 @@
     <string name="name">Name</string>
     <string name="basic_info">Basic information</string>
     <string name="inbox">Resume inbox</string>
-    <string name="inbox_no_info">Haven't received any resumes yet!</string>
+    <string name="inbox_no_info">Haven’t received any resumes yet!</string>
 
     <string-array name="address_list">
+        <item>基隆市</item>
         <item>台北市</item>
         <item>新北市</item>
+        <item>桃園市</item>
+        <item>新竹市</item>
+        <item>新竹縣</item>
+        <item>苗栗縣</item>
+        <item>台中市</item>
+        <item>南投縣</item>
+        <item>彰化縣</item>
+        <item>雲林縣</item>
+        <item>嘉義市</item>
+        <item>嘉義縣</item>
+        <item>台南市</item>
+        <item>高雄市</item>
+        <item>屏東縣</item>
+        <item>宜蘭縣</item>
+        <item>花蓮縣</item>
+        <item>台東縣</item>
+        <item>澎湖縣</item>
+        <item>金門縣</item>
+        <item>連江縣</item>
     </string-array>
+    <string name="spin_address">Please select the county</string>
+    <string name="spin_area">Please select a region</string>
+
+    <string name="spe1">Welcome to the 一家順順 application (hereinafter referred to as APP) developed by National Taipei University of Business (hereinafter referred to as NTUB). When you enter this app to browse or access it The information and information means that you have read, understood, accepted and agreed to the following terms and conditions:</string>
+            
+    <string name="spe2"> 1, use specification </string>
+    <string name="spe3">Your user agrees: </string>
+    <string name="spe4">Follow any applicable laws, agreed terms, and good manners, and respect the privacy of others. </string>
+    <string name="spe5">Use this app only for private, non-commercial use. </string>
+    <string name="spe6">To obtain any consent, permission or authorization required to post, post or submit information or materials, and to assume any responsibility arising from posting, posting or submitting information or materials. </string>
+    <string name="spe7">Do not post, post or submit illegal, misleading, insulting, defamatory, harassing, defamatory or other inappropriate information, do not distribute or post spam, extra large files exceeding reasonable capacity, viruses, etc. . </string>
+    <string name="spe8">The APP may not be modified, translated, resold, sublicensed, leased, reverse engineered, or removed, circumvented, decoded, or otherwise altered or interfered with any applicable usage practices, Or attempt to circumvent APP’s Content Copy Protection feature or any other technology used to control access or use of the Content or its identified material. </string>
+    <string name="spe9">Do not use any other technology that may harm the interests or property of this APP or other users. </string>
+    <string name="spe10">Do not use any automated system or method not provided by NTUB to connect, acquire, copy or monitor any part of this app. </string>
+    <string name="spe11">You agree to provide true and complete information when you register for this application, and keep such information up-to-date. You must carefully store your User’s name and password to prevent improper use by others and assume any responsibility arising out of the use of this App. </string>
+    <string name="spe12">2, NTUB permissions </string>
+    <string name="spe13">You understand and license the following rights of Beijing Business University, its service providers and partners: </string>
+    <string name="spe14">Freely use, modify, rewrite, reproduce, distribute, publish and display your users posted, posted or submitted in the public area or shared area of ​​the APP within the scope necessary to provide the service. Information or materials, including other information or materials related to the content provided by your users. </string>
+    <string name="spe15"> has the right but not the obligation to supervise, adjust or delete the content of this app or the information or materials posted, posted or submitted by your users. </string>
+    <string name="spe16">In order to protect this APP, the APP provider, the Internet provider or other affected or potentially affected users, you have the right to restrict the use of this APP or delete the account that your user has registered. </string>
+    <string name="spe17">You may terminate or change the APP and its content and related terms at any time without prior notice to your users. </string>
+    <string name="spe18">3, privacy statement </string>
+    <string name="spe19">NTUB’s personal information collected by your users using this app will be protected by the Privacy Policy. By registering as a member of this APP, you indicate that you have read, understood and fully agree to the following instructions: </string>
+    <string name="spe20">NTUB APP user</string>
+    <string name="spe21">Scope of the Privacy Policy </string>
+    <string name="spe22">Information collected by NTUB</string>
+    <string name="spe23">How NTUB will use the collected information</string>
+    <string name="spe24">User-shared information (information transparency and options)</string>
+    <string name="spe25">Access and update your personal information</string>
+    <string name="spe26">NTUB shared information</string>
+    <string name="spe27">User profile retention period </string>
+    <string name="spe28">Information Security</string>
+    <string name="spe29">Policy implementation and cooperation with the competent authority </string>
+    <string name="spe30">Change and contact </string>
+    <string name="spe31">4, intellectual property rights statement </string>
+    <string name="spe32">The ownership, copyright and other wisdom of this app and its content (but not including information or materials posted, posted or submitted by users on the message wall, public areas or shared areas of this app) Property rights are owned by NTUB. </string>
+    <string name="spe33">5, disclaimer </string>
+    <string name="spe34">You are responsible for all risks of using this app. NTUB is not responsible for any loss caused by browsing or using this app, nor does it provide any kind, express or implied warranty. </string>
+    <string name="spe35">NTUB is committed to the accuracy and completeness of the contents of this app, but NTUB does not assume any liability for errors or omissions. </string>
+    <string name="spe36">NTUB is committed to maintaining the operation and execution of this APP, but NTUB is not responsible for any loss caused by any interruption (including but not limited to interference and interruption of telecommunications services) by your users. </string>
+    <string name="spe37">Except for the contents of NTUB, including but not limited to the pages linked through this app, NTUB will not be responsible for accidents (including infection with computer or mobile phone viruses), embarrassment, copyright infringement. Or the loss or liability caused by intellectual property rights, including but not limited to profits, goodwill, use, loss of data or other intangible losses, Beijing Commercial University does not assume any direct, indirect, incidental, special, derivative or punitive damages or liabilities. . Whether or not to use the services of this APP to download or obtain any information shall be at your own risk and at your own risk. NTUB will not be liable for any damage or loss of data from your computer or mobile phone system due to the download or acquisition of any prior information. </string>
+    <string name="spe38">6, the law of law and the court of jurisdiction </string>
+    <string name="spe39">The interpretation and application of this "Rules and Statements of Use" and the disputes or disputes arising out of the use of this App by your users shall be in accordance with the laws of Taiwan. deal with. </string>
+
     <string name="spin_address">請選擇縣市</string>
     <string name="spin_area">請選擇區域</string>
     <string name="hint_hotel_info">請輸入民宿簡介資訊</string>

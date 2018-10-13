@@ -17,6 +17,7 @@
     <string name="lbl_depart">科系名稱</string>
     <string name="lbl_state_study">就學狀態</string>
     <string name="title_humansearch">人才搜尋</string>
+    <string name="lbl_collection">收藏清單</string>
     <string name="lbl_intro">自我介紹</string>
     <string name="lbl_interest">興趣</string>
     <string name="lbl_skill">一般技能(可複選)</string>
@@ -186,7 +187,7 @@
     <string name="basic_info">基本資訊</string>
     <string name="inbox">履歷收件匣</string>
     <string name="inbox_no_info">還沒有收到任何履歷喔！</string>
-    
+
     <string-array name="address_list">
         <item>台北市</item>
         <item>新北市</item>

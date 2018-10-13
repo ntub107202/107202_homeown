@@ -26,6 +26,7 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.view.View;
@@ -85,6 +86,30 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         choiceFromAlbumButton.setOnClickListener(clickListener);
         choiceFromAlbumButton2 = (ImageView) findViewById(R.id.img_pic);
         choiceFromAlbumButton2.setOnClickListener(clickListener);
+
+        //计算图片左右间距之和
+        int padding = 15;
+        int spacePx = (int) (UIUtil.dp2px(this, padding) * 2);
+        //计算图片宽度
+        int imageWidth = UIUtil.getScreenWidth(this) - spacePx;
+        int imageWidth2 = UIUtil.getScreenWidth(this) - spacePx;
+        //计算宽高比，注意数字后面要加上f表示浮点型数字
+        float scale = 16f / 9f;
+        float scale2 = 16f / 9f;
+        //根据图片宽度和比例计算图片高度
+        int imageHeight = (int) (imageWidth / scale);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( imageWidth,imageHeight);
+
+        int imageHeight2 = (int) (imageWidth2 / scale2);
+        LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams( imageWidth2,imageHeight2);
+        //设置左右边距
+        params.leftMargin = (int) UIUtil.dp2px(this, padding);
+        params.rightMargin = (int) UIUtil.dp2px(this, padding);
+        params2.leftMargin = (int) UIUtil.dp2px(this, padding);
+        params2.rightMargin = (int) UIUtil.dp2px(this, padding);
+        choiceFromAlbumButton.setLayoutParams(params2);
+        choiceFromAlbumButton2.setLayoutParams(params);
+
 
         Button button01 = (Button) findViewById(R.id.btn_add_hotel);
 

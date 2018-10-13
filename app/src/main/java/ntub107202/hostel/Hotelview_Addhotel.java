@@ -18,6 +18,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -33,6 +34,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -47,6 +49,9 @@ public class Hotelview_Addhotel extends AppCompatActivity {
     EditText edit_hotel_phone;
     EditText edit_hotel_info;
     Button btn_add_hotel;
+
+    private static String pic1;
+    private static String pic2;
 
     private ImageView startCameraButton = null;
     private ImageView choiceFromAlbumButton = null;
@@ -91,7 +96,9 @@ public class Hotelview_Addhotel extends AppCompatActivity {
             public void onClick(View v) {
                 Log.v("8888888", spin_address.getSelectedItem().toString());
                 Log.v("8888888", spin_area.getSelectedItem().toString());
-                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString());
+                Log.v("8888888", pic1);
+                Log.v("8888888", pic2);
+                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2);
                 Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "post");
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();
@@ -440,6 +447,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                     File file = new File(photoOutputUri.getPath());
                     if(file.exists()) {
                         Bitmap bitmap = BitmapFactory.decodeFile(photoOutputUri.getPath());
+                        BitmapToString(bitmap);
                         choiceFromAlbumButton.setImageBitmap(bitmap);
 //                        file.delete(); // 选取完后删除照片
                     } else {
@@ -454,6 +462,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                     File file2 = new File(photoOutputUri.getPath());
                     if(file2.exists()) {
                         Bitmap bitmap = BitmapFactory.decodeFile(photoOutputUri.getPath());
+                        BitmapToString2(bitmap);
                         choiceFromAlbumButton2.setImageBitmap(bitmap);
 //                        file.delete(); // 选取完后删除照片
                     } else {
@@ -462,5 +471,37 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                     break;
             }
         }
+    }
+    public static String BitmapToString(Bitmap bitmap) {
+        String des = null;
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            out.flush();
+            out.close();
+            byte[] buffer = out.toByteArray();
+            byte[] encode = Base64.encode(buffer, Base64.DEFAULT);
+            des = new String(encode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        pic1=des;
+        return des;
+    }
+    public static String BitmapToString2(Bitmap bitmap) {
+        String des = null;
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            out.flush();
+            out.close();
+            byte[] buffer = out.toByteArray();
+            byte[] encode = Base64.encode(buffer, Base64.DEFAULT);
+            des = new String(encode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        pic2=des;
+        return des;
     }
 }

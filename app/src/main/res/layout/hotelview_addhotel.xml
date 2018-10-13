@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -117,12 +118,17 @@
                 android:gravity="top|left"
                 android:inputType="textMultiLine"
                 android:minLines="5"
-                android:singleLine="true" />
+                android:singleLine="true"
+                />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/license"
+                android:scaleType="centerCrop"
                 android:textColor="@color/fontDark" />
             <!--
             <Button
@@ -141,18 +147,20 @@
             <ImageView
                 android:id="@+id/img_license"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:padding="60dp"
-                android:background="@color/txt_font"
-                android:src="@drawable/ic_photo_white"/>
+                android:layout_marginTop="20dp"
+                android:background="@color/txt_font" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/hotel_photo"
                 android:textColor="@color/fontDark" />
             <!--
@@ -172,14 +180,12 @@
             <ImageView
                 android:id="@+id/img_pic"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/txt_font"
-                android:padding="60dp"
-                android:src="@drawable/ic_photo_camera_white" />
+                android:layout_marginTop="20dp"
+                android:background="@color/txt_font" />
             <Button
                 android:id="@+id/btn_add_hotel"
                 android:layout_width="match_parent"

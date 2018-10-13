@@ -1,10 +1,13 @@
 package ntub107202.hostel;
 
 import android.app.Fragment;
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Base64;
@@ -71,10 +74,13 @@ public class Fragment_Humansearch extends Fragment {
     }
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         private List<String> mData;
+        private Context mContext;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             public TextView TextView0001, TextView0002 ,TextView0003, TextView0004;
             public ImageView Img01;
+            public CardView cardView;
+
             public ViewHolder(View v) {
                 super(v);
                 TextView0001 = (TextView) v.findViewById(R.id.textView0001);
@@ -82,6 +88,7 @@ public class Fragment_Humansearch extends Fragment {
                 TextView0003 = (TextView) v.findViewById(R.id.textView0003);
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
                 Img01 = (ImageView) v.findViewById(R.id.img01);
+                cardView = (CardView) v.findViewById(R.id.card_view);
             }
         }
 
@@ -92,9 +99,24 @@ public class Fragment_Humansearch extends Fragment {
 
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
+            mContext = parent.getContext();
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.humansearch_item, parent, false);
             MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
+
+            vh.cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent i = new Intent(mContext, Humansearch_Info.class);
+                    i.putExtra("row1",myDataset.get(vh.getAdapterPosition()));
+                    i.putExtra("row2",myDataset2.get(vh.getAdapterPosition()));
+                    i.putExtra("row3",myDataset3.get(vh.getAdapterPosition()));
+                    i.putExtra("row4",myDataset4.get(vh.getAdapterPosition()));
+                    i.putExtra("row5",myDataset5.get(vh.getAdapterPosition()));
+
+                    mContext.startActivity(i);
+                }
+            });
             return vh;
         }
 

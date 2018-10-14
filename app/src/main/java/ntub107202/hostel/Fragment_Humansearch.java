@@ -29,6 +29,20 @@ public class Fragment_Humansearch extends Fragment {
     ArrayList<String> myDataset3;
     ArrayList<String> myDataset4;
     ArrayList<String> myDataset5;
+    ArrayList<String> myDataset6;
+    ArrayList<String> myDataset7;
+    ArrayList<String> myDataset8;
+    ArrayList<String> myDataset9;
+    ArrayList<String> myDataset10;
+    ArrayList<String> myDataset11;
+    ArrayList<String> myDataset12;
+    ArrayList<String> myDataset13;
+    ArrayList<String> myDataset14;
+    ArrayList<String> myDataset15;
+    ArrayList<String> myDataset16;
+    ArrayList<String> myDataset17;
+    ArrayList<String> myDataset18;
+    ArrayList<String> myDataset19;
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
     @Nullable
@@ -56,6 +70,21 @@ public class Fragment_Humansearch extends Fragment {
         myDataset3 = new ArrayList<>();
         myDataset4 = new ArrayList<>();
         myDataset5 = new ArrayList<>();
+        myDataset6 = new ArrayList<>();
+        myDataset7 = new ArrayList<>();
+        myDataset8 = new ArrayList<>();
+        myDataset9 = new ArrayList<>();
+        myDataset10 = new ArrayList<>();
+        myDataset11 = new ArrayList<>();
+        myDataset12 = new ArrayList<>();
+        myDataset13 = new ArrayList<>();
+        myDataset14 = new ArrayList<>();
+        myDataset15 = new ArrayList<>();
+        myDataset16 = new ArrayList<>();
+        myDataset17 = new ArrayList<>();
+        myDataset18 = new ArrayList<>();
+        myDataset19 = new ArrayList<>();
+
         myAdapter = new MyAdapter(myDataset);
         for(int i = 0; i < getWorksheet.humanLength; i++){
 //                myDataset.add(i + "");
@@ -64,6 +93,21 @@ public class Fragment_Humansearch extends Fragment {
             myDataset3.add(getWorksheet.getRow15(i));
             myDataset4.add(getWorksheet.getRow16(i));
             myDataset5.add(getWorksheet.getRow17(i));
+            myDataset6.add(getWorksheet.getRow18(i));
+            myDataset7.add(getWorksheet.getRow19(i));
+            myDataset8.add(getWorksheet.getRow20(i));
+            myDataset9.add(getWorksheet.getRow21(i));
+            myDataset10.add(getWorksheet.getRow22(i));
+            myDataset11.add(getWorksheet.getRow23(i));
+            myDataset12.add(getWorksheet.getRow24(i));
+            myDataset13.add(getWorksheet.getRow25(i));
+            myDataset14.add(getWorksheet.getRow26(i));
+            myDataset15.add(getWorksheet.getRow27(i));
+            myDataset16.add(getWorksheet.getRow28(i));
+            myDataset17.add(getWorksheet.getRow29(i));
+            myDataset18.add(getWorksheet.getRow30(i));
+            myDataset19.add(getWorksheet.getRow31(i));
+
             Log.d("get0000", myDataset5.get(i)+"resume");
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
@@ -113,8 +157,45 @@ public class Fragment_Humansearch extends Fragment {
                     i.putExtra("row3",myDataset3.get(vh.getAdapterPosition()));
                     i.putExtra("row4",myDataset4.get(vh.getAdapterPosition()));
                     i.putExtra("row5",myDataset5.get(vh.getAdapterPosition()));
-
+                    i.putExtra("row6",myDataset6.get(vh.getAdapterPosition()));
+                    i.putExtra("row7",myDataset7.get(vh.getAdapterPosition()));
+                    i.putExtra("row8",myDataset8.get(vh.getAdapterPosition()));
+                    i.putExtra("row9",myDataset9.get(vh.getAdapterPosition()));
+                    i.putExtra("row10",myDataset10.get(vh.getAdapterPosition()));
+                    i.putExtra("row11",myDataset11.get(vh.getAdapterPosition()));
+                    i.putExtra("row12",myDataset12.get(vh.getAdapterPosition()));
+                    i.putExtra("row13",myDataset13.get(vh.getAdapterPosition()));
+                    i.putExtra("row14",myDataset14.get(vh.getAdapterPosition()));
+                    i.putExtra("row15",myDataset15.get(vh.getAdapterPosition()));
+                    i.putExtra("row16",myDataset16.get(vh.getAdapterPosition()));
+                    i.putExtra("row17",myDataset17.get(vh.getAdapterPosition()));
+                    i.putExtra("row18",myDataset18.get(vh.getAdapterPosition()));
+                    i.putExtra("row19",myDataset19.get(vh.getAdapterPosition()));
                     mContext.startActivity(i);
+
+                    Log.d("get0000", "1" + myDataset);
+                    Log.d("get0000", "1" + myDataset2);
+                    Log.d("get0000", "1" + myDataset3);
+                    Log.d("get0000", "1" + myDataset4);
+                    Log.d("get0000", "1" + myDataset5);
+                    Log.d("get0000", "1" + myDataset6);
+                    Log.d("get0000", "1" + myDataset7);
+                    Log.d("get0000", "1" + myDataset8);
+                    Log.d("get0000", "1" + myDataset9);
+                    Log.d("get0000", "1" + myDataset10);
+                    Log.d("get8787", "1" + myDataset11);
+                    Log.d("get0000", "1" + myDataset12);
+                    Log.d("get0000", "1" + myDataset13);
+                    Log.d("get0000", "1" + myDataset14);
+                    Log.d("get0000", "1" + myDataset15);
+                    Log.d("get0000", "1" + myDataset16);
+                    Log.d("get0000", "1" + myDataset17);
+                    Log.d("get0000", "1" + myDataset18);
+                    Log.d("get0000", "1" + myDataset19);
+
+
+
+
                 }
             });
             return vh;

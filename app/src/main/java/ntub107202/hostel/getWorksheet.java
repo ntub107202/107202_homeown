@@ -32,7 +32,20 @@ public class getWorksheet {
     private static String[] row15= new String[100];
     private static String[] row16= new String[100];
     private static String[] row17= new String[100];
-
+    private static String[] row18= new String[100];
+    private static String[] row19= new String[100];
+    private static String[] row20= new String[100];
+    private static String[] row21= new String[100];
+    private static String[] row22= new String[100];
+    private static String[] row23= new String[100];
+    private static String[] row24= new String[100];
+    private static String[] row25= new String[100];
+    private static String[] row26= new String[100];
+    private static String[] row27= new String[100];
+    private static String[] row28= new String[100];
+    private static String[] row29= new String[100];
+    private static String[] row30= new String[100];
+    private static String[] row31= new String[100];
     private static int worksheetLength ;
     public static int humanLength;
     public static int jobLength;
@@ -79,11 +92,26 @@ public class getWorksheet {
                     int j=0;
                     Log.v("get0000",humanLength + "human");
                     for (int i = 0 ; i<humanLength ; i++){
-                        row13[i] = jsonArray.getJSONObject(i).getString("row1");
-                        row14[i] = jsonArray.getJSONObject(i).getString("row2");
-                        row15[i] = jsonArray.getJSONObject(i).getString("row3");
-                        row16[i] = jsonArray.getJSONObject(i).getString("row4");
-                        row17[i] = jsonArray.getJSONObject(i).getString("row5");
+                        row13[i] = jsonArray.getJSONObject(i).getString("name");
+                        row14[i] = jsonArray.getJSONObject(i).getString("school");
+                        row15[i] = jsonArray.getJSONObject(i).getString("jobExp");
+                        row16[i] = jsonArray.getJSONObject(i).getString("exchangeReason");
+                        row17[i] = jsonArray.getJSONObject(i).getString("face");
+
+                        row18[i] = jsonArray.getJSONObject(i).getString("gender");
+                        row19[i] = jsonArray.getJSONObject(i).getString("birth");
+                        row20[i] = jsonArray.getJSONObject(i).getString("cellphone");
+                        row21[i] = jsonArray.getJSONObject(i).getString("address");
+                        row22[i] = jsonArray.getJSONObject(i).getString("email");
+                        row23[i] = jsonArray.getJSONObject(i).getString("lifePhoto");
+                        row24[i] = jsonArray.getJSONObject(i).getString("studyState");
+                        row25[i] = jsonArray.getJSONObject(i).getString("interest");
+                        row26[i] = jsonArray.getJSONObject(i).getString("eatingHabit");
+                        row27[i] = jsonArray.getJSONObject(i).getString("startingDate");
+                        row28[i] = jsonArray.getJSONObject(i).getString("endingDate");
+                        row29[i] = jsonArray.getJSONObject(i).getString("collectionList");
+                        row30[i] = jsonArray.getJSONObject(i).getString("department");
+                        row31[i] = jsonArray.getJSONObject(i).getString("gardening");
                         Log.v("Row17", row17[i]);
 
                     }
@@ -260,8 +288,50 @@ public class getWorksheet {
     public static String getRow16(int i){
         return row16[i];
     }
+
     public static String getRow17(int i){
         return row17[i];
     }
-
+    public static String getRow18(int i){
+        return row18[i];
+    }
+    public static String getRow19(int i){
+        return row19[i];
+    }
+    public static String getRow20(int i){
+        return row20[i];
+    }
+    public static String getRow21(int i){
+        return row21[i];
+    }
+    public static String getRow22(int i){
+        return row22[i];
+    }
+    public static String getRow23(int i){
+        return row23[i];
+    }
+    public static String getRow24(int i){
+        return row24[i];
+    }
+    public static String getRow25(int i){
+        return row25[i];
+    }
+    public static String getRow26(int i){
+        return row26[i];
+    }
+    public static String getRow27(int i){
+        return row27[i];
+    }
+    public static String getRow28(int i){
+        return row28[i];
+    }
+    public static String getRow29(int i){
+        return row29[i];
+    }
+    public static String getRow30(int i){
+        return row30[i];
+    }
+    public static String getRow31(int i){
+        return row31[i];
+    }
 }

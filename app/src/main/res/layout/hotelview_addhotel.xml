@@ -128,7 +128,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:text="@string/license"
-                android:scaleType="centerCrop"
+
                 android:textColor="@color/fontDark" />
             <!--
             <Button
@@ -185,6 +185,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
                 android:background="@color/txt_font" />
             <Button
                 android:id="@+id/btn_add_hotel"

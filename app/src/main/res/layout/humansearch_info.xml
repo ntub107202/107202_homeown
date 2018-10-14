@@ -317,26 +317,6 @@
                 android:textColor="@color/fontDark"/>
 
             <TextView
-                android:id="@+id/textView25"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"
-                android:text="聯絡人"
-                android:textColor="@color/txt_font" />
-
-            <TextView
-                android:id="@+id/contact_man"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="聯絡人"
-                android:textColor="@color/fontDark"
-                android:textSize="16dp" />
-
-            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

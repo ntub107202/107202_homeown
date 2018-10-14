@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class Humansearch_Info extends AppCompatActivity {
 
-    public TextView name, gender,birth,home,school,department,study_state,interest,work_exp,exchange_reason,eatting_habit,start_date,end_date,contact_man,phone,email;
+    public TextView name, gender,birth,home,school,department,study_state,interest,work_exp,exchange_reason,eatting_habit,start_date,end_date,phone,email;
     public ImageView img_photo,life_photo;
 
     @Override
@@ -32,7 +32,6 @@ public class Humansearch_Info extends AppCompatActivity {
         eatting_habit =  (TextView) findViewById(R.id.eatting_habit);
         start_date = (TextView) findViewById(R.id.start_date);
         end_date =  (TextView) findViewById(R.id.end_date);
-        contact_man = (TextView) findViewById(R.id.contact_man);
         interest =  (TextView) findViewById(R.id.interest);
         phone = (TextView) findViewById(R.id.phone);
         email =  (TextView) findViewById(R.id.email);

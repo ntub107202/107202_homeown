@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -105,7 +106,7 @@ public class Fragment_Calenderview extends Fragment {
         private List<String> mData;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004;
+            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004,TextView33;
 
             public ViewHolder(View v) {
                 super(v);
@@ -113,6 +114,26 @@ public class Fragment_Calenderview extends Fragment {
                 TextView0002 = (TextView) v.findViewById(R.id.textView0002);
                 TextView0003 = (TextView) v.findViewById(R.id.textView0003);
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
+
+                TextView33 = (TextView) v.findViewById(R.id.textView33);
+
+                TextView33.setOnClickListener(new View.OnClickListener() {
+                    Boolean flag = true;
+                    @Override
+                    public void onClick(View v) {
+                        if (flag) {
+                            flag = false;
+                            TextView0002.setMaxLines(5);
+                            TextView0002.setEllipsize(null); // 展开
+                            TextView33.setText("... 摺疊內容");
+                        } else {
+                            flag = true;
+                            TextView0002.setLines(1);
+                            TextView0002.setEllipsize(TextUtils.TruncateAt.END); // 收缩
+                            TextView33.setText("... 查看更多");
+                        }
+                    }
+                });
             }
         }
 

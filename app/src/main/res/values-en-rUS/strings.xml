@@ -254,4 +254,16 @@
     <string name="spe39">The interpretation and application of this "Rules and Statements of Use" and the disputes or disputes arising out of the use of this App by your users shall be in accordance with the laws of Taiwan. deal with. </string>
 
     <string name="hint_hotel_info">Please enter the property information</string>
+    <string name="hint_enter">Direct access please click me </string>
+    <string name="hint_passwd">Please enter a password </string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="other_login">Login in other ways</string>
+    <string name="forget_passwd">Forgot your password? </string>
+    <string name="hint_confirm_passwd">Please confirm the password </string>
+    <string name="agree">I agree to register an account</string>
+    <string name="create_account">Create a homestay account</string>
+    <string name="whisper">Helps you find small helpers who are adventurous and have the courage to try new things. If you are willing to try new things, accept travellers from all walks of life and go to your favorite places to experience what you love, welcome to contact us! </string>
+    <string name="hotel_reg">Homestay registration</string>
+    <string name="hotel_enter">Homestay entrance </string>
 </resources>

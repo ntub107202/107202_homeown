@@ -24,7 +24,7 @@
         android:paddingRight="10dp"
         android:paddingTop="50dp"
         android:singleLine="false"
-        android:text="幫您尋找的是各地具有冒險精神\n勇於嘗試新事物的小幫手\n若您也願意嘗試新的事物\n接受各地旅友離鄉背井\n到你所愛的地方體驗你所愛的事物\n歡迎跟我們聯繫"
+        android:text="@string/whisper"
         android:textColor="#4d4d4d"
         android:textSize="14sp" />
 
@@ -74,7 +74,7 @@
                 android:layout_marginRight="100dp"
                 android:layout_weight="1"
                 android:background="@drawable/shape"
-                android:text="民宿入口"
+                android:text="@string/hotel_enter"
                 android:textColor="@color/colorAccent" />
         </LinearLayout>
 

@@ -254,4 +254,16 @@
     <string name="spe39"> Die Auslegung und Anwendung dieser Benutzungsregeln und die Streitigkeiten oder Streitigkeiten, die sich aus der Nutzung dieser App durch Ihre Benutzer ergeben, müssen den Gesetzen von Taiwan entsprechen. Verarbeitung. </string>
 
     <string name="hint_hotel_info">Bitte geben Sie die Immobilieninformationen ein</string>
+    <string name="hint_enter">Bitte geben Sie mich direkt ein</string>
+    <string name="hint_passwd">Bitte geben Sie Ihr Passwort ein</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="other_login">Log dich auf andere Weise ein</string>
+    <string name="forget_passwd">Passwort vergessen?</string>
+    <string name="hint_confirm_passwd">Bitte bestätigen Sie das Passwort</string>
+    <string name="agree">Ich stimme der Registrierung für ein Konto zu</string>
+    <string name="create_account">Erstellen Sie ein Gastfamilie-Konto</string>
+    <string name="whisper">Was Sie suchen, ist ein kleiner Helfer, der abenteuerlustig ist und den Mut hat, neue Dinge auszuprobieren. Wenn Sie bereit sind, neue Dinge auszuprobieren, akzeptieren Sie Reisende aus allen Bereichen des Lebens und gehen Sie zu Ihren Lieblingsplätzen, um zu erleben, was Sie lieben, willkommen, uns zu kontaktieren!</string>
+    <string name="hotel_reg">Gastfamilie Registrierung</string>
+    <string name="hotel_enter">Gastfamilie Eingang</string>
 </resources>

@@ -105,9 +105,9 @@
     <string name="contact">連絡先</string>
     <string name="contact_name">連絡先の名前を入力してください</string>
     <string name="email">E-mail</string>
-    <string name="hint_email">連絡先のメールアドレスを入力してください</string>
+    <string name="hint_email">あなたのメールアドレスを入力してください</string>
     <string name="phone">携帯電話</string>
-    <string name="hint_phone">連絡先を入力してください</string>
+    <string name="hint_phone">電話番号を入力してください</string>
 
     <string name="boss_setting">雇用者ページ</string>
     <string name="hotel_info">ホームステイ情報</string>
@@ -255,4 +255,17 @@
 
 
     <string name="hint_hotel_info">プロパティ情報を入力してください</string>
+    <string name="hint_enter">直接アクセスしてください。</string>
+    <string name="hint_passwd">パスワードを入力してください</string>
+    <string name="facebook"> Facebook </string>
+    <string name="google"> Google </string>
+    <string name="other_login"> 他の方法でログイン</string>
+    <string name="forget_passwd">パスワードを忘れましたか？ </string>
+    <string name="hint_confirm_passwd">パスワードを確認してください</string>
+    <string name="agree">アカウントを登録することに同意します</ string>
+    <string name="whisper">あなたが探しているのは、冒険的な小さなヘルパーで、新しいことを試す勇気があります。 あなたが新しいものを試してみたいなら、あらゆる人生の旅行者を受け入れ、あなたが愛していることを体験するためにあなたの好きな場所に行って、私達に連絡してください！</string>
+    <string name="create_account">ホームステイアカウントを作成する</string>
+    <string name="hotel_reg">ホームステイ登録</string>
+    <string name="hotel_enter">ホームステイ入り口</string>
+
 </resources>

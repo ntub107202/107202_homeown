@@ -46,10 +46,15 @@ public class getWorksheet {
     private static String[] row29= new String[100];
     private static String[] row30= new String[100];
     private static String[] row31= new String[100];
+    private static String[] row32= new String[100];
+    private static String[] row33= new String[100];
+    private static String[] row34= new String[100];
+    private static String[] row35= new String[100];
     private static int worksheetLength ;
     public static int humanLength;
     public static int jobLength;
     public static int calendarLength;
+    public static int hostelinfoLength;
 
     public static void getJSON() {
 
@@ -178,7 +183,34 @@ public class getWorksheet {
         });
         myAsyncTask.execute(Common.getCalendar);
     }
+    public static void gethostelinfoJSON() {
 
+        getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    hostelinfoLength = worksheetLength;
+                    int j=0;
+                    Log.v("get0000",jobLength + "ergegje");
+                    for (int i = 0 ; i<hostelinfoLength ; i++){
+                        row32[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row33[i] = jsonArray.getJSONObject(i).getString("row2");
+                        row34[i] = jsonArray.getJSONObject(i).getString("row3");
+                        row35[i] = jsonArray.getJSONObject(i).getString("row4");
+                        Log.v("Row5", row5[i]);
+
+                    }
+                } catch (Exception e) {
+                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myAsyncTask.execute(Common.getHostelinfo);
+    }
 
     public static void postToPHP(String row1, String row2, String row3) {
         postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
@@ -333,5 +365,17 @@ public class getWorksheet {
     }
     public static String getRow31(int i){
         return row31[i];
+    }
+    public static String getRow32(int i){
+        return row32[i];
+    }
+    public static String getRow33(int i){
+        return row33[i];
+    }
+    public static String getRow34(int i){
+        return row34[i];
+    }
+    public static String getRow35(int i){
+        return row35[i];
     }
 }

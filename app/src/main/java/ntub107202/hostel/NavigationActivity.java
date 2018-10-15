@@ -77,6 +77,7 @@ public class NavigationActivity extends AppCompatActivity {
         getWorksheet.gethumansearchJSON();
         getWorksheet.getjobJSON();
         getWorksheet.getcalendarJSON();
+        getWorksheet.gethostelinfoJSON();
         int id = getIntent().getIntExtra("id", 0);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();

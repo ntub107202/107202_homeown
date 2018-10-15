@@ -227,6 +227,6 @@ public class Fragment_Humansearch extends Fragment {
             return null;
         } catch (OutOfMemoryError e) {
             return null;
-    }
+        }
     }
 }

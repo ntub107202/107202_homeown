@@ -167,15 +167,15 @@
     <string name="ch4"> 4番目の</string>
     <string name="gas">天然ガス</string>
 
-    <string name = "hotel_no_info">ホームステイ情報はまだありません！</string>
-    <string name = "add_hotel_info">新しい家の情報を追加する</string>
-    <string name = "hotel_name"> ホームステイ名</string>
-    <string name = "hint_hotel_name">ホテルの店舗名を入力してください</string>
-    <string name = "hotel_address"> ホームステイアドレス</string>
-    <string name = "hint_hotel_address">ホームステイの住所を入力してください</string>
-    <string name = "hotel_phone">ホームステイ電話</string>
-    <string name = "hint_hotel_phone">ホームステイの電話番号を入力してください</string>
-    <string name = "license">ビジネスライセンス</string>
+    <string name="hotel_no_info">ホームステイ情報はまだありません！</string>
+    <string name="add_hotel_info">新しい家の情報を追加する</string>
+    <string name="hotel_name"> ホームステイ名</string>
+    <string name="hint_hotel_name">ホテルの店舗名を入力してください</string>
+    <string name="hotel_address"> ホームステイアドレス</string>
+    <string name="hint_hotel_address">ホームステイの住所を入力してください</string>
+    <string name="hotel_phone">ホームステイ電話</string>
+    <string name="hint_hotel_phone">ホームステイの電話番号を入力してください</string>
+    <string name="license">ビジネスライセンス</string>
 
     <string name="hint_license">ビジネスライセンスをアップロードするにはクリックしてください</string>
     <string name="hotel_photo">ホームステイフォト</string>
@@ -259,10 +259,10 @@
     <string name="hint_passwd">パスワードを入力してください</string>
     <string name="facebook"> Facebook </string>
     <string name="google"> Google </string>
-    <string name="other_login"> 他の方法でログイン</string>
+    <string name="other_login">他の方法でログイン</string>
     <string name="forget_passwd">パスワードを忘れましたか？ </string>
     <string name="hint_confirm_passwd">パスワードを確認してください</string>
-    <string name="agree">アカウントを登録することに同意します</ string>
+    <string name="agree">アカウントを登録することに同意します</string>
     <string name="whisper">あなたが探しているのは、冒険的な小さなヘルパーで、新しいことを試す勇気があります。 あなたが新しいものを試してみたいなら、あらゆる人生の旅行者を受け入れ、あなたが愛していることを体験するためにあなたの好きな場所に行って、私達に連絡してください！</string>
     <string name="create_account">ホームステイアカウントを作成する</string>
     <string name="hotel_reg">ホームステイ登録</string>

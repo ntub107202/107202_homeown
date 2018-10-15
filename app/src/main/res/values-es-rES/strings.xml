@@ -253,7 +253,7 @@
     <string name="spe39"> La interpretación y aplicación de estas "Reglas y declaraciones de uso" y las disputas o disputas que surjan del uso de esta Aplicación por parte de sus usuarios serán de acuerdo con las leyes de Taiwán. Procesamiento. </string>
 
     <string name="hint_hotel_info">Por favor ingrese la información de la propiedad</string>
-    <string name = "hint_enter"> Acceso directo, haga clic en mí </string>
+    <string name="hint_enter"> Acceso directo, haga clic en mí </string>
         
     <string name="hint_passwd">Introduzca una contraseña</string>
     <string name="facebook">Facebook</string>

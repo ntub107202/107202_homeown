@@ -115,6 +115,11 @@ public class Fragment_Humansearch extends Fragment {
                     i.putExtra("row5",myDataset5.get(vh.getAdapterPosition()));
 
                     mContext.startActivity(i);
+                    Log.d("get0000", "test1"+myDataset);
+                    Log.d("get0000", "test2"+myDataset2);
+                    Log.d("get0000", "test3"+myDataset3);
+                    Log.d("get0000", "test4"+myDataset4);
+                    Log.d("get0000", "test5"+myDataset5);
                 }
             });
             return vh;

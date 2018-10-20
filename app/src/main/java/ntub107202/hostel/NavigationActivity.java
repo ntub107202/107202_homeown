@@ -68,8 +68,10 @@ public class NavigationActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
+        String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
+        Log.v("useraa", user);
+        Log.v("useraa", pw);
     }
 
     @Override

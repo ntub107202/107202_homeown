@@ -1,24 +1,58 @@
 package ntub107202.hostel;
 
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.net.URISyntaxException;
+import java.util.List;
 
 public class Humansearch_Info extends AppCompatActivity {
 
     public TextView name, gender,birth,home,school,department,study_state,interest,work_exp,exchange_reason,eatting_habit,start_date,end_date,phone,email;
     public ImageView img_photo,life_photo;
+    public Button btn_contact;
+
+    static final int REQUEST_ACTION_PICK = 1;
+    public static final String PACKAGE_NAME = "jp.naver.line.android";
+    public static final String CLASS_NAME = "jp.naver.line.android.activity.selectchat.SelectChatActivity";
+    private List<ApplicationInfo> m_appList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.humansearch_info);
+
 //
+        btn_contact = (Button) findViewById(R.id.btn_contact);
+        btn_contact.setOnClickListener(new Button.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setPackage(PACKAGE_NAME);
+//            intent.setClassName(PACKAGE_NAME, CLASS_NAME);
+            Uri number = Uri.parse("line://nv/recommendOA/@s920613a");
+
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_TEXT,"//ti/p/%40linedevelopers");
+            startActivity(intent);
+            }
+        });
+
+
         name = (TextView) findViewById(R.id.name);
         gender =  (TextView) findViewById(R.id.gender);
         birth = (TextView) findViewById(R.id.birth);
@@ -108,5 +142,30 @@ public class Humansearch_Info extends AppCompatActivity {
         } catch (OutOfMemoryError e) {
             return null;
         }
+    }
+    public void sendTextHandler(View view) {
+        String sendText = "s920613a";
+        if(checkLineInstalled()){
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setClassName(PACKAGE_NAME, CLASS_NAME);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_TEXT, sendText);
+            startActivity(intent);
+        }else{
+            Toast toast = Toast.makeText(this, "LINEがインストールされていません", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    }
+    private boolean checkLineInstalled(){
+        PackageManager pm = getPackageManager();
+        m_appList = pm.getInstalledApplications(0);
+        boolean lineInstallFlag = false;
+        for (ApplicationInfo ai : m_appList) {
+            if(ai.packageName.equals(PACKAGE_NAME)){
+                lineInstallFlag = true;
+                break;
+            }
+        }
+        return lineInstallFlag;
     }
 }

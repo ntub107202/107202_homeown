@@ -269,4 +269,7 @@
     <string name="hotel_reg">ホームステイ登録</string>
     <string name="hotel_enter">ホームステイ入り口</string>
 
+    <string name="hire_now">今すぐ採用</string>
+    <string name="online_contact">オンラインの連絡先</string>
+
 </resources>

@@ -259,4 +259,8 @@
     <string name="whisper">帮您寻找的是各地具有冒险精神，勇于尝试新事物的小帮手。若您也愿意尝试新的事物，接受各地旅友离乡背井，到你所爱的地方体验你所爱的事物，欢迎跟我们联系！</string>
     <string name="hotel_reg">民宿注册</string>
     <string name="hotel_enter">民宿入口</string>
+
+    <string name="hire_now">立即雇用</string>
+    <string name="online_contact">线上联络</string>
+
 </resources>

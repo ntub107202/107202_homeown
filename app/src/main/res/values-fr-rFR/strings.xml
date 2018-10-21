@@ -269,5 +269,9 @@
     <string name="whisper">Ce que vous recherchez, c’est un petit assistant aventureux qui a le courage d’essayer de nouvelles choses. Si vous êtes prêt à essayer de nouvelles expériences, à accepter des voyageurs de tous les horizons et à vous rendre dans vos endroits préférés pour vivre ce que vous aimez, n’hésitez pas à nous contacter!</string>
     <string name="hotel_reg">Enregistrement Hôtel</string>
     <string name="hotel_enter"> Entrée du Hôtel</string>
+
+    <string name="hire_now">embaucher maintenant</string>
+    <string name="online_contact">contact en ligne</string>
+
 </resources>
 

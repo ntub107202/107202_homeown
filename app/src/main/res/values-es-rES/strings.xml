@@ -266,4 +266,8 @@
     <string name="whisper">Lo que estás buscando es un pequeño ayudante que sea aventurero y tenga el coraje de probar cosas nuevas. Si está dispuesto a probar cosas nuevas, acepte viajeros de todos los ámbitos de la vida y vaya a sus lugares favoritos para experimentar lo que ama, ¡contáctenos!</string>
     <string name="hotel_reg">Registro hotelero</string>
     <string name="hotel_enter">Entrada del hotel</string>
+
+    <string name="hire_now">contratar ahora</string>
+    <string name="online_contact">contacto en línea</string>
+
 </resources>

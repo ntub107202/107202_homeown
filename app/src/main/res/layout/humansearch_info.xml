@@ -131,7 +131,7 @@
                     android:id="@+id/school"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="學校"
+                    android:text="@string/lbl_school"
                     android:textColor="@color/fontDark"
                     android:textSize="16dp" />
 
@@ -145,7 +145,7 @@
                     android:id="@+id/department"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="科系"
+                    android:text="@string/lbl_depart"
                     android:textColor="@color/fontDark"
                     android:textSize="16sp" />
 
@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="就學狀態"
+                android:text="@string/lbl_state_study"
                 android:textColor="@color/txt_font" />
 
             <TextView
@@ -165,7 +165,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="就學狀態"
+                android:text="@string/lbl_state_study"
                 android:textColor="@color/fontDark"
                 android:textSize="16dp" />
 
@@ -197,7 +197,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="興趣"
+                android:text="@string/lbl_interest"
                 android:textColor="@color/fontDark"
                 android:textSize="16dp" />
 
@@ -218,7 +218,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="工作經驗"
+                android:text="@string/lbl_workexp"
                 android:textColor="@color/fontDark"
                 android:textSize="16dp" />
 
@@ -239,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="換宿原因"
+                android:text="@string/lbl_reason"
                 android:textColor="@color/fontDark"
                 android:textSize="16dp" />
 
@@ -260,7 +260,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="飲食習慣"
+                android:text="@string/lbl_eathabit"
                 android:textColor="@color/fontDark"
                 android:textSize="16dp" />
 
@@ -271,7 +271,7 @@
                 android:layout_marginTop="8dp"
                 android:background="#CCCCCC"
                 android:padding="12dp"
-                android:text="換宿期間"
+                android:text="@string/lbl_wrkperiod"
                 android:textColor="@color/fontDark" />
 
             <LinearLayout
@@ -294,7 +294,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:text="－" />
+                    android:text="~" />
 
                 <TextView
                     android:id="@+id/end_date"
@@ -357,7 +357,7 @@
                 android:layout_marginTop="8dp"
                 android:background="#CCCCCC"
                 android:padding="12dp"
-                android:text="生活照片"
+                android:text="@string/lbl_lifephoto"
                 android:textColor="@color/fontDark" />
 
             <ImageView
@@ -381,7 +381,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:text="聯絡他"
+                    android:text="@string/online_contact"
                     android:background="@color/colorPrimary"
                     android:textColor="@android:color/white"/>
                 <Button
@@ -390,7 +390,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:text="立即雇用"
+                    android:text="@string/hire_now"
                     android:background="@color/colorPrimary"
                     android:textColor="@android:color/white"/>
 

@@ -267,4 +267,8 @@
     <string name="whisper">Helps you find small helpers who are adventurous and have the courage to try new things. If you are willing to try new things, accept travellers from all walks of life and go to your favorite places to experience what you love, welcome to contact us! </string>
     <string name="hotel_reg">Homestay registration</string>
     <string name="hotel_enter">Homestay entrance </string>
+
+    <string name="hire_now">hire now</string>
+    <string name="online_contact">online contact</string>
+
 </resources>

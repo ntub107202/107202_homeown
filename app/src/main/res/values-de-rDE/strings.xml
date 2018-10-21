@@ -267,4 +267,8 @@
     <string name="whisper">Was Sie suchen, ist ein kleiner Helfer, der abenteuerlustig ist und den Mut hat, neue Dinge auszuprobieren. Wenn Sie bereit sind, neue Dinge auszuprobieren, akzeptieren Sie Reisende aus allen Bereichen des Lebens und gehen Sie zu Ihren Lieblingsplätzen, um zu erleben, was Sie lieben, willkommen, uns zu kontaktieren!</string>
     <string name="hotel_reg">Gastfamilie Registrierung</string>
     <string name="hotel_enter">Gastfamilie Eingang</string>
+
+    <string name="hire_now">jetzt einstellen</string>
+    <string name="online_contact">Online-Kontakt</string>
+
 </resources>

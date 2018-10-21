@@ -60,7 +60,7 @@ public class Setting_Hotelinfo extends AppCompatActivity {
             myDataset2.add(getWorksheet.getRow33(i));
             myDataset3.add(getWorksheet.getRow34(i));
             myDataset4.add(getWorksheet.getRow35(i));
-            Log.d("get99999", getWorksheet.getRow32(i));
+//            Log.d("get99999", getWorksheet.getRow32(i));
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
         layoutManager = new LinearLayoutManager(this);

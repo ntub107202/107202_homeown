@@ -38,8 +38,7 @@
             <ImageView
                 android:id="@+id/img_hotel_photo"
                 android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:background="@color/txt_font"/>
+                android:layout_height="100dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -48,10 +47,22 @@
                 android:gravity="center_vertical"
                 android:orientation="vertical">
                 <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hotel_address"
+                    android:textColor="@color/txt_font"
+                    android:textSize="12dp"/>
+                <TextView
                     android:id="@+id/txt_hotel_address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="民宿地址" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hotel_phone"
+                    android:textColor="@color/txt_font"
+                    android:textSize="12dp"/>
                 <TextView
                     android:id="@+id/txt_hotel_phone"
                     android:layout_width="match_parent"

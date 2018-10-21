@@ -254,7 +254,7 @@
 
     <string name="hint_hotel_info">Por favor ingrese la información de la propiedad</string>
     <string name="hint_enter"> Acceso directo, haga clic en mí </string>
-        
+    <string name="hint_account">Ingrese una cuenta</string> 
     <string name="hint_passwd">Introduzca una contraseña</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>

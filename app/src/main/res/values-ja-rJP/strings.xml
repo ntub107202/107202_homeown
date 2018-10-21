@@ -256,6 +256,7 @@
 
     <string name="hint_hotel_info">プロパティ情報を入力してください</string>
     <string name="hint_enter">直接アクセスしてください。</string>
+    <string name="hint_account">アカウントを入力してください</string>
     <string name="hint_passwd">パスワードを入力してください</string>
     <string name="facebook"> Facebook </string>
     <string name="google"> Google </string>

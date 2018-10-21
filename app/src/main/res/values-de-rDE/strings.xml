@@ -255,6 +255,7 @@
 
     <string name="hint_hotel_info">Bitte geben Sie die Immobilieninformationen ein</string>
     <string name="hint_enter">Bitte geben Sie mich direkt ein</string>
+    <string name="hint_account"> Bitte geben Sie ein Konto ein </string>
     <string name="hint_passwd">Bitte geben Sie Ihr Passwort ein</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>

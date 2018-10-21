@@ -247,6 +247,7 @@
 
     <string name="hint_hotel_info">请输入民宿简介资讯</string>
     <string name="hint_enter">直接进入请点我</string>
+    <string name="hint_account">请输入帐号</string>
     <string name="hint_passwd">请输入密码</string>
     <string name="facebook">Facebook</string>
     <string name="google">Google</string>

@@ -257,6 +257,7 @@
 
 
     <string name="hint_enter"> Accès direct, cliquez-moi s’il vous plaît </string>
+    <string name="hint_account">Veuillez entrer un compte</string>
     <string name="hint_passwd"> Veuillez saisir un mot de passe </string>
     <string name="facebook"> Facebook </string>
     <string name="google"> Google </string>

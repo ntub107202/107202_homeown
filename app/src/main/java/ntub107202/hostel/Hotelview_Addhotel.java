@@ -123,7 +123,9 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                 Log.v("8888888", spin_area.getSelectedItem().toString());
                 Log.v("8888888", pic1);
                 Log.v("8888888", pic2);
-                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2);
+                String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+                Log.v("8888888", user);
+                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2,user);
                 Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "post");
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();

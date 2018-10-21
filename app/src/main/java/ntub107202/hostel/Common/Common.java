@@ -21,6 +21,7 @@ public class Common {
     public static String getCalendar="http://140.131.114.153/getcalendar";
     public static String postHotel="http://140.131.114.153/postHotel";
     public static String getHostelinfo="http://140.131.114.153/getHostelinfo";
+    public static String getuid="http://140.131.114.153/getuid";
 
 
 }

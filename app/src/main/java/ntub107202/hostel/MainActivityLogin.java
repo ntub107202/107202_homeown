@@ -300,8 +300,10 @@ public class MainActivityLogin extends AppCompatActivity {
                             String ret = parsePostLoginJSon(response);
                         if(ret.equals("成功"))
                         {
+
                             String user = email.getText().toString();
                             String pw = password.getText().toString();
+
                             SharedPreferences pref = getSharedPreferences("userpw", MODE_PRIVATE);
                             pref.edit()
                                     .putString("USER", user)

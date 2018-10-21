@@ -50,6 +50,9 @@ public class getWorksheet {
     private static String[] row33= new String[100];
     private static String[] row34= new String[100];
     private static String[] row35= new String[100];
+
+    private static String[] row999= new String[100];
+
     private static int worksheetLength ;
     public static int humanLength;
     public static int jobLength;
@@ -83,6 +86,31 @@ public class getWorksheet {
         });
         myAsyncTask.execute(Common.getUrl);
     }
+
+    public static void getuidJSON() {
+
+        getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    int j=0;
+                    Log.v("get0000",jobLength + "ergegje");
+                    for (int i = 0 ; i<jobLength ; i++){
+                        row999[i] = jsonArray.getJSONObject(i).getString("row1");
+                        Log.v("Row5", row5[i]);
+
+                    }
+                } catch (Exception e) {
+                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myAsyncTask.execute(Common.getuid);
+    }
+
     public static void gethumansearchJSON() {
 
         getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
@@ -256,7 +284,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postQuestion ,row1);
         }
     }
-    public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8) {
+    public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8 , String row9) {
         postUpdateAsyncTask4 myAsyncTask = new postUpdateAsyncTask4(new postUpdateAsyncTask4.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -264,7 +292,7 @@ public class getWorksheet {
         });
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
-            myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6,row7,row8);
+            myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6,row7,row8,row9);
         }
     }
 

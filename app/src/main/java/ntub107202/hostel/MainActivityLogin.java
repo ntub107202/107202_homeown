@@ -35,6 +35,8 @@ public class MainActivityLogin extends AppCompatActivity {
     private EditText password;
     private String valid_email;
     private String valid_password;
+    private static String user ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +45,7 @@ public class MainActivityLogin extends AppCompatActivity {
         getWorksheet.getjobJSON();
         getWorksheet.getcalendarJSON();
 
-        String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
         String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
         if(! user.equals("") && ! pw.equals("")){
             postATLogin();
@@ -80,6 +82,8 @@ public class MainActivityLogin extends AppCompatActivity {
 
         });
     }
+    public static String getUser(){return user;}
+
     public void openHtl(){
         Intent intent =new Intent(this, NavigationActivity.class);
         startActivity(intent);

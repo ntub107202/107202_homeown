@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import ntub107202.hostel.getHostel;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,6 +109,7 @@ public class Fragment_Jobview extends Fragment {
 
             //pause
         }else{
+            getHostel.getHostel();
             setJobview();
             //resume
         }
@@ -122,10 +125,10 @@ public class Fragment_Jobview extends Fragment {
         myAdapter = new MyAdapter(myDataset);
         for(int i = 0; i < getWorksheet.jobLength; i++){
 //                myDataset.add(i + "");
-            myDataset.add(getWorksheet.getRow5(i));
-            myDataset2.add(getWorksheet.getRow6(i));
-            myDataset3.add(getWorksheet.getRow7(i));
-            myDataset4.add(getWorksheet.getRow8(i));
+            myDataset.add(getWorksheet.getRow111(i));
+            myDataset2.add(getWorksheet.getRow112(i));
+            myDataset3.add(getWorksheet.getRow113(i));
+            myDataset4.add(getWorksheet.getRow114(i));
             Log.d("get0000", String.valueOf(getWorksheet.jobLength)+"resume");
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);

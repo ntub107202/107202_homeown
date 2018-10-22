@@ -3,6 +3,7 @@ package ntub107202.hostel;
 import android.util.Log;
 
 import ntub107202.hostel.Common.Common;
+import ntub107202.hostel.MyAsyncTask.NavigationAsyncTask;
 import ntub107202.hostel.MyAsyncTask.getAsyncTask;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask2;
@@ -50,6 +51,12 @@ public class getWorksheet {
     private static String[] row33= new String[100];
     private static String[] row34= new String[100];
     private static String[] row35= new String[100];
+    private static String[] row111= new String[100];
+    private static String[] row112= new String[100];
+    private static String[] row113= new String[100];
+    private static String[] row114= new String[100];
+
+
 
     private static String[] row999= new String[100];
 
@@ -158,6 +165,31 @@ public class getWorksheet {
 
     public static void getjobJSON() {
 
+            NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+                @Override
+                public void onFinished(String result) {
+                    try{
+                        JSONObject object = new JSONObject(result);
+                        JSONArray jsonArray = object.getJSONArray("result");
+
+                        worksheetLength = jsonArray.length();
+                        jobLength = worksheetLength;
+
+                        for (int i = 0 ; i < jsonArray.length(); i++){
+                            row111[i] = jsonArray.getJSONObject(i).getString("row1");
+                            row112[i] = jsonArray.getJSONObject(i).getString("row2");
+                            row113[i] = jsonArray.getJSONObject(i).getString("row3");
+                            row114[i] = jsonArray.getJSONObject(i).getString("row4");
+                            Log.v("tttttt",row111[i]);
+                        }
+                        //-----------------------------------------取得目前版本----------------------------------
+                    }catch(Exception e){
+
+                    }
+                }
+            });
+            myNavigationAsyncTask.execute(Common.getjob, MainActivityLogin.getUser()); //第一個參數是Common的網址,第二個是要上傳的值
+        /*
         getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -183,6 +215,7 @@ public class getWorksheet {
             }
         });
         myAsyncTask.execute(Common.getjob);
+        */
     }
     public static void getcalendarJSON() {
 
@@ -405,5 +438,17 @@ public class getWorksheet {
     }
     public static String getRow35(int i){
         return row35[i];
+    }
+    public static String getRow111(int i){
+        return row111[i];
+    }
+    public static String getRow112(int i){
+        return row112[i];
+    }
+    public static String getRow113(int i){
+        return row113[i];
+    }
+    public static String getRow114(int i){
+        return row114[i];
     }
 }

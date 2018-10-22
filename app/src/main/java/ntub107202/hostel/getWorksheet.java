@@ -256,12 +256,11 @@ public class getWorksheet {
     }
     public static void gethostelinfoJSON() {
 
-        getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
             @Override
             public void onFinished(String result) {
                 try {
                     JSONObject object = new JSONObject(result);
-
                     JSONArray jsonArray = object.getJSONArray("result");
                     worksheetLength = jsonArray.length();
                     hostelinfoLength = worksheetLength;
@@ -272,14 +271,15 @@ public class getWorksheet {
                         row33[i] = jsonArray.getJSONObject(i).getString("row2");
                         row34[i] = jsonArray.getJSONObject(i).getString("row3");
                         row35[i] = jsonArray.getJSONObject(i).getString("row4");
+//                        Log.v("Row5", row5[i]);
 
                     }
                 } catch (Exception e) {
-                    Log.v("ABC", Log.getStackTraceString(e));
+//                    Log.v("ABC", Log.getStackTraceString(e));
                 }
             }
         });
-        myAsyncTask.execute(Common.getHostelinfo);
+        myNavigationAsyncTask.execute(Common.getHostelinfo, MainActivityLogin.getUser());
     }
 
     public static void postToPHP(String row1, String row2, String row3) {

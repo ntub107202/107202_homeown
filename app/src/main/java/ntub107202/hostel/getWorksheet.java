@@ -55,6 +55,7 @@ public class getWorksheet {
     private static String[] row112= new String[100];
     private static String[] row113= new String[100];
     private static String[] row114= new String[100];
+    private static String[] row115= new String[100];
 
 
 
@@ -180,8 +181,14 @@ public class getWorksheet {
                             row112[i] = jsonArray.getJSONObject(i).getString("row2");
                             row113[i] = jsonArray.getJSONObject(i).getString("row3");
                             row114[i] = jsonArray.getJSONObject(i).getString("row4");
-                            Log.v("tttttt",row111[i]);
                         }
+                        JSONArray jsonArray2 = object.getJSONArray("result2");
+
+                        for(int i = 0 ; i< jsonArray2.length();i++){
+                            row115[i] = jsonArray2.getJSONObject(i).getString("row6");
+                            Log.v("uuuu",row115[i]);
+                        }
+
                         //-----------------------------------------取得目前版本----------------------------------
                     }catch(Exception e){
 
@@ -450,5 +457,8 @@ public class getWorksheet {
     }
     public static String getRow114(int i){
         return row114[i];
+    }
+    public static String getRow115(int i){
+        return row115[i];
     }
 }

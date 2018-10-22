@@ -28,6 +28,7 @@ public class Fragment_Jobview extends Fragment {
     static TextView textView2;
     static TextView textView3;
     static TextView textView4;
+
     static TextView textView30;
     static String[] row = new String[100];
     static String row5;
@@ -40,6 +41,7 @@ public class Fragment_Jobview extends Fragment {
     ArrayList<String> myDataset2;
     ArrayList<String> myDataset3;
     ArrayList<String> myDataset4;
+    ArrayList<String> myDataset5;
     MyAdapter  myAdapter;
     static LinearLayoutManager layoutManager;
     FragmentTransaction beginTransaction;
@@ -109,7 +111,7 @@ public class Fragment_Jobview extends Fragment {
 
             //pause
         }else{
-            getHostel.getHostel();
+//            getHostel.getHostel();
             setJobview();
             //resume
         }
@@ -122,6 +124,7 @@ public class Fragment_Jobview extends Fragment {
         myDataset2 = new ArrayList<>();
         myDataset3 = new ArrayList<>();
         myDataset4 = new ArrayList<>();
+        myDataset5 = new ArrayList<>();
         myAdapter = new MyAdapter(myDataset);
         for(int i = 0; i < getWorksheet.jobLength; i++){
 //                myDataset.add(i + "");
@@ -129,6 +132,7 @@ public class Fragment_Jobview extends Fragment {
             myDataset2.add(getWorksheet.getRow112(i));
             myDataset3.add(getWorksheet.getRow113(i));
             myDataset4.add(getWorksheet.getRow114(i));
+            myDataset5.add(getWorksheet.getRow115(i));
             Log.d("get0000", String.valueOf(getWorksheet.jobLength)+"resume");
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
@@ -141,7 +145,7 @@ public class Fragment_Jobview extends Fragment {
         private List<String> mData;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004;
+            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004 ,TextView0005 ;
 
             public ViewHolder(View v) {
                 super(v);
@@ -149,6 +153,7 @@ public class Fragment_Jobview extends Fragment {
                 TextView0002 = (TextView) v.findViewById(R.id.textView0002);
                 TextView0003 = (TextView) v.findViewById(R.id.textView0003);
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
+                TextView0005 = (TextView) v.findViewById(R.id.textView0005);
             }
         }
 
@@ -171,6 +176,7 @@ public class Fragment_Jobview extends Fragment {
             holder.TextView0002.setText(myDataset2.get(position));
             holder.TextView0003.setText(myDataset3.get(position));
             holder.TextView0004.setText(myDataset4.get(position));
+            holder.TextView0005.setText(myDataset5.get(position));
         }
 
         @Override

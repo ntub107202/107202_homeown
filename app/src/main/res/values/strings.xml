@@ -171,7 +171,7 @@
 
     <string name="hotel_no_info">還沒有任何民宿資訊喔！</string>
     <string name="add_hotel_info">新增民宿資訊</string>
-    <string name="hotel_name">民宿店名</string>
+    <string name="hotel_name">民宿名稱</string>
     <string name="hint_hotel_name">請輸入民宿店名</string>
     <string name="hotel_address">民宿地址</string>
     <string name="hint_hotel_address">請輸入民宿地址</string>

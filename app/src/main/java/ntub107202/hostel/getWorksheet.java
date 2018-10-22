@@ -52,6 +52,7 @@ public class getWorksheet {
     private static String[] row34= new String[100];
     private static String[] row35= new String[100];
     private static String[] row36= new String[100];
+    private static String[] row37= new String[100];
     private static String[] row111= new String[100];
     private static String[] row112= new String[100];
     private static String[] row113= new String[100];
@@ -303,7 +304,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postJob ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13);
         }
     }
-    public static void postToCalendar(String row1, String row2, String row3, String row4, String row5) {
+    public static void postToCalendar(String row1, String row2, String row3, String row4, String row5,String row6) {
         postUpdateAsyncTask2 myAsyncTask = new postUpdateAsyncTask2(new postUpdateAsyncTask2.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -311,7 +312,7 @@ public class getWorksheet {
         });
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
-            myAsyncTask.execute(Common.postCalendar ,row1,row2,row3,row4,row5);
+            myAsyncTask.execute(Common.postCalendar ,row1,row2,row3,row4,row5,row6);
         }
     }
     public static void postToQuestion(String row1) {
@@ -447,9 +448,14 @@ public class getWorksheet {
     public static String getRow35(int i){
         return row35[i];
     }
+
     public static String getRow36(int i){
         return row36[i];
     }
+    public static String getRow37(int i){
+        return row37[i];
+    }
+
     public static String getRow111(int i){
         return row111[i];
     }

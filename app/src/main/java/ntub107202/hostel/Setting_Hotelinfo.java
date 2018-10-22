@@ -22,7 +22,7 @@ import java.util.List;
 
 
 public class Setting_Hotelinfo extends AppCompatActivity {
-
+    TextView text01;
     RecyclerView mList;
     ArrayList<String> myDataset;
     ArrayList<String> myDataset2;
@@ -38,6 +38,7 @@ public class Setting_Hotelinfo extends AppCompatActivity {
         getWorksheet.gethostelinfoJSON();
         FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.fab_go_to_add_hotel) ;
         mList = (RecyclerView)findViewById(R.id.list_view);
+        text01 = (TextView)findViewById(R.id.text01);
         setJobview();
         fab.setOnClickListener(new Button.OnClickListener(){
             @Override
@@ -47,6 +48,9 @@ public class Setting_Hotelinfo extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        if(myDataset2.size() == 0){
+            text01.setVisibility(View.GONE);
+        }
     }
     public void  setJobview(){
         myDataset = new ArrayList<>();

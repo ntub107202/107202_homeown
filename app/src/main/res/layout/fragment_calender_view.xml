@@ -26,6 +26,24 @@
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
+
+        <ntub107202.hostel.Schedule.view.DataView
+            android:id="@+id/week"
+            android:layout_width="match_parent"
+            android:background="@color/color_ffffff"
+            android:layout_height="wrap_content">
+        </ntub107202.hostel.Schedule.view.DataView>
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:lineSpacingExtra="3dp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -33,6 +51,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="以下為本週工作"
+                    android:textColor="@color/fontDark"
+                    android:textSize="18sp" />
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/list_view"
                     android:layout_width="match_parent"

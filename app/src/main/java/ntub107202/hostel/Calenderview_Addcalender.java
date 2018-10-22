@@ -1,5 +1,6 @@
 package ntub107202.hostel;
 
+import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,7 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TimePicker;
@@ -19,7 +21,7 @@ import java.util.Date;
 
 public class Calenderview_Addcalender extends AppCompatActivity {
 
-    private EditText work_start_time, work_end_time;
+    private EditText work_start_time, work_end_time,start_date;
     private int mYear, mMonth, mDay, mHour, mMinute;
 
     EditText edit_work_title;
@@ -30,9 +32,15 @@ public class Calenderview_Addcalender extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calenderview_addcalender);
-
+        start_date = (EditText) findViewById(R.id.start_date);
         work_start_time = (EditText) findViewById(R.id.work_start_time);
         work_end_time = (EditText) findViewById(R.id.work_end_time);
+
+        start_date.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                showDatePickerDialogStart();
+            }
+        });
 
         work_start_time.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -58,6 +66,8 @@ public class Calenderview_Addcalender extends AppCompatActivity {
         work_end_time.addTextChangedListener(textWatcher2);
 
         rad_work_type_always.setChecked(true);
+
+        start_date.addTextChangedListener(textWatcher6);
 //        Log.v("1123",rad_work_type_alwaysS);
         //--------------------------
         //取得伺服器上JSON資料
@@ -75,7 +85,7 @@ public class Calenderview_Addcalender extends AppCompatActivity {
                 Log.v("work_start_time",work_start_time.getText().toString());
                 Log.v("work_end_time",work_end_time.getText().toString());
                 Log.v("edit_work",edit_work.getText().toString());
-                getWorksheet.postToCalendar(edit_work_title.getText().toString(), rad_work_type_alwaysS, work_start_time.getText().toString(), work_end_time.getText().toString(), edit_work.getText().toString());
+                getWorksheet.postToCalendar(edit_work_title.getText().toString(), rad_work_type_alwaysS, work_start_time.getText().toString(), work_end_time.getText().toString(), edit_work.getText().toString(), start_date.getText().toString());
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();
                 getWorksheet.getcalendarJSON();
@@ -84,6 +94,26 @@ public class Calenderview_Addcalender extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    public void showDatePickerDialogStart() {
+        // 設定初始日期
+        final Calendar c = Calendar.getInstance();
+        mYear = c.get(Calendar.YEAR);
+        mMonth = c.get(Calendar.MONTH);
+        mDay = c.get(Calendar.DAY_OF_MONTH);
+
+        // 跳出日期選擇器
+        DatePickerDialog dpd = new DatePickerDialog(this,
+                new DatePickerDialog.OnDateSetListener() {
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) {
+                        // 完成選擇，顯示日期
+                        start_date.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+
+                    }
+                }, mYear, mMonth, mDay);
+        dpd.show();
     }
     public void showTimePickerDialogStart() {
         // 設定初始時間
@@ -208,6 +238,31 @@ public class Calenderview_Addcalender extends AppCompatActivity {
             } catch (Exception e) {
 
             }
+        }
+    };
+    private TextWatcher textWatcher6 = new TextWatcher() {
+        @Override
+        public void afterTextChanged(Editable s) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "afterTextChanged--------------->");
+            Is_Valid_Email(start_date);
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count,
+                                      int after) {
+            // TODO Auto-generated method stub
+            Log.d("TAG", "beforeTextChanged--------------->");
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before,
+                                  int count) {
+            Log.d("TAG", "onTextChanged--------------->");
+
+        }
+        public void Is_Valid_Email(EditText edt) {
+
         }
     };
 }

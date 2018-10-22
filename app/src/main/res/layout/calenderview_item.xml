@@ -30,6 +30,12 @@
                 android:text="TextView"
                 android:textSize="20sp" />
 
+            <TextView
+                android:id="@+id/textView0005"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -53,7 +59,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:text="... 查看更多"
+                    android:text="查看更多"
                     android:textColor="#0066cc" />
             </LinearLayout>
 

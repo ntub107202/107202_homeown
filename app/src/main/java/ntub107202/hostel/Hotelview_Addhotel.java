@@ -1,46 +1,31 @@
 package ntub107202.hostel;
 
 import android.Manifest;
-import android.app.DatePickerDialog;
-import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.TimePicker;
-import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 public class Hotelview_Addhotel extends AppCompatActivity {
     EditText edit_hotel_name;
@@ -126,14 +111,23 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                 String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
                 Log.v("8888888", user);
                 getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2,user);
-                Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "post");
+                Log.d("000000", String.valueOf(getWorksheet.hostelinfoLength) + "post");
+                getWorksheet.gethostelinfoJSON();
+                try {
+                    Thread.sleep(3000); //1000為1秒
+                } catch (InterruptedException e) {
+// TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();
-                Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "get");
+                Log.d("000000", String.valueOf(getWorksheet.hostelinfoLength) + "get");
                 getWorksheet.getcalendarJSON();
-                Intent intent = new Intent(Hotelview_Addhotel.this,Setting_Hotelinfo.class);
+                Setting_Hotelinfo.start_sethostelname = false;
+                getWorksheet.gethostelinfoJSON();
+                Intent intent = new Intent(Hotelview_Addhotel.this,Hostelinfo_Jump.class);
                 intent.putExtra("id",2);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -498,6 +492,12 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                     break;
             }
         }
+    }
+    @Override
+    protected  void onDestroy() {
+        getWorksheet.gethostelinfoJSON();
+        super.onDestroy();
+        getWorksheet.gethostelinfoJSON();
     }
     public static String BitmapToString(Bitmap bitmap) {
         String des = null;

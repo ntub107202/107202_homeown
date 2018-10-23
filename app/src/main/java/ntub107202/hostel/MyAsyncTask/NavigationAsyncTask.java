@@ -1,6 +1,7 @@
 package ntub107202.hostel.MyAsyncTask;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -38,6 +39,7 @@ public class NavigationAsyncTask extends AsyncTask<String, Integer, String> {
     @Override
     protected void onProgressUpdate(Integer... values) {
         super.onProgressUpdate(values);
+        Log.d("000000",values[0].toString());
     }
 
     //=========================================================

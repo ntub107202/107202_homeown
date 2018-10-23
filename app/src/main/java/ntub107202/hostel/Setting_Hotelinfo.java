@@ -30,7 +30,7 @@ public class Setting_Hotelinfo extends AppCompatActivity {
     ArrayList<String> myDataset4;
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
-
+    public static  boolean start_sethostelname=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,11 +48,27 @@ public class Setting_Hotelinfo extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        if(myDataset2.size() == 0){
+        if(myDataset2.size() != 0){
             text01.setVisibility(View.GONE);
         }
     }
+    @Override
+    protected  void  onResume() {
+        super.onResume();
+        Log.v("0000000","resume");
+        getWorksheet.gethostelinfoJSON();
+        setJobview();
+//        while(true) {
+//            if (start_sethostelname == true) {
+//                Log.v("0000000", "resumeing");
+//                setJobview();
+//                start_sethostelname = false;
+//                break;
+//            }
+//        }
+    }
     public void  setJobview(){
+        getWorksheet.gethostelinfoJSON();
         myDataset = new ArrayList<>();
         myDataset2 = new ArrayList<>();
         myDataset3 = new ArrayList<>();
@@ -64,7 +80,7 @@ public class Setting_Hotelinfo extends AppCompatActivity {
             myDataset2.add(getWorksheet.getRow33(i));
             myDataset3.add(getWorksheet.getRow34(i));
             myDataset4.add(getWorksheet.getRow35(i));
-//            Log.v("get99999", getWorksheet.getRow33(i));
+            Log.v("0000000", "888888");
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
         layoutManager = new LinearLayoutManager(this);

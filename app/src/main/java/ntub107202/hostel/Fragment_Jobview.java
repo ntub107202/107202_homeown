@@ -184,33 +184,5 @@ public class Fragment_Jobview extends Fragment {
             return mData.size();
         }
     }
-//    public static void setrow(){
-//        Log.v("get0000",getWorksheet.jobLength + "");
-//
-//        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
-//            row[i] = getWorksheet.getRow5(i);
-//
-//        }
-//        for (int i = 0 ; i < getWorksheet.jobLength; i ++ ){
-//            Log.v("get0000",  row[i]+"xxx");
-//        }
-//    }
-//    public static void setrow5(String row){
-//        row5 = row;
-////        textView1.setText(row5 );
-////
-//  }
-//    public static void setrow6(String row){
-//        row6 = row;
-////        textView2.setText(row6);
-//    }
-//    public static void setrow7(String row){
-//        row7 = row;
-////        textView3.setText(row7 );
-////
-//    }
-//    public static void setrow8(String row){
-//        row8 = row;
-////        textView4.setText(row8);
-//    }
+
 }

@@ -20,9 +20,9 @@ public class Setting_Returnproblem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                getWorksheet.postToQuestion(edit_problem.getText().toString());
+                getWorksheet.postToQuestion(MainActivityLogin.getUser(),edit_problem.getText().toString());
                 Intent intent = new Intent(Setting_Returnproblem.this,NavigationActivity.class);
-                intent.putExtra("id",4);
+                intent.putExtra("id",5);
                 startActivity(intent);
 
             }

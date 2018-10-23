@@ -316,7 +316,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postCalendar ,row1,row2,row3,row4,row5,row6);
         }
     }
-    public static void postToQuestion(String row1) {
+    public static void postToQuestion(String row1 , String row2) {
         postUpdateAsyncTask3 myAsyncTask = new postUpdateAsyncTask3(new postUpdateAsyncTask3.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -324,7 +324,7 @@ public class getWorksheet {
         });
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
-            myAsyncTask.execute(Common.postQuestion ,row1);
+            myAsyncTask.execute(Common.postQuestionH ,row1,row2);
         }
     }
     public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8 , String row9) {

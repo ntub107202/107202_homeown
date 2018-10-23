@@ -148,38 +148,16 @@ public class Fragment_Humansearch extends Fragment {
             MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
 
             vh.cardView.setOnClickListener(new View.OnClickListener() {
+                int position;
                 @Override
                 public void onClick(View v) {
 
-                    Intent i = new Intent(mContext, Humansearch_Info.class);
-                    i.putExtra("row1",myDataset.get(vh.getAdapterPosition()));
-                    i.putExtra("row2",myDataset2.get(vh.getAdapterPosition()));
-                    i.putExtra("row3",myDataset3.get(vh.getAdapterPosition()));
-                    i.putExtra("row4",myDataset4.get(vh.getAdapterPosition()));
-                    i.putExtra("row5",myDataset5.get(vh.getAdapterPosition()));
-                    i.putExtra("row6",myDataset6.get(vh.getAdapterPosition()));
-                    i.putExtra("row7",myDataset7.get(vh.getAdapterPosition()));
-                    i.putExtra("row8",myDataset8.get(vh.getAdapterPosition()));
-                    i.putExtra("row9",myDataset9.get(vh.getAdapterPosition()));
-                    i.putExtra("row10",myDataset10.get(vh.getAdapterPosition()));
-                    i.putExtra("row11",myDataset11.get(vh.getAdapterPosition()));
-                    i.putExtra("row12",myDataset12.get(vh.getAdapterPosition()));
-                    i.putExtra("row13",myDataset13.get(vh.getAdapterPosition()));
-                    i.putExtra("row14",myDataset14.get(vh.getAdapterPosition()));
-                    i.putExtra("row15",myDataset15.get(vh.getAdapterPosition()));
-                    i.putExtra("row16",myDataset16.get(vh.getAdapterPosition()));
-                    i.putExtra("row17",myDataset17.get(vh.getAdapterPosition()));
-                    i.putExtra("row18",myDataset18.get(vh.getAdapterPosition()));
-                    i.putExtra("row19",myDataset19.get(vh.getAdapterPosition()));
+                    Bundle bundle=new Bundle();
+                    bundle.putInt("position", vh.getAdapterPosition());
+                    Intent i=new Intent();
+                    i.putExtras(bundle);
+                    i.setClass(mContext, Humansearch_Info.class);
                     mContext.startActivity(i);
-
-                    Log.d("get0000", "1" + myDataset6);
-                    mContext.startActivity(i);
-                    Log.d("get0000", "test1"+myDataset);
-                    Log.d("get0000", "test2"+myDataset2);
-                    Log.d("get0000", "test3"+myDataset3);
-                    Log.d("get0000", "test4"+myDataset4);
-                    Log.d("get0000", "test5"+myDataset5);
                 }
             });
             return vh;

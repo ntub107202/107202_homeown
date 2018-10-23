@@ -140,7 +140,6 @@ public class getWorksheet {
                         row15[i] = jsonArray.getJSONObject(i).getString("jobExp");
                         row16[i] = jsonArray.getJSONObject(i).getString("exchangeReason");
                         row17[i] = jsonArray.getJSONObject(i).getString("face");
-
                         row18[i] = jsonArray.getJSONObject(i).getString("gender");
                         row19[i] = jsonArray.getJSONObject(i).getString("birth");
                         row20[i] = jsonArray.getJSONObject(i).getString("cellphone");
@@ -155,6 +154,7 @@ public class getWorksheet {
                         row29[i] = jsonArray.getJSONObject(i).getString("collectionList");
                         row30[i] = jsonArray.getJSONObject(i).getString("department");
                         row31[i] = jsonArray.getJSONObject(i).getString("gardening");
+
                         Log.v("Row17", row17[i]);
 
                     }

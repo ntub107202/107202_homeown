@@ -52,7 +52,6 @@ public class Humansearch_Info extends AppCompatActivity {
             }
         });
 
-
         name = (TextView) findViewById(R.id.name);
         gender =  (TextView) findViewById(R.id.gender);
         birth = (TextView) findViewById(R.id.birth);
@@ -73,47 +72,29 @@ public class Humansearch_Info extends AppCompatActivity {
         img_photo = (ImageView) findViewById(R.id.img_photo);
         life_photo = (ImageView) findViewById(R.id.life_photo);
 
-        Intent intent = getIntent();
-        String row1 = intent.getExtras().getString("row1");
-        String row2 = intent.getExtras().getString("row2");
-        String row3 = intent.getExtras().getString("row3");
-        String row4 = intent.getExtras().getString("row4");
-        String row5 = intent.getExtras().getString("row5");
-        String row6 = intent.getExtras().getString("row6");
-        String row7 = intent.getExtras().getString("row7");
-        String row8 = intent.getExtras().getString("row8");
-        String row9 = intent.getExtras().getString("row9");
-        String row10 = intent.getExtras().getString("row10");
-        String row11 = intent.getExtras().getString("row11");
-        String row12 = intent.getExtras().getString("row12");
-        String row13 = intent.getExtras().getString("row13");
-        String row14 = intent.getExtras().getString("row14");
-        String row15 = intent.getExtras().getString("row15");
-        String row16 = intent.getExtras().getString("row16");
-        String row17 = intent.getExtras().getString("row17");
-        String row18 = intent.getExtras().getString("row18");
-        String row19 = intent.getExtras().getString("row19");
+        Bundle bundle=getIntent().getExtras();
+        int position=bundle.getInt("position");
 
-//        Log.d("Log", "position" + row1);
+        name.setText(getWorksheet.getRow13(position));
+        school.setText(getWorksheet.getRow14(position));
+        work_exp.setText(getWorksheet.getRow15(position));
+        exchange_reason.setText(getWorksheet.getRow16(position));
+        img_photo.setImageBitmap(stringToBitmap(getWorksheet.getRow17(position)));
+        gender.setText(getWorksheet.getRow18(position));
+        birth.setText(getWorksheet.getRow19(position));
+        phone.setText(getWorksheet.getRow20(position));
+        home.setText(getWorksheet.getRow21(position));
+        email.setText(getWorksheet.getRow22(position));
+        life_photo.setImageBitmap(stringToBitmap(getWorksheet.getRow23(position)));
+        study_state.setText(getWorksheet.getRow24(position));
+        interest.setText(getWorksheet.getRow25(position));
+        eatting_habit.setText(getWorksheet.getRow26(position));
+        start_date.setText(getWorksheet.getRow27(position));
+        end_date.setText(getWorksheet.getRow28(position));
+        department.setText(getWorksheet.getRow30(position));
 
-        name.setText(row1);
-        school.setText(row2);
-        work_exp.setText(row3);
-        exchange_reason.setText(row4);
-        img_photo.setImageBitmap(stringToBitmap(row5));
-        gender.setText(row6);
-        birth.setText(row7);
-        phone.setText(row8);
-        home.setText(row9);
-        email.setText(row10);
-        life_photo.setImageBitmap(stringToBitmap2(row11));
-        study_state.setText(row12);
-        interest.setText(row13);
-        eatting_habit.setText(row14);
-        start_date.setText(row15);
-        end_date.setText(row16);
-        department.setText(row18);
-        //17收藏清單//19庭園整理
+        Log.d("Log", "position是沙小???" + position);
+
     }
 
     public Bitmap stringToBitmap(String string) {
@@ -130,20 +111,7 @@ public class Humansearch_Info extends AppCompatActivity {
         }
     }
 
-    public Bitmap stringToBitmap2(String string) {
-        Bitmap bitmap = null;
-        try {
-            byte[] bitmapArray = Base64.decode(string, Base64.DEFAULT);
-            bitmap = BitmapFactory.decodeByteArray(bitmapArray, 0, bitmapArray.length);
-            return bitmap;
-        } catch (NullPointerException e) {
-            e.getMessage();
-            return null;
-        } catch (OutOfMemoryError e) {
-            return null;
-        }
-    }
-    public void sendTextHandler(View view) {
+     public void sendTextHandler(View view) {
         String sendText = "s920613a";
         if(checkLineInstalled()){
             Intent intent = new Intent(Intent.ACTION_SEND);

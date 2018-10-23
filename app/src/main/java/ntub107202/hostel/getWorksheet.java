@@ -265,7 +265,7 @@ public class getWorksheet {
                     worksheetLength = jsonArray.length();
                     hostelinfoLength = worksheetLength;
                     int j=0;
-                    Log.v("get0000",jobLength + "ergegje");
+                    Log.v("0000000",hostelinfoLength + "66666666");
                     for (int i = 0 ; i<hostelinfoLength ; i++){
                         row32[i] = jsonArray.getJSONObject(i).getString("row1");
                         row33[i] = jsonArray.getJSONObject(i).getString("row2");
@@ -274,6 +274,7 @@ public class getWorksheet {
 //                        Log.v("Row5", row5[i]);
 
                     }
+                    Setting_Hotelinfo.start_sethostelname = true;
                 } catch (Exception e) {
 //                    Log.v("ABC", Log.getStackTraceString(e));
                 }

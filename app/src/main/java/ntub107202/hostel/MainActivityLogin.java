@@ -1,8 +1,10 @@
 package ntub107202.hostel;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -96,6 +98,19 @@ public class MainActivityLogin extends AppCompatActivity {
     public void openRegister() {
         Intent intent = new Intent(this, MainActivityEntryRegister.class);
         startActivity(intent);
+    }
+
+    public void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivityLogin.this);
+        builder.setMessage("帳密輸入錯誤，請重新輸入");
+
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     private TextWatcher textWatcher = new TextWatcher() {
@@ -316,6 +331,7 @@ public class MainActivityLogin extends AppCompatActivity {
                             openHtl();
                         }
                         else {
+                            showAlert();
                             Log.i("Log","帳密錯誤");
                         }
                         } catch (JSONException e) {

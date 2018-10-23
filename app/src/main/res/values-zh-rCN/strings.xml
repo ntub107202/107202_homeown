@@ -103,9 +103,9 @@
     <string name="contact">联络人</string>
     <string name="contact_name">请输入联络人姓名</string>
     <string name="email">E-mail</string>
-    <string name="hint_email">请输入联络人电子信箱</string>
+    <string name="hint_email">请输入电子信箱</string>
     <string name="phone">手机</string>
-    <string name="hint_phone">请输入联络人电话</string>
+    <string name="hint_phone">请输入电话</string>
         
     <string name="boss_setting">雇主页面</string>
     <string name="hotel_info">民宿资讯</string>
@@ -246,4 +246,21 @@
     <string name="spe39">本「使用规范与声明」之解释与适用，以及与本「使用规范与声明」有关或贵用户因使用本APP而产生之争议或纠纷，应依照台湾之法律予以处理。 </string>
 
     <string name="hint_hotel_info">请输入民宿简介资讯</string>
+    <string name="hint_enter">直接进入请点我</string>
+    <string name="hint_account">请输入帐号</string>
+    <string name="hint_passwd">请输入密码</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="other_login">以其他方式登入</string>
+    <string name="forget_passwd">忘记密码？ </string>
+    <string name="hint_confirm_passwd">请确认密码</string>
+    <string name="agree">我同意注册帐户</string>
+    <string name="create_account">创建民宿帐户</string>
+    <string name="whisper">帮您寻找的是各地具有冒险精神，勇于尝试新事物的小帮手。若您也愿意尝试新的事物，接受各地旅友离乡背井，到你所爱的地方体验你所爱的事物，欢迎跟我们联系！</string>
+    <string name="hotel_reg">民宿注册</string>
+    <string name="hotel_enter">民宿入口</string>
+
+    <string name="hire_now">立即雇用</string>
+    <string name="online_contact">线上联络</string>
+
 </resources>

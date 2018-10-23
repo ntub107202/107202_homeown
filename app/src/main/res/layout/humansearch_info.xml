@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -29,20 +30,23 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/img_photo"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
-                android:background="@color/txt_font"
                 android:layout_gravity="center_horizontal"
-                android:layout_margin="10dp"/>
+                android:layout_margin="10dp"
+                android:background="@color/txt_font"
+                android:scaleType="centerCrop" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#CCCCCC"
                 android:padding="12dp"
                 android:text="@string/basic_info"
-                android:textColor="@color/fontDark"/>
+                android:textColor="@color/fontDark" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -115,79 +119,194 @@
                 android:layout_marginRight="20dp"
                 android:text="@string/school_depart"
                 android:textColor="@color/txt_font" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_school"
+                    android:textColor="@color/fontDark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="－" />
+
+                <TextView
+                    android:id="@+id/department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_depart"
+                    android:textColor="@color/fontDark"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
             <TextView
-                android:id="@+id/school_depart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/school_depart"
-                android:textColor="@color/fontDark"
-                android:textSize="16dp"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="@string/profession_skill"
+                android:text="@string/lbl_state_study"
                 android:textColor="@color/txt_font" />
+
             <TextView
-                android:id="@+id/profession_skill"
+                android:id="@+id/study_state"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/profession_skill"
+                android:text="@string/lbl_state_study"
                 android:textColor="@color/fontDark"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
+
             <TextView
+                android:id="@+id/textView15"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="@string/general_skill"
-                android:textColor="@color/txt_font" />
-            <TextView
-                android:id="@+id/general_skill"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="@string/general_skill"
+                android:layout_marginTop="5dp"
+                android:background="#CCCCCC"
+                android:padding="12dp"
+                android:text="@string/lbl_intro"
                 android:textColor="@color/fontDark"
-                android:textSize="16dp"/>
+                android:textSize="14sp" />
+
             <TextView
+                android:id="@+id/textView16"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/language_skill"
-                android:textColor="@color/txt_font" />
+                android:layout_marginTop="5dp"
+                android:text="@string/lbl_interest"
+                android:textColor="@color/txt_font"
+                android:textSize="14sp" />
+
             <TextView
-                android:id="@+id/language_skill"
+                android:id="@+id/interest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/language_skill"
+                android:text="@string/lbl_interest"
                 android:textColor="@color/fontDark"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
+
             <TextView
+                android:id="@+id/textView17"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/lbl_collection"
-                android:textColor="@color/txt_font" />
+                android:layout_marginTop="5dp"
+                android:text="@string/lbl_workexp"
+                android:textColor="@color/txt_font"
+                android:textSize="14sp" />
+
             <TextView
-                android:id="@+id/collection"
+                android:id="@+id/work_exp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:text="@string/lbl_collection"
+                android:text="@string/lbl_workexp"
                 android:textColor="@color/fontDark"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/lbl_reason"
+                android:textColor="@color/txt_font"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/exchange_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/lbl_reason"
+                android:textColor="@color/fontDark"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/lbl_eathabit"
+                android:textColor="@color/txt_font"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/eatting_habit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="@string/lbl_eathabit"
+                android:textColor="@color/fontDark"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#CCCCCC"
+                android:padding="12dp"
+                android:text="@string/lbl_wrkperiod"
+                android:textColor="@color/fontDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/start_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="起始日"
+                    android:textColor="@color/fontDark"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="~" />
+
+                <TextView
+                    android:id="@+id/end_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="結束日"
+                    android:textColor="@color/fontDark"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -196,6 +315,7 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/lbl_contact"
                 android:textColor="@color/fontDark"/>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -229,6 +349,27 @@
                 android:text="@string/email"
                 android:textColor="@color/fontDark"
                 android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#CCCCCC"
+                android:padding="12dp"
+                android:text="@string/lbl_lifephoto"
+                android:textColor="@color/fontDark" />
+
+            <ImageView
+                android:id="@+id/life_photo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                app:srcCompat="@color/txt_font" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -240,7 +381,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:text="聯絡他"
+                    android:text="@string/online_contact"
                     android:background="@color/colorPrimary"
                     android:textColor="@android:color/white"/>
                 <Button
@@ -249,7 +390,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:text="立即雇用"
+                    android:text="@string/hire_now"
                     android:background="@color/colorPrimary"
                     android:textColor="@android:color/white"/>
 

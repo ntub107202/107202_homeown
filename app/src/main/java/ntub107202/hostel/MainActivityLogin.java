@@ -2,6 +2,7 @@ package ntub107202.hostel;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -36,6 +37,8 @@ public class MainActivityLogin extends AppCompatActivity {
     private EditText password;
     private String valid_email;
     private String valid_password;
+    private static String user ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,15 @@ public class MainActivityLogin extends AppCompatActivity {
         getWorksheet.gethumansearchJSON();
         getWorksheet.getjobJSON();
         getWorksheet.getcalendarJSON();
+
+        user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
+        if(! user.equals("") && ! pw.equals("")){
+            postATLogin();
+        }
+        Log.v("useraa", user);
+        Log.v("useraa", pw);
+
 
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.password);
@@ -67,10 +79,13 @@ public class MainActivityLogin extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener((v)->
         {
 //            generateAllStars();
+
             postLogin();
 
         });
     }
+    public static String getUser(){return user;}
+
     public void openHtl(){
         Intent intent =new Intent(this, NavigationActivity.class);
         startActivity(intent);
@@ -288,7 +303,7 @@ public class MainActivityLogin extends AppCompatActivity {
     private void postLogin()
     {
         // Service的URL
-        String url = "http://140.131.114.153/postLogin.php";
+        String url = "http://140.131.114.153/postHomeownLogin.php";
 
         //對應Postman StringRequest -> content-type=不設置
 
@@ -304,6 +319,15 @@ public class MainActivityLogin extends AppCompatActivity {
                             String ret = parsePostLoginJSon(response);
                         if(ret.equals("成功"))
                         {
+
+                            String user = email.getText().toString();
+                            String pw = password.getText().toString();
+
+                            SharedPreferences pref = getSharedPreferences("userpw", MODE_PRIVATE);
+                            pref.edit()
+                                    .putString("USER", user)
+                                    .putString("PW", pw)
+                                    .commit();
                             openHtl();
                         }
                         else {
@@ -359,4 +383,62 @@ public class MainActivityLogin extends AppCompatActivity {
         }
         return "失敗";
     }
+    private void postATLogin()
+    {
+        // Service的URL
+        String url = "http://140.131.114.153/postHomeownLogin.php";
+
+        //對應Postman StringRequest -> content-type=不設置
+
+        StringRequest request = new StringRequest(Request.Method.POST,url,
+                new Response.Listener<String>()
+                {
+                    @Override
+                    //respone = php回應的結果
+                    public void onResponse(String response)
+                    {
+                        Log.i("Log","result:" + response);
+                        try {
+                            String ret = parsePostLoginJSon(response);
+                            if(ret.equals("成功"))
+                            {
+                                openHtl();
+                            }
+                            else {
+                                Log.i("Log","帳密錯誤");
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener()
+                {
+                    // Request失敗處理
+                    @Override
+                    public void onErrorResponse(VolleyError error)
+                    {
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }
+        )
+        {
+            @Override
+
+
+            //=postman keyvalue (formdata)
+            protected Map<String, String> getParams() {
+                Map<String, String> param = new HashMap<>();
+                String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+                String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
+                param.put("row1", user);
+                param.put("row2", pw);
+
+                return param;
+            }
+        };
+        // 將request放到RequestQueue，Volley會以非同步方式送出request
+        ApplicationController.getInstance().addToRequestQueue(request);
+    }
+
 }

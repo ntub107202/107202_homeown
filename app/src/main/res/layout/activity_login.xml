@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:text="直接進入請點我"
+        android:text="@string/hint_enter"
         android:textColor="#707487" />
 
     <LinearLayout
@@ -44,7 +44,7 @@
             android:background="#cccccc"
             android:drawableLeft="@drawable/emailtype"
             android:ems="10"
-            android:hint="　請輸入帳號"
+            android:hint="@string/hint_account"
             android:inputType="textEmailAddress"
             android:textColorHint="#707487"
             android:textSize="12sp" />
@@ -59,7 +59,7 @@
             android:background="#cccccc"
             android:drawableLeft="@drawable/pwdtype"
             android:ems="10"
-            android:hint="　請輸入密碼"
+            android:hint="@string/hint_passwd"
             android:inputType="textPassword"
             android:textColorHint="#707487"
             android:textSize="12sp" />
@@ -72,7 +72,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:background="#424242"
-            android:text="登入"
+            android:text="@string/login"
             android:textColor="@color/colorPrimary" />
 
         <LinearLayout
@@ -87,7 +87,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:text="註冊"
+                android:text="@string/register"
                 android:textColor="#707487" />
 
             <Button
@@ -97,7 +97,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:text="忘記密碼？"
+                android:text="@string/forget_passwd"
                 android:textColor="#707487" />
         </LinearLayout>
 
@@ -108,7 +108,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:gravity="center"
-            android:text="＿＿＿＿＿ 以其他方式登入 ＿＿＿＿＿"
+            android:text="@string/other_login"
             android:textColor="#707487"
             android:textSize="14sp" />
 
@@ -127,7 +127,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="#3b5998"
-                android:text="Facebook"
+                android:text="@string/facebook"
                 android:textColor="#FFFFFF" />
 
             <Button
@@ -138,7 +138,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:background="#db4a3c"
-                android:text="Google"
+                android:text="@string/google"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 

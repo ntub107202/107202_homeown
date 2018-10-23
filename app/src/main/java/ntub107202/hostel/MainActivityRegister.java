@@ -305,7 +305,7 @@ public class MainActivityRegister extends AppCompatActivity {
     private void generateAllStars()
     {
         // Service的URL
-        String url = "http://140.131.114.153/getRegister";
+        String url = "http://140.131.114.153/getHomeownRegister.php";
 
         // 建立期望收到JsonObject的request
         // 若new JsonObjectRequest的第二個參數為null則代表是GET，反之若為JSONObject則為POST
@@ -355,7 +355,7 @@ public class MainActivityRegister extends AppCompatActivity {
     private void postRegister()
     {
         // Service的URL
-        String url = "http://140.131.114.153/postRegister.php";
+        String url = "http://140.131.114.153/postHomeownRegister.php";
 
         // 建立期望收到JsonObject的request
         // 若new JsonObjectRequest的第二個參數為null則代表是GET，反之若為JSONObject則為POST

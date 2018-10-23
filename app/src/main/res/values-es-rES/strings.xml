@@ -253,4 +253,21 @@
     <string name="spe39"> La interpretación y aplicación de estas "Reglas y declaraciones de uso" y las disputas o disputas que surjan del uso de esta Aplicación por parte de sus usuarios serán de acuerdo con las leyes de Taiwán. Procesamiento. </string>
 
     <string name="hint_hotel_info">Por favor ingrese la información de la propiedad</string>
+    <string name="hint_enter"> Acceso directo, haga clic en mí </string>
+    <string name="hint_account">Ingrese una cuenta</string> 
+    <string name="hint_passwd">Introduzca una contraseña</string>
+    <string name="facebook">Facebook</string>
+    <string name="google">Google</string>
+    <string name="other_login"> Inicie sesión de otras maneras</string>
+    <string name="forget_passwd"> ¿Olvidó su contraseña?</string>
+    <string name="hint_confirm_passwd"> Confirme la contraseña</string>
+    <string name="agree"> Acepto registrar una cuenta</string>
+    <string name="create_account"> Crea una cuenta de Hotel</string>
+    <string name="whisper">Lo que estás buscando es un pequeño ayudante que sea aventurero y tenga el coraje de probar cosas nuevas. Si está dispuesto a probar cosas nuevas, acepte viajeros de todos los ámbitos de la vida y vaya a sus lugares favoritos para experimentar lo que ama, ¡contáctenos!</string>
+    <string name="hotel_reg">Registro hotelero</string>
+    <string name="hotel_enter">Entrada del hotel</string>
+
+    <string name="hire_now">contratar ahora</string>
+    <string name="online_contact">contacto en línea</string>
+
 </resources>

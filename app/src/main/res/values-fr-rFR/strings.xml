@@ -254,5 +254,24 @@
     <string name="spe39"> L’interprétation et l’application de ces règles et déclarations d’utilisation ainsi que les litiges ou litiges découlant de l’utilisation de cette appli par vos utilisateurs doivent être conformes à la législation de Taïwan. Traitement. </string>
 
     <string name="hint_hotel_info">S’il vous plaît entrer les informations de la propriété</string>
+
+
+    <string name="hint_enter"> Accès direct, cliquez-moi s’il vous plaît </string>
+    <string name="hint_account">Veuillez entrer un compte</string>
+    <string name="hint_passwd"> Veuillez saisir un mot de passe </string>
+    <string name="facebook"> Facebook </string>
+    <string name="google"> Google </string>
+    <string name="other_login"> Connectez-vous d’une autre manière </string>
+    <string name="forget_passwd"> Mot de passe oublié? </string>
+    <string name="hint_confirm_passwd"> Veuillez confirmer le mot de passe </string>
+    <string name="agree"> J’accepte de créer un compte </string>
+    <string name="create_account">Créer un compte Hôtel</string>
+    <string name="whisper">Ce que vous recherchez, c’est un petit assistant aventureux qui a le courage d’essayer de nouvelles choses. Si vous êtes prêt à essayer de nouvelles expériences, à accepter des voyageurs de tous les horizons et à vous rendre dans vos endroits préférés pour vivre ce que vous aimez, n’hésitez pas à nous contacter!</string>
+    <string name="hotel_reg">Enregistrement Hôtel</string>
+    <string name="hotel_enter"> Entrée du Hôtel</string>
+
+    <string name="hire_now">embaucher maintenant</string>
+    <string name="online_contact">contact en ligne</string>
+
 </resources>
 

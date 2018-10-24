@@ -271,4 +271,5 @@
 
     <string name="hire_now">立即雇用</string>
     <string name="online_contact">線上聯絡</string>
+    <string name="logout">登出</string>
 </resources>

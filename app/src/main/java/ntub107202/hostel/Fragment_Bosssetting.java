@@ -8,9 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 
 public class Fragment_Bosssetting extends Fragment {
+    TextView textView31;
+    TextView textView30;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -24,7 +27,10 @@ public class Fragment_Bosssetting extends Fragment {
         Button button05 = (Button)view.findViewById(R.id.btn_specification);
         Button button07 = (Button)view.findViewById(R.id.btn_login);
         Button button08 = (Button)view.findViewById(R.id.btn_reg);
-
+        textView31 = (TextView)view.findViewById(R.id.textView31);
+        textView30 = (TextView)view.findViewById(R.id.textView30);
+        textView31.setText(getWorksheet.getRow38(0));
+        textView30.setText(MainActivityLogin.getUser());
         btn_hotelinfo.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {

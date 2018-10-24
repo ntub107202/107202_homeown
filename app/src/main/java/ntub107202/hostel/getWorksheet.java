@@ -53,6 +53,10 @@ public class getWorksheet {
     private static String[] row35= new String[100];
     private static String[] row36= new String[100];
     private static String[] row37= new String[100];
+
+    private static String[] row38= new String[100];
+
+
     private static String[] row111= new String[100];
     private static String[] row112= new String[100];
     private static String[] row113= new String[100];
@@ -68,6 +72,7 @@ public class getWorksheet {
     public static int jobLength;
     public static int calendarLength;
     public static int hostelinfoLength;
+    public static int hostelnameLength;
 
     public static void getJSON() {
 
@@ -225,6 +230,33 @@ public class getWorksheet {
         });
         myAsyncTask.execute(Common.getjob);
         */
+    }
+    public static void gethostelnameJSON() {
+
+        getAsyncTask myAsyncTask = new getAsyncTask(new getAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    hostelnameLength = worksheetLength;
+                    int j=0;
+
+                    for (int i = 0 ; i<getWorksheetLength() ; i++){
+                        row38[i] = jsonArray.getJSONObject(i).getString("row1");
+
+                        Log.v("66668", getWorksheet.row38[i]);
+//                        Log.v("66668", getWorksheet.row35[i]);
+
+                    }
+                } catch (Exception e) {
+                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myAsyncTask.execute(Common.getHostelname);
     }
     public static void getcalendarJSON() {
 
@@ -456,6 +488,11 @@ public class getWorksheet {
     public static String getRow37(int i){
         return row37[i];
     }
+
+    public static String getRow38(int i){
+        return row38[i];
+    }
+
 
     public static String getRow111(int i){
         return row111[i];

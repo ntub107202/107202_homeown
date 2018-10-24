@@ -402,6 +402,7 @@ public class MainActivityLogin extends AppCompatActivity {
                             String ret = parsePostLoginJSon(response);
                             if(ret.equals("成功"))
                             {
+                                getWorksheet.gethostelnameJSON();
                                 openHtl();
                             }
                             else {

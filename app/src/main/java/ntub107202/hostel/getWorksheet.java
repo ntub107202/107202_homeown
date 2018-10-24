@@ -55,6 +55,7 @@ public class getWorksheet {
     private static String[] row37= new String[100];
 
     private static String[] row38= new String[100];
+    private static String[] row39= new String[100];
 
 
     private static String[] row111= new String[100];
@@ -303,7 +304,9 @@ public class getWorksheet {
                         row33[i] = jsonArray.getJSONObject(i).getString("row2");
                         row34[i] = jsonArray.getJSONObject(i).getString("row3");
                         row35[i] = jsonArray.getJSONObject(i).getString("row4");
-//                        Log.v("Row5", row5[i]);
+                        row39[i] = jsonArray.getJSONObject(i).getString("row5");
+                        Log.v("row39", row33[i]);
+                        Log.v("row39", row39[i]);
 
                     }
                     Setting_Hotelinfo.start_sethostelname = true;
@@ -491,6 +494,9 @@ public class getWorksheet {
 
     public static String getRow38(int i){
         return row38[i];
+    }
+    public static String getRow39(int i){
+        return row39[i];
     }
 
 

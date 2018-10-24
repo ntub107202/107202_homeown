@@ -270,5 +270,6 @@
     <string name="hire_now">contratar ahora</string>
     <string name="online_contact">contacto en línea</string>
     <string name="logout">Cerrar sesión</string>
+    <string name="cancel">Cancelar</string>
 
 </resources>

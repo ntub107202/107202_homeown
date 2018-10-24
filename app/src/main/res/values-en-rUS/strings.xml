@@ -271,5 +271,6 @@
     <string name="hire_now">hire now</string>
     <string name="online_contact">online contact</string>
     <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
 
 </resources>

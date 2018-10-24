@@ -263,5 +263,6 @@
     <string name="hire_now">立即雇用</string>
     <string name="online_contact">线上联络</string>
     <string name="logout">登出</string>
+    <string name="cancel">取消</string>
 
 </resources>

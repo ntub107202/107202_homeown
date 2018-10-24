@@ -273,6 +273,7 @@
     <string name="hire_now">embaucher maintenant</string>
     <string name="online_contact">contact en ligne</string>
     <string name="logout">Déconnexion</string>
+    <string name="cancel">Annuler</string>
 
 </resources>
 

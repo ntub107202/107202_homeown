@@ -120,7 +120,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="1"
                     android:background="@color/colorPrimary"
-                    android:text="取消"
+                    android:text="@string/cancel"
                     android:textColor="@android:color/white" />
             </LinearLayout>
 

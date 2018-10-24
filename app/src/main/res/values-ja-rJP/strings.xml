@@ -271,5 +271,7 @@
 
     <string name="hire_now">今すぐ採用</string>
     <string name="online_contact">オンラインの連絡先</string>
+    <string name="logout">ログアウト</string>
+    <string name="cancel">キャンセル</string>
 
 </resources>

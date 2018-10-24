@@ -17,7 +17,7 @@ public class Fragment_Bosssetting extends Fragment {
         View view=inflater.inflate(R.layout.fragment_boss_setting,container,false);
         Button btn_hotelinfo =(Button)view.findViewById(R.id.btn_hotel_info);
         Button button01 = (Button)view.findViewById(R.id.btn_hire_history);
-        Button button02 = (Button)view.findViewById(R.id.btn_contact_history);
+        Button button02 = (Button)view.findViewById(R.id.btn_logout);
         Button btn_notification = (Button)view.findViewById(R.id.btn_notification);
         Button button03 = (Button)view.findViewById(R.id.btn_return);
         Button button04 = (Button)view.findViewById(R.id.btn_about);

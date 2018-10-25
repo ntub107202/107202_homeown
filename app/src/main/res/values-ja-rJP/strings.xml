@@ -273,5 +273,7 @@
     <string name="online_contact">オンラインの連絡先</string>
     <string name="logout">ログアウト</string>
     <string name="cancel">キャンセル</string>
+    <string name="account_status">アカウントのステータス</string>
+    <string name="unbound">アンバウンド</string>
 
 </resources>

@@ -272,5 +272,7 @@
     <string name="online_contact">online contact</string>
     <string name="logout">Logout</string>
     <string name="cancel">Cancel</string>
+    <string name="account_status">Account status</string>
+    <string name="unbound">Unbound</string>
 
 </resources>

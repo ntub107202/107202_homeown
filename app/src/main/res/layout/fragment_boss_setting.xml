@@ -65,7 +65,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
-                            android:text="雇主姓名"
+                            android:text="@string/name"
                             android:textSize="24sp" />
 
                         <TextView
@@ -73,7 +73,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
-                            android:text="test456@ntub.edu.tw" />
+                            android:text="@string/email" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -85,14 +85,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="帳號狀態：" />
+                                android:text="@string/account_status" />
 
                             <TextView
                                 android:id="@+id/textView32"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="未綁定" />
+                                android:text="@string/unbound" />
 
                             <ImageButton
                                 android:id="@+id/imageButton"

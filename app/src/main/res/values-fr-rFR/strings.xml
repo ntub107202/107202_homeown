@@ -274,6 +274,8 @@
     <string name="online_contact">contact en ligne</string>
     <string name="logout">Déconnexion</string>
     <string name="cancel">Annuler</string>
+    <string name="account_status">État du compte</string>
+    <string name="unbound">Non consolidé</string>
 
 </resources>
 

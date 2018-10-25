@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">一家順順</string>
+    <string name="title_people">履歴を編集</string>
+    <string name="title_publish">情報の公開</string>
+    <string name="title_work">作業の手配</string>
+    <string name="title_page">雇用者ページ</string>
+    <string name="lbl_indiv_info">個人情報</string>
+    <string name="lbl_upload_photo">大きな写真をアップロードする</string>
+    <string name="lbl_inputName">名前を入力してください</string>
+    <string name="lbl_plzinputName">あなたの名前を入力してください</string>
+    <string name="lbl_gender">ジェンダー</string>
+    <string name="lbl_birth">誕生日</string>
+    <string name="lbl_home">住宅地</string>
+    <string name="lbl_school">学校</string>
+    <string name="lbl_depart">部門名</string>
+    <string name="lbl_state_study">学校出席</string>
+    <string name="title_humansearch">タレント検索</string>
+    <string name="lbl_intro">自己紹介</string>
+    <string name="lbl_interest">インタレスト</string>
+    <string name="lbl_skill">一般技能</string>
+    <string name="lbl_pro_skill">プロのスキル</string>
+    <string name="lbl_drive">運転技術</string>
+    <string name="lbl_talentperf">タレントショー</string>
+    <string name="lbl_language">言語能力</string>
+    <string name="lbl_workexp">職務経験</string>
+    <string name="lbl_reason">ワーキングホリデーの理由</string>
+    <string name="lbl_eathabit">食べる習慣</string>
+    <string name="lbl_wrkperiod">ワーキングホリデーの期間</string>
+    <string name="lbl_contact">連絡先情報</string>
+    <string name="lbl_liang">連絡先</string>
+    <string name="lbl_phone">携帯電話</string>
+    <string name="lbl_lifephoto">人生の写真</string>
+    <string name="title_humaninfo">タレント情報</string>
+
+    <string name="title_bnb">ワーキングホリデー検索</string>
+    <string name="title_forum">エクスチェンジの経験</string>
+    <string name="title_schedule">勤務スケジュール</string>
+    <string name="title_student">個人ページ</string>
+
+    <string name="about1">私たちのチームは、モバイルアプリケーションの開発により、より便利で効率的な作業と宿泊を実現し、情報の非対称性とセキュリティの問題を解決することを望んでいます。</string>
+    <string name="about2">仲人と学生のためのプラットフォームとして、私たちのロゴは学生と所有者の関係を表すハチとハイブです。 ミツバチは、学生が宿舎を変えたときに、勤勉さ、自己規律、チームワークの精神を維持することができると象徴しています。 一家順順の名前は、宿泊施設の変更が予想されているため、家族のようにお互いを気遣い、円滑かつ円滑に協力します。</string>
+
+
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="add_job">新しい求人情報</string>
+    <string name="publish_hotel">ホームステイの掲載</string>
+    <string name="job_info">求人情報</string>
+    <string name="job_title">役職</string>
+    <string name="hint_job_title">職名を入力してください</string>
+    <string name="salary">給料</string>
+    <string name="hint_salary">金額を入力してください</string>
+    <string name="salary_day">/ 日</string>
+    <string name="no">いいえ</string>
+    <string name="service">サービス</string>
+    <string name="stay">宿泊施設を含む</string>
+    <string name="snorkel">シュノーケリング</string>
+    <string name="food">食べるものを含む</string>
+    <string name="moto">機関車を提供する</string>
+    <string name="fish">釣り</string>
+    <string name="time">日付</string>
+    <string name="hint_date">クリックして日付を選択する</string>
+    <string name="time_1">タイムスロット 1</string>
+    <string name="hint_time">クリックして時間を選択する</string>
+    <string name="add_time">新しい時</string>
+    <string name="numder_people">必要人数</string>
+    <string name="hint_number_people">人数を入力してください</string>
+    <string name="work_content">作業内容</string>
+    <string name="work_item1">作業項目 1</string>
+    <string name="hint_work_content">あなたの仕事の内容を入力してください</string>
+    <string name="add_work_item">新しい項目</string>
+    <string name="skill">必要な技能</string>
+    <string name="general_skill">一般技能</string>
+    <string name="og">庭仕上げ</string>
+    <string name="cr">カウンター受信</string>
+    <string name="rc">ハウスキーピング</string>
+    <string name="od">データ編成</string>
+    <string name="rs">レストランサービス</string>
+    <string name="profession_skill">プロのスキル</string>
+    <string name="cook">料理</string>
+    <string name="art">アートデザイン</string>
+    <string name="photograph">写真</string>
+    <string name="web">ウェブサイト管理</string>
+    <string name="gardening">ガーデニング</string>
+    <string name="show">芸術的なパフォーマンス</string>
+    <string name="dance">ダンス</string>
+    <string name="sing">歌う</string>
+    <string name="music">楽器</string>
+    <string name="language_skill">言語能力</string>
+    <string name="English">英語</string>
+    <string name="Japanese">日本語</string>
+    <string name="Minnan">ミナン</string>
+    <string name="driving_skill">運転技術</string>
+    <string name="motorcycle">機関車運転免許証</string>
+    <string name="car">車の運転免許証</string>
+    <string name="publish_date">場所期間</string>
+    <string name="contact_info">応募方法</string>
+    <string name="contact">連絡先</string>
+    <string name="contact_name">連絡先の名前を入力してください</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">連絡先のメールアドレスを入力してください</string>
+    <string name="phone">携帯電話</string>
+    <string name="hint_phone">連絡先を入力してください</string>
+
+    <string name="boss_setting">雇用者ページ</string>
+    <string name="hotel_info">ホームステイ情報</string>
+    <string name="hire_history">雇用記録</string>
+    <string name="contact_history">連絡先の記録</string>
+    <string name="notice">通知設定</string>
+    <string name="return_problem">戻り問題</string>
+    <string name="about">私たちについて</string>
+    <string name="specification">関連する仕様</string>
+    <string name="identity_change">アイデンティティの切り替え</string>
+    <string name="login">ログイン</string>
+    <string name="register">登録</string>
+
+    <string name="add_calender">新しい仕事の手配</string>
+    <string name="work_info">求人情報</string>
+    <string name="work_title">役職</string>
+    <string name="hint_work_title">職名を入力してください</string>
+    <string name="work_type">仕事の種類</string>
+    <string name="everyday_work">毎日の仕事</string>
+    <string name="once_work">1回限りの作業</string>
+    <string name="work_time">作業時間</string>
+    <string name="member">人員の配置</string>
+
+    <string name="human_search">タレント検索</string>
+    <string name="job_view">求人を転記する</string>
+    <string name="job_view_no_info">まだ求人情報を掲載していません！</string>
+    <string name="contact_history_no_info">連絡先のレコードはまだありません！</string>
+    <string name="hire_history_no_info">雇用記録はまだありません！</string>
+
+    <string name="reture_problem1">遭遇した問題や状況を可能な限り説明してください。できるだけ早く関係するスタッフが対処してください！ ご協力いただきありがとうございます！</string>
+    <string name="problem">問題の説明</string>
+    <string name="hint_problem">問題の説明を入力してください。より詳細な方がよいでしょう！</string>
+    <string name="sent">送信する</string>
+
+    <string name="calender">作業の手配</string>
+    <string name="calender_no_info">まだ仕事の手配はありません！</string>
+    <string name="spec_no_info">まだ計画中</string>
+
+    <string name="publish_job">求人を転記する</string>
+    <string name="publish_job_no_info">まだ求人情報は公開されていません。！</string>
+
+    <string name="hire_notice">雇用通知</string>
+    <string name="message_notice">メッセージ通知</string>
+    <string name="system_notice">システム通知</string>
+</resources>

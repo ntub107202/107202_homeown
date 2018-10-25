@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">一家順順</string>
+    <string name="title_people">Edit Resume</string>
+    <string name="title_publish">Publish Information</string>
+    <string name="title_work">Work Calender</string>
+    <string name="title_page">Boss Page</string>
+    <string name="lbl_indiv_info">Personal Information</string>
+    <string name="lbl_upload_photo">Upload Sticker</string>
+    <string name="lbl_inputName">Please enter your name</string>
+    <string name="lbl_plzinputName">Please enter your name</string>
+    <string name="lbl_gender">Gender</string>
+    <string name="lbl_birth">Birthday</string>
+    <string name="lbl_home">Residential Address</string>
+    <string name="lbl_school">Current School</string>
+    <string name="lbl_depart">Department</string>
+    <string name="lbl_state_study">School State</string>
+    <string name="title_humansearch">Talent Search</string>
+    <string name="lbl_intro">Self Introduction</string>
+    <string name="lbl_interest">Interest</string>
+    <string name="lbl_skill">Skill</string>
+    <string name="lbl_pro_skill">Profession Skill</string>
+    <string name="lbl_drive">Drive Skill</string>
+    <string name="lbl_talentperf">Art Show</string>
+    <string name="lbl_language">Language</string>
+    <string name="lbl_workexp">Work Experience</string>
+    <string name="lbl_reason">Reason Of Work Exchange</string>
+    <string name="lbl_eathabit">Eating Habits</string>
+    <string name="lbl_wrkperiod">During Work Exchange</string>
+    <string name="lbl_contact">Contact Way</string>
+    <string name="lbl_liang">Contact Person</string>
+    <string name="lbl_phone">Phone</string>
+    <string name="lbl_lifephoto">Daily Life Photo</string>
+    <string name="title_humaninfo">Talent Information</string>
+
+    <string name="title_bnb">Work Experience Search</string>
+    <string name="title_forum">Exchange Experience</string>
+    <string name="title_schedule">Work Calender</string>
+    <string name="title_student">Personal Page</string>
+
+    <string name="about1">Our team hopes that the development of mobile applications will make working and lodging more convenient and efficient, and solve the problem of information asymmetry and security.</string>
+    <string name="about2">As a platform for matchmakers and students, our logo is a bee and a hive, representing the relationship between the student and the owner. The bees symbolize that students can still maintain the spirit of diligence, self-discipline and teamwork when they change accommodation. The hexagonal hive symbolizes that the home is like the second home of the students. The name of 一家順順 is derived from our expectation of a change of accommodation. Everyone cares for each other like a family, and cooperates smoothly and smoothly.</string>
+
+
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="add_job">Add Publish Information</string>
+    <string name="publish_hotel">Publish Hotel</string>
+    <string name="job_info">Job Information</string>
+    <string name="job_title">Job name</string>
+    <string name="hint_job_title">Please enter job name</string>
+    <string name="salary">Salary</string>
+    <string name="hint_salary">Please enter the amount</string>
+    <string name="salary_day">/ Day</string>
+    <string name="no">No</string>
+    <string name="service">Service</string>
+    <string name="stay">Place to stay</string>
+    <string name="snorkel">Snorkeling</string>
+    <string name="food">Eating</string>
+    <string name="moto">Scooter</string>
+    <string name="fish">Fishing</string>
+    <string name="time">Date</string>
+    <string name="hint_date">Click to select date</string>
+    <string name="time_1">Time 1</string>
+    <string name="hint_time">Click to select time</string>
+    <string name="add_time">Add Time</string>
+    <string name="numder_people">Number Of People</string>
+    <string name="hint_number_people">Please enter number of people</string>
+    <string name="work_content">Work Content</string>
+    <string name="work_item1">Work Item 1</string>
+    <string name="hint_work_content">Please enter work content</string>
+    <string name="add_work_item">Add Item</string>
+    <string name="skill">Required Skills</string>
+    <string name="general_skill">General Skills</string>
+    <string name="og">Organize Garden</string>
+    <string name="cr">Counter Reception</string>
+    <string name="rc">Room Clean</string>
+    <string name="od">Organize Data</string>
+    <string name="rs">Restaurant Service</string>
+    <string name="profession_skill">Professional Skills</string>
+    <string name="cook">Cooking</string>
+    <string name="art">Art Design</string>
+    <string name="photograph">Photography</string>
+    <string name="web">Website Management</string>
+    <string name="gardening">Gardening</string>
+    <string name="show">Art Show</string>
+    <string name="dance">Dance</string>
+    <string name="sing">Sing</string>
+    <string name="music">Musical Instrument</string>
+    <string name="language_skill">Languages</string>
+    <string name="English">English</string>
+    <string name="Japanese">Japanese</string>
+    <string name="Minnan">Minnan</string>
+    <string name="driving_skill">Driving Skills</string>
+    <string name="motorcycle">Scooter driver's license</string>
+    <string name="car">Car driver's license</string>
+    <string name="publish_date">Publish Date</string>
+    <string name="contact_info">Contact Information</string>
+    <string name="contact">Contact Person</string>
+    <string name="contact_name">Please enter contact person name</string>
+    <string name="email">E-mail</string>
+    <string name="hint_email">Please enter e-mail</string>
+    <string name="phone">Phone</string>
+    <string name="hint_phone">Please enter phone number</string>
+
+    <string name="boss_setting">Boss Page</string>
+    <string name="hotel_info">Hotel Information</string>
+    <string name="hire_history">Hire History</string>
+    <string name="contact_history">Contact History</string>
+    <string name="notice">Notice Setting</string>
+    <string name="return_problem">Return Promblem</string>
+    <string name="about">About us</string>
+    <string name="specification">Specification</string>
+    <string name="identity_change">Identity Change</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+
+    <string name="add_calender">Add Work Calender</string>
+    <string name="work_info">Work Information</string>
+    <string name="work_title">Work Title</string>
+    <string name="hint_work_title">Please enter work title</string>
+    <string name="work_type">Work Type</string>
+    <string name="everyday_work">Everyday</string>
+    <string name="once_work">Once</string>
+    <string name="work_time">Work Time</string>
+    <string name="member">Member</string>
+
+    <string name="human_search">Talent Search</string>
+    <string name="job_view">Publish Job</string>
+    <string name="job_view_no_info">Haven't posted any job information yet!</string>
+    <string name="contact_history_no_info">There are no contact history yet!</string>
+    <string name="hire_history_no_info">There are no hire history yet!</string>
+
+    <string name="reture_problem1">Please describe as much as possible the problems and conditions encountered, and the relevant staff will deal with them as soon as possible! Thank you for your cooperation and assistance!</string>
+    <string name="problem">Problem Description</string>
+    <string name="hint_problem">Please enter a description of the problem, the more detailed the better!</string>
+    <string name="sent">Send Out</string>
+
+    <string name="calender">Work Calender</string>
+    <string name="calender_no_info">There is no work calender yet!</string>
+    <string name="spec_no_info">Still planning</string>
+
+    <string name="publish_job">Publish Job</string>
+    <string name="publish_job_no_info">No job information has been published yet!</string>
+
+    <string name="hire_notice">Hire Notice</string>
+    <string name="message_notice">Message Notice</string>
+    <string name="system_notice">System Notice</string>
+
+</resources>

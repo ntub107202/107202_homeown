@@ -12,6 +12,11 @@
         android:title="@string/title_publish" />
 
     <item
+        android:id="@+id/navigation_inbox"
+        android:icon="@drawable/ic_inbox_black_24dp"
+        android:title="@string/inbox" />
+
+    <item
         android:id="@+id/navigation_work"
         android:icon="@drawable/ic_business_center_black_24dp"
         android:title="@string/title_work" />

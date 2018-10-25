@@ -2,6 +2,7 @@ package ntub107202.hostel.MyAsyncTask;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.widget.ProgressBar;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -99,6 +100,7 @@ public class getAsyncTask extends AsyncTask<String, Integer, String> {
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
         taskListener.onFinished(result);
+        Log.d("Tag onPostExecute", String.valueOf(Thread.currentThread().getId()));
     }
 
     @Override

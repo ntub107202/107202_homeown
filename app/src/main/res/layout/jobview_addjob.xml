@@ -12,8 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="244dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -22,17 +22,14 @@
             android:background="?attr/colorPrimary"
             android:elevation="4dp"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:theme="?attr/actionBarTheme">
 
             <TextView
                 android:id="@+id/toolbar_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal"
-                android:text="新增刊登職缺"
+                android:text="@string/add_job"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
         </android.support.v7.widget.Toolbar>
@@ -49,9 +46,24 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/publish_hotel"
+                    android:textColor="@color/fontDark" />
+
+                <Spinner
+                    android:id="@+id/spin_hotel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"></Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="#CCCCCC"
                     android:padding="12dp"
-                    android:text="職缺資訊"
+                    android:text="@string/job_info"
                     android:textColor="@color/fontDark" />
 
                 <TextView
@@ -59,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="職缺名稱"
+                    android:text="@string/job_title"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -68,15 +80,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="請輸入職缺名稱"
-                    android:text="打雜工"
-                    android:singleLine="true" />
+                    android:hint="@string/hint_job_title"
+                    android:singleLine="true"
+                    android:text="打雜工" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="待遇"
+                    android:text="@string/salary"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -88,23 +100,24 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:hint="請輸入數字金額"
-                        android:text="200"
+                        android:hint="@string/hint_salary"
                         android:inputType="number"
-                        android:singleLine="true" />
+                        android:singleLine="true"
+                        android:text="200" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="20dp"
-                        android:text="/ 日"
+                        android:text="@string/salary_day"
                         android:textColor="@color/fontDark" />
 
-                    <RadioButton
-                        android:id="@+id/rad_salary"
+                    <CheckBox
+                        android:id="@+id/chk_salary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="無"
+                        android:layout_weight="1"
+                        android:text="@string/no"
                         android:textColor="@color/fontDark"
                         android:textSize="16dp" />
 
@@ -114,81 +127,178 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="其他待遇"
+                    android:text="@string/service"
                     android:textColor="@color/fontDark" />
 
-                <LinearLayout
+                <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|top">
+                    android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <TableRow android:gravity="center_horizontal">
 
                         <CheckBox
                             android:id="@+id/chk_stay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="包含住宿"
-                            android:textColor="@color/fontDark" />
-
-                        <CheckBox
-                            android:id="@+id/chk_snorkel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="浮潛"
-
-                            android:textColor="@color/fontDark" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                            android:text="@string/stay"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
                         <CheckBox
                             android:id="@+id/chk_food"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="包含吃食"
-
-                            android:textColor="@color/fontDark" />
+                            android:text="@string/food"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
                         <CheckBox
                             android:id="@+id/chk_moto"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="提供機車"
+                            android:text="@string/moto"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+                    </TableRow>
 
-                            android:textColor="@color/fontDark" />
-                    </LinearLayout>
+                    <TableRow android:gravity="center_horizontal">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        <CheckBox
+                            android:id="@+id/chk_snorkel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/snorkel"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
                         <CheckBox
                             android:id="@+id/chk_fish"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="釣魚"
+                            android:text="@string/fish"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
-                            android:textColor="@color/fontDark" />
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp"
+                            android:visibility="invisible" />
+                    </TableRow>
+                </TableLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="時間"
+                    android:text="@string/equipment"
+                    android:textColor="@color/fontDark" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow android:gravity="center_horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/table"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chair"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wardrobe"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bed"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+                    <TableRow android:gravity="center_horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/refrigerator"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/air_conditioning"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tv"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/water_heater"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+                    <TableRow android:gravity="center_horizontal">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/washing_machine"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wi_fi"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ch4"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gas"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+                    </TableRow>
+                </TableLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/time"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -202,13 +312,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="點擊選擇日期"
-                        android:text="2018-4-1"
-                        android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"
-                        android:focusableInTouchMode="false"/>
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/hint_date"
+                        android:inputType="none"
+                        android:text="2019-01-15" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -222,13 +332,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="點擊選擇日期"
-                        android:text="2018-6-1"
-                        android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"
-                        android:focusableInTouchMode="false"/>
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/hint_date"
+                        android:inputType="none"
+                        android:text="2019-02-25" />
 
                 </LinearLayout>
 
@@ -236,7 +346,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="時段 1"
+                    android:text="@string/time_1"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -250,13 +360,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="點擊選擇時間"
-                        android:text="10:00"
-                        android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"
-                        android:focusableInTouchMode="false"/>
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/hint_time"
+                        android:inputType="none"
+                        android:text="14:00" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -270,13 +380,13 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="點擊選擇時間"
-                        android:text="14:00"
-                        android:inputType="none"
                         android:clickable="false"
                         android:cursorVisible="false"
                         android:focusable="false"
-                        android:focusableInTouchMode="false"/>
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/hint_time"
+                        android:inputType="none"
+                        android:text="18:00" />
 
                 </LinearLayout>
 
@@ -287,14 +397,14 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="20dp"
                     android:background="@color/colorPrimary"
-                    android:text="新增時段"
+                    android:text="@string/add_time"
                     android:textColor="@android:color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="需求人數"
+                    android:text="@string/numder_people"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -303,23 +413,23 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="請輸入人數"
-                    android:text="2"
+                    android:hint="@string/hint_number_people"
                     android:inputType="number"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    android:text="1" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="工作內容"
+                    android:text="@string/work_content"
                     android:textColor="@color/fontDark" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="工作項目 1"
+                    android:text="@string/work_item1"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -328,9 +438,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
                     android:layout_marginRight="40dp"
-                    android:hint="請輸入工作內容"
-                    android:text="打掃房間，整理床鋪及浴室，如房客有遺漏務須打電話告知"
-                    android:singleLine="true" />
+                    android:hint="@string/hint_work_content"
+                    android:singleLine="true"
+                    android:text="清除前院及後院雜草" />
 
                 <Button
                     android:id="@+id/btn_add_work"
@@ -339,62 +449,43 @@
                     android:layout_gravity="right"
                     android:layout_marginRight="20dp"
                     android:background="@color/colorPrimary"
-                    android:text="新增項目"
+                    android:text="@string/add_work_item"
                     android:textColor="@android:color/white" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="所需技能"
+                    android:text="@string/skill"
                     android:textColor="@color/fontDark" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="一般技能"
+                    android:text="@string/general_skill"
                     android:textColor="@color/fontDark" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <TableRow android:gravity="center_horizontal">
 
                         <CheckBox
                             android:id="@+id/chk_og"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="庭園整理"
+                            android:text="@string/og"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
-
-                        <CheckBox
-                            android:id="@+id/chk_cr"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="櫃台接待"
-                            android:textColor="@color/fontDark"
-                            android:textSize="16dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/chk_rc"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="房務清潔"
+                            android:text="@string/rc"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -403,76 +494,83 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="資料整理"
+                            android:text="@string/od"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
-                    </LinearLayout>
+                    </TableRow>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <TableRow android:gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_cr"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cr"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
                         <CheckBox
                             android:id="@+id/chk_rs"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="餐廳服務"
+                            android:text="@string/rs"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/fontDark"
+                            android:visibility="invisible" />
+                    </TableRow>
 
-                    </LinearLayout>
+                    <TableRow>
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:text="@string/profession_skill"
+                            android:textColor="@color/fontDark" />
+                    </TableRow>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="專業技能"
-                    android:textColor="@color/fontDark" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                    <TableRow android:gravity="center_horizontal">
 
                         <CheckBox
                             android:id="@+id/chk_c"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="料理"
+                            android:text="@string/cook"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
-
-                        <CheckBox
-                            android:id="@+id/chk_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="美術設計"
-                            android:textColor="@color/fontDark"
-                            android:textSize="16dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <CheckBox
                             android:id="@+id/chk_p"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="攝影"
+                            android:text="@string/photograph"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+
+                        <CheckBox
+                            android:id="@+id/chk_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gardening"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+                    </TableRow>
+
+                    <TableRow android:gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/art"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
@@ -481,149 +579,144 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="網站管理"
+                            android:text="@string/web"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
 
                         <CheckBox
-                            android:id="@+id/chk_g"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="園藝"
+                            android:text=""
+                            android:textColor="@color/fontDark"
+                            android:visibility="invisible" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:text="@string/show"
+                            android:textColor="@color/fontDark" />
+                    </TableRow>
+
+                    <TableRow android:gravity="center_horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/dance"
                             android:textColor="@color/fontDark"
                             android:textSize="16dp" />
 
+                        <CheckBox
+                            android:id="@+id/chk_s"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/sing"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
-                    </LinearLayout>
+                        <CheckBox
+                            android:id="@+id/chk_i"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/music"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
+                    </TableRow>
 
-                </LinearLayout>
+                    <TableRow>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="藝術表演"
-                    android:textColor="@color/fontDark" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:text="@string/language_skill"
+                            android:textColor="@color/fontDark" />
+                    </TableRow>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
+                    <TableRow android:gravity="center_horizontal">
 
-                    <CheckBox
-                        android:id="@+id/chk_d"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="舞蹈"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
+                        <CheckBox
+                            android:id="@+id/chk_e"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/English"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
-                    <CheckBox
-                        android:id="@+id/chk_s"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="唱歌"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
+                        <CheckBox
+                            android:id="@+id/chk_j"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/Japanese"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
-                    <CheckBox
-                        android:id="@+id/chk_i"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="樂器演奏"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
+                        <CheckBox
+                            android:id="@+id/chk_m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/Minnan"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
-                </LinearLayout>
+                    </TableRow>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="語言能力"
-                    android:textColor="@color/fontDark" />
+                    <TableRow>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:text="@string/driving_skill"
+                            android:textColor="@color/fontDark" />
+                    </TableRow>
 
-                    <CheckBox
-                        android:id="@+id/chk_e"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="英文"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
+                    <TableRow android:gravity="center_horizontal">
 
-                    <CheckBox
-                        android:id="@+id/chk_j"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="日文"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
+                        <CheckBox
+                            android:id="@+id/chk_motorcycle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/motorcycle"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
-                    <CheckBox
-                        android:id="@+id/chk_m"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="閩南語"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
+                        <CheckBox
+                            android:id="@+id/chk_car"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/car"
+                            android:textColor="@color/fontDark"
+                            android:textSize="16dp" />
 
-                </LinearLayout>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/fontDark"
+                            android:visibility="invisible" />
+                    </TableRow>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="40dp"
-                    android:text="駕駛技能"
-                    android:textColor="@color/fontDark" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center">
-
-                    <CheckBox
-                        android:id="@+id/chk_motorcycle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="機車駕照"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
-
-                    <CheckBox
-                        android:id="@+id/chk_car"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="汽車駕照"
-                        android:textColor="@color/fontDark"
-                        android:textSize="16dp" />
-
-                </LinearLayout>
+                </TableLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="40dp"
-                    android:text="刊登期間"
+                    android:text="@string/publish_date"
                     android:textColor="@color/fontDark" />
 
                 <LinearLayout
@@ -637,7 +730,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="點擊選擇時間"
+                        android:hint="@string/hint_date"
                         android:inputType="none" />
 
                     <TextView
@@ -652,7 +745,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:hint="點擊選擇時間"
+                        android:hint="@string/hint_date"
                         android:inputType="none" />
 
                 </LinearLayout>
@@ -662,7 +755,7 @@
                     android:layout_height="wrap_content"
                     android:background="#CCCCCC"
                     android:padding="12dp"
-                    android:text="應徵方式"
+                    android:text="@string/contact_info"
                     android:textColor="@color/fontDark" />
 
                 <TextView
@@ -670,7 +763,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="聯絡人"
+                    android:text="@string/contact"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -679,7 +772,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="請輸入聯絡人姓名"
+                    android:hint="@string/contact_name"
                     android:singleLine="true" />
 
                 <TextView
@@ -687,7 +780,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="E-mail"
+                    android:text="@string/email"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -696,7 +789,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="請輸入聯絡人電子信箱"
+                    android:hint="@string/hint_email"
                     android:singleLine="true" />
 
                 <TextView
@@ -704,7 +797,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="8dp"
-                    android:text="手機"
+                    android:text="@string/phone"
                     android:textColor="@color/fontDark" />
 
                 <EditText
@@ -713,7 +806,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:hint="請輸入聯絡人電話"
+                    android:hint="@string/hint_phone"
                     android:singleLine="true" />
 
                 <Button
@@ -726,7 +819,7 @@
                     android:layout_marginRight="60dp"
                     android:layout_marginTop="10dp"
                     android:background="@color/colorPrimary"
-                    android:text="新增刊登職缺"
+                    android:text="@string/add_job"
                     android:textColor="@android:color/white" />
             </LinearLayout>
         </ScrollView>

@@ -15,8 +15,15 @@ public class Common {
     public static String postUrl="http://140.131.114.153/getAndroid";
     public static String postJob="http://140.131.114.153/postJob";
     public static String postCalendar="http://140.131.114.153/postCalendar";
+    public static String postQuestionH="http://140.131.114.153/postQuestionH";
+    public static String getHumanSearch="http://140.131.114.153/getHumanSearch";
     public static String getjob="http://140.131.114.153/getjob";
-    public static String getCalendar="http://140.131.114.153/getcalendar";
-
+    public static String getCalendar="http://140.131.114.153/getSchedule00";
+    public static String postHotel="http://140.131.114.153/postHotel";
+    public static String getHostelinfo="http://140.131.114.153/getHostelinfo";
+    public static String getuid="http://140.131.114.153/getuid";
+    public static String getHostelname="http://140.131.114.153/getHostelname";
+    public static String postResumeHostel2Student="http://140.131.114.153/postResumeHostel2Student";
+    public static String getResumeH="http://140.131.114.153/getResumeH";
 
 }

@@ -271,5 +271,7 @@
     <string name="online_contact">contacto en línea</string>
     <string name="logout">Cerrar sesión</string>
     <string name="cancel">Cancelar</string>
+    <string name="account_status">Estado de la cuenta</string>
+    <string name="unbound">Sin consolidar</string>
 
 </resources>

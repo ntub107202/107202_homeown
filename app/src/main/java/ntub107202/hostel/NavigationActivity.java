@@ -6,8 +6,10 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -65,6 +67,7 @@ public class NavigationActivity extends AppCompatActivity {
     public void onBackPressed() {
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +148,7 @@ public class NavigationActivity extends AppCompatActivity {
         getWorksheet.getjobJSON();
         getWorksheet.getcalendarJSON();
         getWorksheet.gethostelinfoJSON();
+        getWorksheet.getResumeJSON();
         int id = getIntent().getIntExtra("id", 0);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         FragmentTransaction beginTransaction = getFragmentManager().beginTransaction();

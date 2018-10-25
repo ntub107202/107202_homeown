@@ -59,6 +59,15 @@ public class getWorksheet {
     private static String[] row39= new String[100];
     private static String[] row40= new String[100];
 
+    private static String[] row41= new String[100];
+    private static String[] row42= new String[100];
+    private static String[] row43= new String[100];
+    private static String[] row44= new String[100];
+    private static String[] row45= new String[100];
+    private static String[] row46= new String[100];
+    private static String[] row47= new String[100];
+    private static String[] row48= new String[100];
+
     private static String[] row111= new String[100];
     private static String[] row112= new String[100];
     private static String[] row113= new String[100];
@@ -75,6 +84,7 @@ public class getWorksheet {
     public static int calendarLength;
     public static int hostelinfoLength;
     public static int hostelnameLength;
+    public static int resumeLength;
 
     public static void getJSON() {
 
@@ -320,6 +330,44 @@ public class getWorksheet {
         });
         myNavigationAsyncTask.execute(Common.getHostelinfo, MainActivityLogin.getUser());
     }
+    public static void getResumeJSON() {
+
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    resumeLength = worksheetLength;
+                    int j=0;
+                    Log.v("0000000",resumeLength + "66666666");
+                    for (int i = 0 ; i<resumeLength ; i++){
+                        row41[i] = jsonArray.getJSONObject(i).getString("row1");
+                        row42[i] = jsonArray.getJSONObject(i).getString("row2");
+                        row43[i] = jsonArray.getJSONObject(i).getString("row3");
+                        row44[i] = jsonArray.getJSONObject(i).getString("row4");
+                        row45[i] = jsonArray.getJSONObject(i).getString("row5");
+                        row46[i] = jsonArray.getJSONObject(i).getString("row6");
+                        row47[i] = jsonArray.getJSONObject(i).getString("row7");
+                        row48[i] = jsonArray.getJSONObject(i).getString("row8");
+                        Log.v("row41", row41[i]);//履歷編號
+                        Log.v("row42", row42[i]);//學生帳號
+                        Log.v("row43", row43[i]);//民宿編號
+                        Log.v("row44", row44[i]);//學生姓名
+                        Log.v("row45", row45[i]);//就讀學校
+                        Log.v("row46", row46[i]);//工作經驗
+                        Log.v("row47", row47[i]);//換宿原因
+                        Log.v("row48", row48[i]);//學生的臉
+                    }
+                    //Setting_Hotelinfo.start_sethostelname = true;
+                } catch (Exception e) {
+//                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myNavigationAsyncTask.execute(Common.getResumeH, MainActivityLogin.getUser());
+    }
 
     public static void postToPHP(String row1, String row2, String row3) {
         postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
@@ -516,6 +564,30 @@ public class getWorksheet {
         return row40[i];
     }
 
+    public static String getRow41(int i){
+        return row41[i];
+    }
+    public static String getRow42(int i){
+        return row42[i];
+    }
+    public static String getRow43(int i){
+        return row43[i];
+    }
+    public static String getRow44(int i){
+        return row44[i];
+    }
+    public static String getRow45(int i){
+        return row45[i];
+    }
+    public static String getRow46(int i){
+        return row46[i];
+    }
+    public static String getRow47(int i){
+        return row47[i];
+    }
+    public static String getRow48(int i){
+        return row48[i];
+    }
 
     public static String getRow111(int i){
         return row111[i];

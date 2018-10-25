@@ -43,13 +43,14 @@ public class MainActivityLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getWorksheet.gethumansearchJSON();
+
         getWorksheet.getjobJSON();
         getWorksheet.getcalendarJSON();
 
         user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
         String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
         if(! user.equals("") && ! pw.equals("")){
+            getWorksheet.gethumansearchJSON();
             postATLogin();
         }
         Log.v("useraa", user);

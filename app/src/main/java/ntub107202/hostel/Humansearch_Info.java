@@ -11,31 +11,65 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Humansearch_Info extends AppCompatActivity {
 
     public TextView name, gender,birth,home,school,department,study_state,interest,work_exp,exchange_reason,eatting_habit,start_date,end_date,phone,email;
     public ImageView img_photo,life_photo;
-    public Button btn_contact;
-
+    public Button btn_contact,btn_hire;
+    public String user, str_hostelNo,stud_account;
+    public ArrayList<String> ary_hostel, ary_hostelNo;
+    public Spinner chooseHostel;
     static final int REQUEST_ACTION_PICK = 1;
     public static final String PACKAGE_NAME = "jp.naver.line.android";
     public static final String CLASS_NAME = "jp.naver.line.android.activity.selectchat.SelectChatActivity";
     private List<ApplicationInfo> m_appList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.humansearch_info);
+        chooseHostel = findViewById(R.id.choose_hostel);
 
+        ary_hostel = new ArrayList<>();
+        ary_hostelNo = new ArrayList<>();
+        for(int i = 0 ; i < getWorksheet.hostelinfoLength; i++){
+            ary_hostel.add(getWorksheet.getRow33(i));
+            ary_hostelNo.add(getWorksheet.getRow39(i));
+        }
+        ArrayAdapter<String> adptHstChoose = new ArrayAdapter<>(this.getBaseContext(),
+                android.R.layout.simple_spinner_dropdown_item,
+                ary_hostel);
+        chooseHostel.setAdapter(adptHstChoose);
+
+        chooseHostel.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                int indexofHos = chooseHostel.getSelectedItemPosition();
+                str_hostelNo = ary_hostelNo.get(indexofHos);
+                Log.d("Log", "str_hostelNo是沙小???" + str_hostelNo);
+
+//                Toast.makeText(getActivity().getBaseContext(), "你選的是" + city + district, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 //
         btn_contact = (Button) findViewById(R.id.btn_contact);
         btn_contact.setOnClickListener(new Button.OnClickListener() {
@@ -51,6 +85,28 @@ public class Humansearch_Info extends AppCompatActivity {
             startActivity(intent);
             }
         });
+
+//        btn_hire = (Button) findViewById(R.id.btn_contact);
+//        btn_hire.setOnClickListener(new Button.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Log.d("Log", "我要傳???" + user);
+//                Log.d("Log", "我要傳???" + str_hostelNo);
+//                Log.d("Log", "我要傳???" + stud_account);
+//                getWorksheet.postToResume(user,str_hostelNo,stud_account);
+//            }
+//        });
+        btn_hire = (Button) findViewById(R.id.btn_hire);
+        btn_hire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("Log", "我要傳!!!" + user);
+                Log.d("Log", "我要傳!!!" + str_hostelNo);
+                Log.d("Log", "我要傳!!!" + stud_account);
+                getWorksheet.postToResume(user,str_hostelNo,stud_account);
+            }
+        });
+
 
         name = (TextView) findViewById(R.id.name);
         gender =  (TextView) findViewById(R.id.gender);
@@ -92,8 +148,13 @@ public class Humansearch_Info extends AppCompatActivity {
         start_date.setText(getWorksheet.getRow27(position));
         end_date.setText(getWorksheet.getRow28(position));
         department.setText(getWorksheet.getRow30(position));
+        stud_account = getWorksheet.getRow40(position);
+        user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
 
-        Log.d("Log", "position是沙小???" + position);
+
+//        Log.d("Log", "position是沙小???" + ary_hostel);
+//        Log.d("Log", "position是沙小???" + user);
+//        Log.d("Log", "position是沙小???" + stud_account);
 
     }
 

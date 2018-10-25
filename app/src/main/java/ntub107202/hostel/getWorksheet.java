@@ -9,6 +9,7 @@ import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask2;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask3;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask4;
+import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask5;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -56,7 +57,7 @@ public class getWorksheet {
 
     private static String[] row38= new String[100];
     private static String[] row39= new String[100];
-
+    private static String[] row40= new String[100];
 
     private static String[] row111= new String[100];
     private static String[] row112= new String[100];
@@ -160,6 +161,8 @@ public class getWorksheet {
                         row29[i] = jsonArray.getJSONObject(i).getString("collectionList");
                         row30[i] = jsonArray.getJSONObject(i).getString("department");
                         row31[i] = jsonArray.getJSONObject(i).getString("gardening");
+                        row40[i] = jsonArray.getJSONObject(i).getString("studentAccount");
+
 
                         Log.v("Row17", row17[i]);
 
@@ -362,6 +365,17 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postQuestionH ,row1,row2);
         }
     }
+    public static void postToResume(String row1 , String row2, String row3) {
+        postUpdateAsyncTask5 myAsyncTask = new postUpdateAsyncTask5(new postUpdateAsyncTask5.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postResumeHostel2Student ,row1,row2,row3);
+        }
+    }
     public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8 , String row9) {
         postUpdateAsyncTask4 myAsyncTask = new postUpdateAsyncTask4(new postUpdateAsyncTask4.TaskListener() {
             @Override
@@ -497,6 +511,9 @@ public class getWorksheet {
     }
     public static String getRow39(int i){
         return row39[i];
+    }
+    public static String getRow40(int i){
+        return row40[i];
     }
 
 

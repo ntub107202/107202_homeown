@@ -68,7 +68,7 @@ public class Fragment_Jobview extends Fragment {
 //        }
         mList = (RecyclerView)view.findViewById(R.id.list_view);
 
-        if(getWorksheet.getRow5(0) != null){
+        if(getWorksheet.getRow111(0) != null){
             textView30.setVisibility(View.INVISIBLE);
         }
 //        layoutManager = new LinearLayoutManager(getActivity());
@@ -134,6 +134,9 @@ public class Fragment_Jobview extends Fragment {
             myDataset4.add(getWorksheet.getRow114(i));
             myDataset5.add(getWorksheet.getRow115(i));
             Log.d("get0000", String.valueOf(getWorksheet.jobLength)+"resume");
+        }
+        if(getWorksheet.getRow111(0) != null){
+            textView30.setVisibility(View.INVISIBLE);
         }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
         layoutManager = new LinearLayoutManager(getActivity());

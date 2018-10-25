@@ -74,6 +74,9 @@ public class Fragment_Inbox extends Fragment {
 
             Log.d("get0000", myDatasetFace.get(i)+"face");
         }
+        if (getWorksheet.getRow44(0) != null) {
+            txtNodata.setVisibility(View.GONE);
+        }
 //            mList = (RecyclerView)view.findViewById(R.id.list_view);
         layoutManager = new LinearLayoutManager(getActivity());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);

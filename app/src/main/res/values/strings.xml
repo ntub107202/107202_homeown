@@ -273,4 +273,6 @@
     <string name="online_contact">線上聯絡</string>
     <string name="logout">登出</string>
     <string name="cancel">取消</string>
+    <string name="chooseHostel">請選擇民宿</string>
+
 </resources>

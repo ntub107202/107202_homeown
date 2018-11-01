@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -24,8 +25,8 @@ import ntub107202.hostel.Schedule.bean.DateEntity;
 import ntub107202.hostel.Schedule.view.DataView;
 
 public class Fragment_Calenderview extends Fragment {
-    private DataView dataView ;
-    private TextView info ;
+    private DataView dataView;
+    private TextView info;
 
     static TextView textView4;
     static TextView textView30;
@@ -51,42 +52,44 @@ public class Fragment_Calenderview extends Fragment {
     ArrayList<String> myDataset10;
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_calender_view,container,false);
-        textView30 = (TextView)view.findViewById(R.id.text001);
-        textView4 = (TextView)view.findViewById(R.id.text4);
-        mList = (RecyclerView)view.findViewById(R.id.list_view);
+        View view = inflater.inflate(R.layout.fragment_calender_view, container, false);
+        textView30 = (TextView) view.findViewById(R.id.text001);
+        textView4 = (TextView) view.findViewById(R.id.text4);
+        mList = (RecyclerView) view.findViewById(R.id.list_view);
 
-        if(getWorksheet.getRow10(0) != null){
+        if (getWorksheet.getRow10(0) != null) {
             textView30.setVisibility(View.INVISIBLE);
         }
         Date date = new Date();
         SimpleDateFormat bartDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String str = bartDateFormat.format(date);
 
-        info = (TextView)view.findViewById(R.id.info);
-        dataView = (DataView)view.findViewById(R.id.week);
+        info = (TextView) view.findViewById(R.id.info);
+        dataView = (DataView) view.findViewById(R.id.week);
         dataView.getData("");
 
-        FloatingActionButton fab = (FloatingActionButton)view.findViewById(R.id.fab_go_to_add_calendar) ;
-        fab.setOnClickListener(new Button.OnClickListener(){
+        FloatingActionButton fab = (FloatingActionButton) view.findViewById(R.id.fab_go_to_add_calendar);
+        fab.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Calenderview_Addcalender.class);
+                Intent intent = new Intent(getActivity(), Calenderview_Addcalender.class);
                 startActivity(intent);
             }
         });
 
         return view;
     }
+
     @Override
     public void onHiddenChanged(boolean hidden) {
         super.onHiddenChanged(hidden);
-        if(hidden){
+        if (hidden) {
             //pause
-        }else{
+        } else {
             myDataset = new ArrayList<>();
             myDataset2 = new ArrayList<>();
             myDataset3 = new ArrayList<>();
@@ -100,15 +103,15 @@ public class Fragment_Calenderview extends Fragment {
             myDataset10 = new ArrayList<>();
             myAdapter = new MyAdapter(myDataset);
             textView4.setVisibility(View.VISIBLE);
-            for(int i = 0; i < getWorksheet.calendarLength; i++){
+            for (int i = 0; i < getWorksheet.calendarLength; i++) {
                 myDataset.add(getWorksheet.getRow9(i));
                 myDataset2.add(getWorksheet.getRow10(i));
                 myDataset3.add(getWorksheet.getRow11(i));
                 myDataset4.add(getWorksheet.getRow12(i));
                 myDataset5.add(getWorksheet.getRow36(i));
-                Log.d("get0000", String.valueOf(getWorksheet.calendarLength)+"calendarLength_resume");
+                Log.d("get0000", String.valueOf(getWorksheet.calendarLength) + "calendarLength_resume");
             }
-            if(myDataset10.size() == 0){
+            if (myDataset10.size() == 0) {
                 textView30.setVisibility(View.GONE);
             }
             layoutManager = new LinearLayoutManager(getActivity());
@@ -123,7 +126,8 @@ public class Fragment_Calenderview extends Fragment {
         private List<String> mData;
 
         public class ViewHolder extends RecyclerView.ViewHolder {
-            public TextView TextView0001, TextView0002 ,TextView0003, TextView0004,TextView0005,TextView33;
+            public TextView TextView0001, TextView0002, TextView0003, TextView0004, TextView0005, TextView33;
+            public ImageButton btn_edit,btn_delete;
 
             public ViewHolder(View v) {
                 super(v);
@@ -133,9 +137,11 @@ public class Fragment_Calenderview extends Fragment {
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
                 TextView0005 = (TextView) v.findViewById(R.id.textView0005);
                 TextView33 = (TextView) v.findViewById(R.id.textView33);
+                btn_edit = (ImageButton) v.findViewById(R.id.btn_edit);
 
                 TextView33.setOnClickListener(new View.OnClickListener() {
                     Boolean flag = true;
+
                     @Override
                     public void onClick(View v) {
                         if (flag) {
@@ -151,6 +157,15 @@ public class Fragment_Calenderview extends Fragment {
                         }
                     }
                 });
+
+                btn_edit.setOnClickListener(new  View.OnClickListener(){
+                    @Override
+                    public void onClick(View v){
+                        Intent intent = new Intent(getActivity(), Calenderview_Editcalender.class);
+                        startActivity(intent);
+                    }
+                });//換頁至編輯工作安排
+
             }
         }
 
@@ -179,15 +194,15 @@ public class Fragment_Calenderview extends Fragment {
                     myDataset8.clear();
                     myDataset9.clear();
                     myDataset10.clear();
-                    for(int i = 0; i < getWorksheet.calendarLength; i++){
+                    for (int i = 0; i < getWorksheet.calendarLength; i++) {
                         myDataset.add(getWorksheet.getRow9(i));
                         myDataset2.add(getWorksheet.getRow10(i));
                         myDataset3.add(getWorksheet.getRow11(i));
                         myDataset4.add(getWorksheet.getRow12(i));
                         myDataset5.add(getWorksheet.getRow36(i));
-                        Log.v("555",myDataset5.get(i)+"%5");
+                        Log.v("555", myDataset5.get(i) + "%5");
                     }
-                    Log.v("555",date.date+"date999");
+                    Log.v("555", date.date + "date999");
                     for (int i = 0; i < getWorksheet.calendarLength; i++) {
                         if (myDataset5.get(i).equals(date.date)) {
                             myDataset6.add(myDataset.get(i));
@@ -198,7 +213,7 @@ public class Fragment_Calenderview extends Fragment {
 //                            Log.v("555",myDataset10.get(i)+"%10");
                         }
                     }
-                    if(myDataset10.size() == 0){
+                    if (myDataset10.size() == 0) {
                         myDataset.clear();
                         myDataset2.clear();
                         myDataset3.clear();
@@ -214,8 +229,7 @@ public class Fragment_Calenderview extends Fragment {
                         mList.setLayoutManager(layoutManager);
                         mList.setAdapter(myAdapter);
                         textView30.setVisibility(View.VISIBLE);
-                    }
-                    else {
+                    } else {
                         int j = myDataset10.size();
                         Log.v("555", myDataset5.size() + "88");
                         myDataset.clear();

@@ -5,15 +5,13 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Jobview_Addjob">
 
     <LinearLayout
         android:id="@+id/linearLayout_addjob"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="244dp">
+        android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -54,9 +52,11 @@
                 <Spinner
                     android:id="@+id/spin_hotel"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"></Spinner>
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="8dp"
+                    android:spinnerMode="dialog" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -722,6 +722,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:layout_gravity="center">
 
                     <EditText

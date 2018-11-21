@@ -14,6 +14,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
+import android.util.SparseArray;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,10 @@ import android.widget.Spinner;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
+
+import com.google.android.gms.vision.Frame;
+import com.google.android.gms.vision.barcode.Barcode;
+import com.google.android.gms.vision.barcode.BarcodeDetector;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -38,10 +43,12 @@ public class Hotelview_Addhotel extends AppCompatActivity {
 
     private static String pic1;
     private static String pic2;
+    private static String pic3;
 
     private ImageView startCameraButton = null;
     private ImageView choiceFromAlbumButton = null;
     private ImageView choiceFromAlbumButton2 = null;
+    private ImageView choiceFromAlbumButton3 = null;
     private ImageView pictureImageView = null;
 
     private static final int TAKE_PHOTO_PERMISSION_REQUEST_CODE = 0; // 拍照的权限处理返回码
@@ -71,22 +78,27 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         choiceFromAlbumButton.setOnClickListener(clickListener);
         choiceFromAlbumButton2 = (ImageView) findViewById(R.id.img_pic);
         choiceFromAlbumButton2.setOnClickListener(clickListener);
-
+        choiceFromAlbumButton3 = (ImageView) findViewById(R.id.img_line);
+        choiceFromAlbumButton3.setOnClickListener(clickListener);
         //计算图片左右间距之和
         int padding = 15;
         int spacePx = (int) (UIUtil.dp2px(this, padding) * 2);
         //计算图片宽度
         int imageWidth = UIUtil.getScreenWidth(this) - spacePx;
         int imageWidth2 = UIUtil.getScreenWidth(this) - spacePx;
+        int imageWidth3 = UIUtil.getScreenWidth(this) - spacePx;
         //计算宽高比，注意数字后面要加上f表示浮点型数字
         float scale = 16f / 9f;
         float scale2 = 16f / 9f;
+        float scale3 = 16f / 9f;
         //根据图片宽度和比例计算图片高度
         int imageHeight = (int) (imageWidth / scale);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams( imageWidth,imageHeight);
 
         int imageHeight2 = (int) (imageWidth2 / scale2);
         LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams( imageWidth2,imageHeight2);
+        int imageHeight3 = (int) (imageWidth3 / scale3);
+        LinearLayout.LayoutParams params3 = new LinearLayout.LayoutParams( imageWidth3,imageHeight3);
         //设置左右边距
         params.leftMargin = (int) UIUtil.dp2px(this, padding);
         params.rightMargin = (int) UIUtil.dp2px(this, padding);
@@ -94,7 +106,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         params2.rightMargin = (int) UIUtil.dp2px(this, padding);
         choiceFromAlbumButton.setLayoutParams(params2);
         choiceFromAlbumButton2.setLayoutParams(params);
-
+        choiceFromAlbumButton3.setLayoutParams(params3);
 
         Button button01 = (Button) findViewById(R.id.btn_add_hotel);
 
@@ -331,6 +343,9 @@ public class Hotelview_Addhotel extends AppCompatActivity {
             else if(v == choiceFromAlbumButton2) {
                 choiceFromAlbum2();
             }
+            else if(v == choiceFromAlbumButton3) {
+                choiceFromAlbum3();
+            }
         }
     };
 
@@ -385,6 +400,13 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         choiceFromAlbumIntent.setType("image/*");
         startActivityForResult(choiceFromAlbumIntent, 6);
     }
+    private void choiceFromAlbum3() {
+        // 打开系统图库的 Action，等同于: "android.intent.action.GET_CONTENT"
+        Intent choiceFromAlbumIntent = new Intent(Intent.ACTION_GET_CONTENT);
+        // 设置数据类型为图片类型
+        choiceFromAlbumIntent.setType("image/*");
+        startActivityForResult(choiceFromAlbumIntent, 8);
+    }
 
 
     /**
@@ -413,6 +435,18 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         cropPhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT,
                 photoOutputUri = Uri.parse("file:////sdcard/image_output.jpg"));
         startActivityForResult(cropPhotoIntent, 7);
+    }
+    private void cropPhoto3(Uri inputUri) {
+        // 调用系统裁剪图片的 Action
+        Intent cropPhotoIntent = new Intent("com.android.camera.action.CROP");
+        // 设置数据Uri 和类型
+        cropPhotoIntent.setDataAndType(inputUri, "image/*");
+        // 授权应用读取 Uri，这一步要有，不然裁剪程序会崩溃
+        cropPhotoIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        // 设置图片的最终输出目录
+        cropPhotoIntent.putExtra(MediaStore.EXTRA_OUTPUT,
+                photoOutputUri = Uri.parse("file:////sdcard/image_output.jpg"));
+        startActivityForResult(cropPhotoIntent, 9);
     }
 
     /**
@@ -490,6 +524,30 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                         Toast.makeText(this, "找不到照片", Toast.LENGTH_SHORT).show();
                     }
                     break;
+                case 8:
+                    cropPhoto3(data.getData());
+                    break;
+                // 裁剪图片
+                case 9:
+                    File file3 = new File(photoOutputUri.getPath());
+                    if(file3.exists()) {
+                        Bitmap bitmap = BitmapFactory.decodeFile(photoOutputUri.getPath());
+                        BitmapToString3(bitmap);
+                        choiceFromAlbumButton3.setImageBitmap(bitmap);
+                        BarcodeDetector detector = new BarcodeDetector.Builder(getApplicationContext())
+                                .setBarcodeFormats(Barcode.QR_CODE)
+                                .build();
+                        Frame frame = new Frame.Builder()
+                                .setBitmap(bitmap).build();
+                        SparseArray<Barcode> barsCode = detector.detect(frame);
+
+                        Barcode result = barsCode.valueAt(0);
+                        Log.v("dick",result.rawValue);
+//                        file.delete(); // 选取完后删除照片
+                    } else {
+                        Toast.makeText(this, "找不到照片", Toast.LENGTH_SHORT).show();
+                    }
+                    break;
             }
         }
     }
@@ -529,6 +587,22 @@ public class Hotelview_Addhotel extends AppCompatActivity {
             e.printStackTrace();
         }
         pic2=des;
+        return des;
+    }
+    public static String BitmapToString3(Bitmap bitmap) {
+        String des = null;
+        try {
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
+            out.flush();
+            out.close();
+            byte[] buffer = out.toByteArray();
+            byte[] encode = Base64.encode(buffer, Base64.DEFAULT);
+            des = new String(encode);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        pic3=des;
         return des;
     }
 }

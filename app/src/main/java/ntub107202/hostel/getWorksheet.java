@@ -67,6 +67,7 @@ public class getWorksheet {
     private static String[] row46= new String[100];
     private static String[] row47= new String[100];
     private static String[] row48= new String[100];
+    private static String[] row49= new String[100];
 
     private static String[] row111= new String[100];
     private static String[] row112= new String[100];
@@ -172,9 +173,10 @@ public class getWorksheet {
                         row30[i] = jsonArray.getJSONObject(i).getString("department");
                         row31[i] = jsonArray.getJSONObject(i).getString("gardening");
                         row40[i] = jsonArray.getJSONObject(i).getString("studentAccount");
-
+                        row49[i] = jsonArray.getJSONObject(i).getString("lineId");
 
                         Log.v("Row17", row17[i]);
+                        Log.v("Rowline", row49[i]);
 
                     }
                 } catch (Exception e) {
@@ -587,6 +589,9 @@ public class getWorksheet {
     }
     public static String getRow48(int i){
         return row48[i];
+    }
+    public static String getRow49(int i){
+        return row49[i];
     }
 
     public static String getRow111(int i){

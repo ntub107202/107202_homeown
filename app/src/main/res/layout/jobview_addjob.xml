@@ -584,11 +584,13 @@
                             android:textSize="16dp" />
 
                         <CheckBox
+                            android:id="@+id/web_create"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=""
+                            android:gravity="center"
+                            android:text="@string/web_create"
                             android:textColor="@color/fontDark"
-                            android:visibility="invisible" />
+                            android:textSize="16dp" />
                     </TableRow>
 
                     <TableRow>

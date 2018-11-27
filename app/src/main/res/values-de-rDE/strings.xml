@@ -274,7 +274,8 @@
     <string name="cancel">Abbrechen</string>
     <string name="account_status">Kontostatus</string>
     <string name="unbound">Nicht gebunden</string>
-    <string name="work_date">工作日期</string>
-    <string name="edit_calenderview">編輯工作安排</string>
+    <string name="work_date">Arbeitstermin</string>
+    <string name="edit_calenderview">Redaktionelle Arbeitsanordnung</string>
+    <string name="web_create">Webseiten-Produktion</string>
 
 </resources>

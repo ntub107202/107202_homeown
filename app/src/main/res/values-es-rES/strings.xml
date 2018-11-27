@@ -273,7 +273,8 @@
     <string name="cancel">Cancelar</string>
     <string name="account_status">Estado de la cuenta</string>
     <string name="unbound">Sin consolidar</string>
-    <string name="work_date">工作日期</string>
-    <string name="edit_calenderview">編輯工作安排</string>
+    <string name="work_date">Fecha de trabajo</string>
+    <string name="edit_calenderview">Arreglo de trabajo editorial</string>
+    <string name="web_create">Producción de páginas web</string>
 
 </resources>

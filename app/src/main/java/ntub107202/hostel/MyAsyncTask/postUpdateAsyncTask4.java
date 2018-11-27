@@ -74,7 +74,8 @@ public class postUpdateAsyncTask4 extends AsyncTask<String, Integer, String> {
                             "&row7=" + URLEncoder.encode(params[7], "UTF-8")+
                             "&row8=" + URLEncoder.encode(params[8], "UTF-8")+
                             "&row9=" + URLEncoder.encode(params[9], "UTF-8")+
-                            "&row10=" + URLEncoder.encode(params[10], "UTF-8");
+                            "&row10=" + URLEncoder.encode(params[10], "UTF-8")+
+                            "&row11=" + URLEncoder.encode(params[11], "UTF-8");
             Log.v("TTTTTTTTTTTTTTTTTTTT", "TTTTTTTTTTTTTTTTTTTT:"+args);
             //-----------------------------這裡寫你要接的參數
 

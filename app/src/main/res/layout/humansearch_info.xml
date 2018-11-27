@@ -369,7 +369,28 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"
                 app:srcCompat="@color/txt_font" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#CCCCCC"
+                android:padding="12dp"
+                android:text="Youtube影片"
+                android:textColor="@color/fontDark" />
+            <LinearLayout
+                android:id="@+id/ll_player_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+            </LinearLayout>
+            <View
+                android:id="@+id/detail_video_back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:background="#000000"
+                ></View>
             <Spinner
                 android:id="@+id/choose_hostel"
                 android:layout_width="match_parent"

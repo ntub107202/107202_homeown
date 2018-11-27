@@ -39,6 +39,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
     EditText edit_hotel_address;
     EditText edit_hotel_phone;
     EditText edit_hotel_info;
+    EditText edit_url;
     Button btn_add_hotel;
 
     public String qrcode;
@@ -73,6 +74,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         edit_hotel_address = (EditText) findViewById(R.id.edit_hotel_address);
         edit_hotel_phone=(EditText) findViewById(R.id.edit_hotel_phone);
         edit_hotel_info=(EditText) findViewById(R.id.edit_hotel_info);
+        edit_url=(EditText) findViewById(R.id.edit_url);
 
 //        startCameraButton = (ImageView) findViewById(null);
 //        startCameraButton.setOnClickListener(clickListener);
@@ -106,6 +108,8 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         params.rightMargin = (int) UIUtil.dp2px(this, padding);
         params2.leftMargin = (int) UIUtil.dp2px(this, padding);
         params2.rightMargin = (int) UIUtil.dp2px(this, padding);
+        params3.leftMargin = (int) UIUtil.dp2px(this, padding);
+        params3.rightMargin = (int) UIUtil.dp2px(this, padding);
         choiceFromAlbumButton.setLayoutParams(params2);
         choiceFromAlbumButton2.setLayoutParams(params);
         choiceFromAlbumButton3.setLayoutParams(params3);
@@ -124,7 +128,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                 Log.v("8888888", pic2);
                 String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
                 Log.v("8888888", user);
-                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2,user,qrcode);
+                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2,user,qrcode,edit_url.getText().toString());
                 Log.d("000000", String.valueOf(getWorksheet.hostelinfoLength) + "post");
                 getWorksheet.gethostelinfoJSON();
                 try {

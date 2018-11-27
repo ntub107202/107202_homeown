@@ -70,19 +70,26 @@ public class Humansearch_Info extends AppCompatActivity {
 
             }
         });
+        Bundle bundle=getIntent().getExtras();
+        int position=bundle.getInt("position");
+
 //
         btn_contact = (Button) findViewById(R.id.btn_contact);
         btn_contact.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
-            Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.setPackage(PACKAGE_NAME);
-//            intent.setClassName(PACKAGE_NAME, CLASS_NAME);
-            Uri number = Uri.parse("line://nv/recommendOA/@s920613a");
+//            Intent intent = new Intent(Intent.ACTION_SEND);
+//            intent.setPackage(PACKAGE_NAME);
+////            intent.setClassName(PACKAGE_NAME, CLASS_NAME);
+//            Uri number = Uri.parse("line://nv/recommendOA/@s920613a");
 
-            intent.setType("text/plain");
-            intent.putExtra(Intent.EXTRA_TEXT,"//ti/p/%40linedevelopers");
-            startActivity(intent);
+//            intent.setType("text/plain");
+//            intent.putExtra(Intent.EXTRA_TEXT,"//ti/p/%40linedevelopers");
+//            startActivity(intent);
+                Log.v("話都你在說",getWorksheet.getRow49(position));
+                Uri uri = Uri.parse(getWorksheet.getRow49(position));
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
 
@@ -128,8 +135,6 @@ public class Humansearch_Info extends AppCompatActivity {
         img_photo = (ImageView) findViewById(R.id.img_photo);
         life_photo = (ImageView) findViewById(R.id.life_photo);
 
-        Bundle bundle=getIntent().getExtras();
-        int position=bundle.getInt("position");
 
         name.setText(getWorksheet.getRow13(position));
         school.setText(getWorksheet.getRow14(position));

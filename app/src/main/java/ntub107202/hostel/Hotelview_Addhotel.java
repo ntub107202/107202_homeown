@@ -41,6 +41,8 @@ public class Hotelview_Addhotel extends AppCompatActivity {
     EditText edit_hotel_info;
     Button btn_add_hotel;
 
+    public String qrcode;
+
     private static String pic1;
     private static String pic2;
     private static String pic3;
@@ -122,7 +124,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                 Log.v("8888888", pic2);
                 String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
                 Log.v("8888888", user);
-                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2,user);
+                getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2,user,qrcode);
                 Log.d("000000", String.valueOf(getWorksheet.hostelinfoLength) + "post");
                 getWorksheet.gethostelinfoJSON();
                 try {
@@ -542,6 +544,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                         SparseArray<Barcode> barsCode = detector.detect(frame);
 
                         Barcode result = barsCode.valueAt(0);
+                        qrcode = result.rawValue;
                         Log.v("dick",result.rawValue);
 //                        file.delete(); // 选取完后删除照片
                     } else {

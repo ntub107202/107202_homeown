@@ -73,6 +73,7 @@ public class getWorksheet {
     private static String[] row113= new String[100];
     private static String[] row114= new String[100];
     private static String[] row115= new String[100];
+    private static String[] row116= new String[100];
 
 
 
@@ -424,7 +425,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postResumeHostel2Student ,row1,row2,row3);
         }
     }
-    public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8 , String row9) {
+    public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8 , String row9 , String row10) {
         postUpdateAsyncTask4 myAsyncTask = new postUpdateAsyncTask4(new postUpdateAsyncTask4.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -432,7 +433,7 @@ public class getWorksheet {
         });
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
-            myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6,row7,row8,row9);
+            myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10);
         }
     }
 

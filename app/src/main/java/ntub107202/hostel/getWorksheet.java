@@ -77,6 +77,7 @@ public class getWorksheet {
     private static String[] row115= new String[100];
     private static String[] row116= new String[100];
     private static String[] row17487= new String[100];
+    private static String[] row510= new String[100];
 
 
     private static String[] row999= new String[100];
@@ -177,6 +178,7 @@ public class getWorksheet {
                         row31[i] = jsonArray.getJSONObject(i).getString("gardening");
                         row40[i] = jsonArray.getJSONObject(i).getString("studentAccount");
                         row49[i] = jsonArray.getJSONObject(i).getString("lineId");
+                        row510[i] = jsonArray.getJSONObject(i).getString("url");
 
                         Log.v("Row17", row17[i]);
                         Log.v("Rowline", row49[i]);
@@ -473,7 +475,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postResumeHostel2Student ,row1,row2,row3);
         }
     }
-    public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8 , String row9 , String row10) {
+    public static void postToHotel(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8 , String row9 , String row10, String row11) {
         postUpdateAsyncTask4 myAsyncTask = new postUpdateAsyncTask4(new postUpdateAsyncTask4.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -481,7 +483,7 @@ public class getWorksheet {
         });
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
-            myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10);
+            myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11);
         }
     }
 
@@ -655,5 +657,8 @@ public class getWorksheet {
     }
     public static String getRow115(int i){
         return row115[i];
+    }
+    public static String getRow510(int i){
+        return row510[i];
     }
 }

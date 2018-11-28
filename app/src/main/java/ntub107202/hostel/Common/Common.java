@@ -25,5 +25,8 @@ public class Common {
     public static String getHostelname="http://140.131.114.153/getHostelname";
     public static String postResumeHostel2Student="http://140.131.114.153/postResumeHostel2Student";
     public static String getResumeH="http://140.131.114.153/getResumeH";
+    public static String getCheck="http://140.131.114.153/getCheck";
+    public static String postCheck="http://140.131.114.153/postCheck";
+
 
 }

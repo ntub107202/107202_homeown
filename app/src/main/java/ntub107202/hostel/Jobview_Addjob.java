@@ -7,12 +7,14 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -20,6 +22,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.widget.DatePicker;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.TimePicker;
 
 public class Jobview_Addjob extends AppCompatActivity {
@@ -45,6 +48,7 @@ public class Jobview_Addjob extends AppCompatActivity {
     EditText edit_contact;
     EditText edit_email;
     EditText edit_phone;
+    Spinner spinner;
 
 
     private String valid_edit_salary;
@@ -59,6 +63,19 @@ public class Jobview_Addjob extends AppCompatActivity {
         end_date = (EditText) findViewById(R.id.end_date);
         end_time = (EditText) findViewById(R.id.end_time);
         chk_salary=(CheckBox) findViewById(R.id.chk_salary);
+        final Spinner choose_hostel = (Spinner)findViewById(R.id.spin_hotel);
+        final ArrayList<String> myList2 = new ArrayList<String>();
+        for(int i = 0; i < getWorksheet.hostelnameLength; i++) {
+            myList2.add(getWorksheet.getRow38(i));
+//            Log.v("88989898",getWorksheet.getRow36(i));
+//            Log.v("88989898",myList2.get(i));
+        }
+        ArrayAdapter<String> myList = new ArrayAdapter<String>(Jobview_Addjob.this,
+                android.R.layout.simple_spinner_dropdown_item,
+                myList2);
+
+        choose_hostel.setAdapter(myList);
+
 
         chk_salary.setOnClickListener(new Button.OnClickListener(){
             @Override
@@ -123,6 +140,10 @@ public class Jobview_Addjob extends AppCompatActivity {
         start_date.addTextChangedListener(textWatcher6);
         end_time.addTextChangedListener(textWatcher7);
         start_time.addTextChangedListener(textWatcher8);
+
+
+
+
         //--------------------------
         //取得伺服器上JSON資料
         //--------------------------

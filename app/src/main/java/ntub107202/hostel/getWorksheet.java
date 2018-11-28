@@ -10,6 +10,7 @@ import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask2;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask3;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask4;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask5;
+import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask6;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -75,7 +76,7 @@ public class getWorksheet {
     private static String[] row114= new String[100];
     private static String[] row115= new String[100];
     private static String[] row116= new String[100];
-
+    private static String[] row17487= new String[100];
 
 
     private static String[] row999= new String[100];
@@ -87,6 +88,7 @@ public class getWorksheet {
     public static int hostelinfoLength;
     public static int hostelnameLength;
     public static int resumeLength;
+    public static int checkLength;
 
     public static void getJSON() {
 
@@ -371,7 +373,39 @@ public class getWorksheet {
         });
         myNavigationAsyncTask.execute(Common.getResumeH, MainActivityLogin.getUser());
     }
+    public static void getcheckJSON() {
 
+        NavigationAsyncTask myNavigationAsyncTask = new NavigationAsyncTask(new NavigationAsyncTask.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+                try {
+                    JSONObject object = new JSONObject(result);
+                    JSONArray jsonArray = object.getJSONArray("result");
+                    worksheetLength = jsonArray.length();
+                    checkLength = worksheetLength;
+                    int j=0;
+                    Log.v("0000000",checkLength + "66666666");
+                    for (int i = 0 ; i<checkLength ; i++){
+                        row17487[i] = jsonArray.getJSONObject(i).getString("row1");
+
+                        Log.v("row17487", row17487[i]);
+                        Log.v("row17487", Hotelview_Addhotel.getID());
+
+                    }
+                    if (row17487[0] != null){
+                        postTocheck(Hotelview_Addhotel.getID(),"1");
+                        Log.v("row17487", "111111111111111111");
+                    }else {
+                        postTocheck(Hotelview_Addhotel.getID(),"0");
+                        Log.v("row17487", "000000000000000000");
+                    }
+                } catch (Exception e) {
+//                    Log.v("ABC", Log.getStackTraceString(e));
+                }
+            }
+        });
+        myNavigationAsyncTask.execute(Common.getCheck, Hotelview_Addhotel.getID());
+    }
     public static void postToPHP(String row1, String row2, String row3) {
         postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
             @Override
@@ -394,6 +428,18 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postJob ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13);
         }
     }
+    public static void postTocheck(String row1, String row2) {
+        postUpdateAsyncTask6 myAsyncTask = new postUpdateAsyncTask6(new postUpdateAsyncTask6.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.postCheck ,row1,row2);
+        }
+    }
+
     public static void postToCalendar(String row1, String row2, String row3, String row4, String row5,String row6) {
         postUpdateAsyncTask2 myAsyncTask = new postUpdateAsyncTask2(new postUpdateAsyncTask2.TaskListener() {
             @Override

@@ -52,6 +52,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
     private ImageView choiceFromAlbumButton2 = null;
     private ImageView choiceFromAlbumButton3 = null;
     private ImageView pictureImageView = null;
+    private  static String ID;
 
     private static final int TAKE_PHOTO_PERMISSION_REQUEST_CODE = 0; // 拍照的权限处理返回码
     private static final int WRITE_SDCARD_PERMISSION_REQUEST_CODE = 1; // 读储存卡内容的权限处理返回码
@@ -106,6 +107,8 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         params.rightMargin = (int) UIUtil.dp2px(this, padding);
         params2.leftMargin = (int) UIUtil.dp2px(this, padding);
         params2.rightMargin = (int) UIUtil.dp2px(this, padding);
+        params3.leftMargin = (int) UIUtil.dp2px(this, padding);
+        params3.rightMargin = (int) UIUtil.dp2px(this, padding);
         choiceFromAlbumButton.setLayoutParams(params2);
         choiceFromAlbumButton2.setLayoutParams(params);
         choiceFromAlbumButton3.setLayoutParams(params3);
@@ -118,6 +121,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         button01.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ID=edit_hotel_name.getText().toString();
                 Log.v("8888888", spin_address.getSelectedItem().toString());
                 Log.v("8888888", spin_area.getSelectedItem().toString());
                 Log.v("8888888", pic1);
@@ -127,6 +131,7 @@ public class Hotelview_Addhotel extends AppCompatActivity {
                 getWorksheet.postToHotel(edit_hotel_name.getText().toString(), spin_address.getSelectedItem().toString(), spin_area.getSelectedItem().toString() , edit_hotel_address.getText().toString() , edit_hotel_phone.getText().toString(), edit_hotel_info.getText().toString(),pic1,pic2,user,qrcode);
                 Log.d("000000", String.valueOf(getWorksheet.hostelinfoLength) + "post");
                 getWorksheet.gethostelinfoJSON();
+                getWorksheet.getcheckJSON();
                 try {
                     Thread.sleep(3000); //1000為1秒
                 } catch (InterruptedException e) {
@@ -607,5 +612,8 @@ public class Hotelview_Addhotel extends AppCompatActivity {
         }
         pic3=des;
         return des;
+    }
+    public static String getID(){
+        return ID;
     }
 }

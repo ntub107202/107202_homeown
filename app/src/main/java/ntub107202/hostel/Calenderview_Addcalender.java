@@ -89,8 +89,14 @@ public class Calenderview_Addcalender extends AppCompatActivity {
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();
                 getWorksheet.getcalendarJSON();
+                try {
+                    Thread.sleep(500); //1000為1秒
+                } catch (InterruptedException e) {
+// TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 Intent intent = new Intent(Calenderview_Addcalender.this,NavigationActivity.class);
-                intent.putExtra("id",3);
+                intent.putExtra("id",4);
                 startActivity(intent);
             }
         });

@@ -27,6 +27,8 @@ public class Common {
     public static String getResumeH="http://140.131.114.153/getResumeH";
     public static String getCheck="http://140.131.114.153/getCheck";
     public static String postCheck="http://140.131.114.153/postCheck";
+    public static String delResume="http://140.131.114.153/delResumeH";
+
 
 
 }

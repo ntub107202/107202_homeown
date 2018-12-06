@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
@@ -18,7 +19,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class NavigationActivity extends AppCompatActivity {
-
+    private int TIME = 3000;
     private TextView mTextMessage;
     private Fragment_Humansearch Fragment1HumanSearch;
     private Fragment_Jobview Fragment2JobView;
@@ -81,6 +82,26 @@ public class NavigationActivity extends AppCompatActivity {
         String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
         Log.v("useraa", user);
         Log.v("useraa", pw);
+        Handler handler = new Handler();
+        // 在初始化方法里.
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    handler.postDelayed(this, TIME);
+                    getWorksheet.getResumeJSON();
+                    if (getWorksheet.getRow41(0) != null) {
+
+                    }
+
+
+                    Log.i("print","1-------------");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        handler.postDelayed(runnable, TIME);
 //        final int notifyID = 1; // 通知的識別號碼
 //        final NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE); // 取得系統的通知服務
 //        final Notification notification = new Notification.Builder(getApplicationContext()).setSmallIcon(R.drawable.logo1).setContentTitle("我是凱偉").setContentText("我想吃小寶屌").build(); // 建立通知

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -33,6 +35,7 @@ public class Fragment_Inbox extends Fragment {
     static TextView txtNodata;
     MyAdapter myAdapter;
     static LinearLayoutManager layoutManager;
+    private int TIME = 3000;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -42,6 +45,23 @@ public class Fragment_Inbox extends Fragment {
         if(getWorksheet.getRow42(0) != null){
             txtNodata.setVisibility(View.INVISIBLE);
         }
+        Handler handler = new Handler();
+        // 在初始化方法里.
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    handler.postDelayed(this, TIME);
+                    getWorksheet.getResumeJSON();
+                    setResumeview();
+                    Log.i("print","1-------------");
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        handler.postDelayed(runnable, TIME);
+
         return view;
     }
 
@@ -91,6 +111,8 @@ public class Fragment_Inbox extends Fragment {
             public TextView TextView0001, TextView0002 ,TextView0003, TextView0004;
             public ImageView Img01;
             public CardView cardView;
+            Button btnOK;
+            Button btnNO;
 
             public ViewHolder(View v) {
                 super(v);
@@ -100,6 +122,8 @@ public class Fragment_Inbox extends Fragment {
                 TextView0004 = (TextView) v.findViewById(R.id.textView0004);
                 Img01 = (ImageView) v.findViewById(R.id.img01);
                 cardView = (CardView) v.findViewById(R.id.card_view);
+                btnOK = (Button)v.findViewById(R.id.btn_accept);
+                btnNO = (Button)v.findViewById(R.id.btn_denied);
             }
         }
 
@@ -113,7 +137,20 @@ public class Fragment_Inbox extends Fragment {
             mContext = parent.getContext();
             View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.inboxview_item, parent, false);
             MyAdapter.ViewHolder vh = new MyAdapter.ViewHolder(v);
-
+            vh.btnOK.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getWorksheet.delToResume(getWorksheet.getRow41(vh.getAdapterPosition()));
+                    Log.d("get5487", "shit" + getWorksheet.getRow41(vh.getAdapterPosition()));
+                }
+            });
+            vh.btnNO.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    getWorksheet.delToResume(getWorksheet.getRow41(vh.getAdapterPosition()));
+                    Log.d("get5487", "shit" + getWorksheet.getRow41(vh.getAdapterPosition()));
+                }
+            });
             vh.cardView.setOnClickListener(new View.OnClickListener() {
                 int position;
                 @Override

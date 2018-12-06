@@ -11,6 +11,7 @@ import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask3;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask4;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask5;
 import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask6;
+import ntub107202.hostel.MyAsyncTask.postUpdateAsyncTask7;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -488,7 +489,17 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postHotel ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11);
         }
     }
-
+    public static void delToResume(String row1) {
+        postUpdateAsyncTask7 myAsyncTask = new postUpdateAsyncTask7(new postUpdateAsyncTask7.TaskListener() {
+            @Override
+            public void onFinished(String result) {
+            }
+        });
+        if(!myAsyncTask.isCancelled()) {
+            //執行上傳動作
+            myAsyncTask.execute(Common.delResume ,row1);
+        }
+    }
     public static int getWorksheetLength(){
         return worksheetLength;
     }

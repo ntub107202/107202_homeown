@@ -51,6 +51,12 @@ public class MainActivityLogin extends AppCompatActivity {
         String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
         if(! user.equals("") && ! pw.equals("")){
             getWorksheet.gethumansearchJSON();
+            try {
+                Thread.sleep(500); //1000為1秒
+            } catch (InterruptedException e) {
+// TODO Auto-generated catch block
+                e.printStackTrace();
+            }
             postATLogin();
         }
         Log.v("useraa", user);

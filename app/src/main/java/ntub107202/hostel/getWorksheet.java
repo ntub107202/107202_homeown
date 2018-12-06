@@ -57,6 +57,8 @@ public class getWorksheet {
     private static String[] row37= new String[100];
 
     private static String[] row38= new String[100];
+    private static String[] row3866= new String[100];
+
     private static String[] row39= new String[100];
     private static String[] row40= new String[100];
 
@@ -267,7 +269,7 @@ public class getWorksheet {
 
                     for (int i = 0 ; i<getWorksheetLength() ; i++){
                         row38[i] = jsonArray.getJSONObject(i).getString("row1");
-
+                        row3866[i] = jsonArray.getJSONObject(i).getString("row2");
                         Log.v("66668", getWorksheet.row38[i]);
 //                        Log.v("66668", getWorksheet.row35[i]);
 
@@ -419,7 +421,7 @@ public class getWorksheet {
             myAsyncTask.execute(Common.postUrl ,row1,row2,row3);
         }
     }
-    public static void postToJob(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8, String row9, String row10, String row11, String row12, String row13) {
+    public static void postToJob(String row1, String row2, String row3, String row4, String row5, String row6, String row7, String row8, String row9, String row10, String row11, String row12, String row13, String row14 , String row15) {
         postUpdateAsyncTask myAsyncTask = new postUpdateAsyncTask(new postUpdateAsyncTask.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -427,7 +429,7 @@ public class getWorksheet {
         });
         if(!myAsyncTask.isCancelled()) {
             //執行上傳動作
-            myAsyncTask.execute(Common.postJob ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13);
+            myAsyncTask.execute(Common.postJob ,row1,row2,row3,row4,row5,row6,row7,row8,row9,row10,row11,row12,row13,row14,row15);
         }
     }
     public static void postTocheck(String row1, String row2) {
@@ -608,6 +610,11 @@ public class getWorksheet {
     public static String getRow38(int i){
         return row38[i];
     }
+    public static String getRow3866(int i){
+        return row3866[i];
+    }
+
+
     public static String getRow39(int i){
         return row39[i];
     }

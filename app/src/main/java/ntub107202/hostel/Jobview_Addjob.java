@@ -176,10 +176,18 @@ public class Jobview_Addjob extends AppCompatActivity {
                     chk_motoS = "0";
                 }
                 Log.v("chk_stay", start_date.getText().toString());
-                getWorksheet.postToJob(edit_job_title.getText().toString(), edit_salary.getText().toString(), chk_stayS, chk_foodS, chk_fishS, chk_snorkelS, chk_motoS, start_date.getText().toString(), start_time.getText().toString(), end_date.getText().toString(), end_time.getText().toString(), edit_number_people.getText().toString(), edit_work.getText().toString());
+                String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+                getWorksheet.postToJob(edit_job_title.getText().toString(), edit_salary.getText().toString(), chk_stayS, chk_foodS, chk_fishS, chk_snorkelS, chk_motoS, start_date.getText().toString(), start_time.getText().toString(), end_date.getText().toString(), end_time.getText().toString(), edit_number_people.getText().toString(), edit_work.getText().toString(),user,getWorksheet.getRow3866(choose_hostel.getSelectedItemPosition()));
                 Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "post");
+                Log.d("你喜歡我", getWorksheet.getRow3866(choose_hostel.getSelectedItemPosition()));
                 getWorksheet.getJSON();
                 getWorksheet.getjobJSON();
+                try {
+                    Thread.sleep(500); //1000為1秒
+                } catch (InterruptedException e) {
+// TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
                 Log.d("get0000", String.valueOf(getWorksheet.jobLength) + "get");
                 getWorksheet.getcalendarJSON();
                 Intent intent = new Intent(Jobview_Addjob.this,NavigationActivity.class);

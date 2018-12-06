@@ -5,6 +5,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
@@ -141,7 +142,12 @@ public class NavigationActivity extends AppCompatActivity {
 //        //取消以前顯示的所有通知.
 ////              mNotificationManager.cancelAll();
     }
-
+    public void cleanshit(){
+        SharedPreferences pref = getSharedPreferences("userpw", MODE_PRIVATE);
+        pref.edit()
+                .clear()
+                .commit();
+    }
     @Override
     public void onResume() {
         getWorksheet.gethumansearchJSON();

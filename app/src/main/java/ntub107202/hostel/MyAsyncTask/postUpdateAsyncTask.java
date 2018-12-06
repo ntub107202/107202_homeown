@@ -74,7 +74,9 @@ public class postUpdateAsyncTask extends AsyncTask<String, Integer, String> {
                             "&row10=" + URLEncoder.encode(params[10], "UTF-8")+
                             "&row11=" + URLEncoder.encode(params[11], "UTF-8")+
                             "&row12=" + URLEncoder.encode(params[12], "UTF-8")+
-                            "&row13=" + URLEncoder.encode(params[13], "UTF-8");
+                            "&row13=" + URLEncoder.encode(params[13], "UTF-8")+
+                            "&row14=" + URLEncoder.encode(params[14], "UTF-8")+
+                            "&row15=" + URLEncoder.encode(params[15], "UTF-8");
             //-----------------------------這裡寫你要接的參數
 
             OutputStream os = conn.getOutputStream();

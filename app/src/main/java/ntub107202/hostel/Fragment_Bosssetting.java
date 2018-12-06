@@ -50,8 +50,9 @@ public class Fragment_Bosssetting extends Fragment {
         button02.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(getActivity(),Setting_Contacthistory.class);
+                NavigationActivity navigationActivity = (NavigationActivity ) getActivity();
+                navigationActivity.cleanshit();
+                Intent intent = new Intent(getActivity(),MainActivityLogin.class);
                 startActivity(intent);
             }
         });

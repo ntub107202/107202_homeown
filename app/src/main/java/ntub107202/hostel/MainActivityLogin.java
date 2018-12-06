@@ -44,8 +44,7 @@ public class MainActivityLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        getWorksheet.getjobJSON();
-        getWorksheet.getcalendarJSON();
+
 
         user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
         String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
@@ -94,7 +93,7 @@ public class MainActivityLogin extends AppCompatActivity {
     public static String getUser(){return user;}
 
     public void openHtl(){
-        Intent intent =new Intent(this, NavigationActivity.class);
+        Intent intent =new Intent(this, Bypass.class);
         startActivity(intent);
     }
     public void openBypass() {

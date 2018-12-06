@@ -11,20 +11,20 @@ public class MainActivityBypass extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bypass);
-        //取得伺服器上JSON資料
-        getWorksheet.getJSON();
-        getWorksheet.gethumansearchJSON();
-        getWorksheet.getjobJSON();
-        getWorksheet.getcalendarJSON();
-
-        button = findViewById(R.id.buttonHtlEntry);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHtl();
-            }
-        });
+//        setContentView(R.layout.activity_bypass);
+//        //取得伺服器上JSON資料
+//        getWorksheet.getJSON();
+//        getWorksheet.gethumansearchJSON();
+//        getWorksheet.getjobJSON();
+//        getWorksheet.getcalendarJSON();
+//
+//        button = findViewById(R.id.buttonHtlEntry);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                openHtl();
+//            }
+//        });
     }
 
     public void openHtl(){

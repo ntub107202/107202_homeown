@@ -8,7 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import static android.content.Context.MODE_PRIVATE;
 
 
 public class Fragment_Bosssetting extends Fragment {
@@ -31,6 +34,12 @@ public class Fragment_Bosssetting extends Fragment {
         textView30 = (TextView)view.findViewById(R.id.textView30);
         textView31.setText(getWorksheet.getRow38(0));
         textView30.setText(MainActivityLogin.getUser());
+        LinearLayout lin_login = (LinearLayout)view.findViewById(R.id.lin_login);
+        LinearLayout lin_reg = (LinearLayout)view.findViewById(R.id.lin_reg);
+        if(MainActivityLogin.getUser()!= null){
+            lin_login.setVisibility(View.GONE);
+            lin_reg.setVisibility(View.GONE);
+        }
         btn_hotelinfo.setOnClickListener(new Button.OnClickListener(){
             @Override
             public void onClick(View v) {

@@ -27,6 +27,7 @@ public class NavigationActivity extends AppCompatActivity {
     private Fragment_Calenderview Fragment4CalenderView;
     private Fragment_Bosssetting Fragment5BossSetting;
     BottomNavigationView navigation;
+    private static String user;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -78,7 +79,7 @@ public class NavigationActivity extends AppCompatActivity {
         mTextMessage = (TextView) findViewById(R.id.message);
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        String user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
+        user = getSharedPreferences("userpw", MODE_PRIVATE).getString("USER", "");
         String pw = getSharedPreferences("userpw", MODE_PRIVATE).getString("PW", "");
         Log.v("useraa", user);
         Log.v("useraa", pw);
@@ -163,6 +164,7 @@ public class NavigationActivity extends AppCompatActivity {
 //        //取消以前顯示的所有通知.
 ////              mNotificationManager.cancelAll();
     }
+    public static String getUser(){return user;}
     public void cleanshit(){
         SharedPreferences pref = getSharedPreferences("userpw", MODE_PRIVATE);
         pref.edit()

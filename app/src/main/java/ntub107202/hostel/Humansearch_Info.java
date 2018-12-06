@@ -1,5 +1,6 @@
 package ntub107202.hostel;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
@@ -7,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
@@ -151,6 +153,7 @@ public class Humansearch_Info extends AppCompatActivity {
                 Log.d("Log", "我要傳!!!" + str_hostelNo);
                 Log.d("Log", "我要傳!!!" + stud_account);
                 getWorksheet.postToResume(user,str_hostelNo,stud_account);
+                showAlert();
             }
         });
 
@@ -217,7 +220,18 @@ public class Humansearch_Info extends AppCompatActivity {
             return null;
         }
     }
+    public void showAlert() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Humansearch_Info.this);
+        builder.setMessage("您已傳送邀請");
 
+        builder.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
      public void sendTextHandler(View view) {
         String sendText = "s920613a";
         if(checkLineInstalled()){

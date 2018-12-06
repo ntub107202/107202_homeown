@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class NavigationActivity extends AppCompatActivity {
-    private int TIME = 3000;
+    private int TIME = 2000;
     private TextView mTextMessage;
     private Fragment_Humansearch Fragment1HumanSearch;
     private Fragment_Jobview Fragment2JobView;
